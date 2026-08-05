@@ -6,6 +6,379 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>BTA - Les Tilleuls</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="bureau">
+
+
+<header>
+
+<h1>🕵️ BTA - LES TILLEULS</h1>
+
+<p>
+Dossier d'enquête : Incident du 17 décembre 2026
+</p>
+
+
+<div class="barre_infos">
+
+<div>
+📅
+<span id="date">
+17 décembre 2026
+</span>
+</div>
+
+
+<div>
+🕙
+<span id="heure">
+22:00
+</span>
+</div>
+
+
+<div>
+📁 Dossier #001
+</div>
+
+
+<div>
+🔴 En cours
+</div>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<section class="bloc">
+
+
+<h2>👥 Personnes liées au dossier</h2>
+
+
+
+<div class="personnes">
+
+
+
+<div class="personne actif" onclick="ouvrirRyan()">
+
+<div class="photo">
+
+<img src="../images/personnages/ryan.jpg">
+
+</div>
+
+
+<h3>Ryan Belani</h3>
+
+
+<p>
+📱 Téléphone disponible
+</p>
+
+
+<p>
+Statut :
+<span class="vert">
+Accessible
+</span>
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="personne bloque">
+
+
+<div class="photo">
+
+<img src="../images/personnages/moha.jpg">
+
+</div>
+
+
+<h3>Moha</h3>
+
+
+<p>
+📱 Téléphone verrouillé
+</p>
+
+
+<p>
+Statut :
+🔒 Bloqué
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="personne bloque">
+
+
+<div class="photo">
+
+<img src="../images/personnages/camille.jpg">
+
+</div>
+
+
+<h3>Camille</h3>
+
+
+<p>
+📱 Téléphone verrouillé
+</p>
+
+
+<p>
+Statut :
+🔒 Bloqué
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="personne bloque">
+
+
+<div class="photo">
+
+<img src="../images/personnages/noah.jpg">
+
+</div>
+
+
+<h3>Noah</h3>
+
+
+<p>
+📱 Téléphone verrouillé
+</p>
+
+
+<p>
+Statut :
+🔒 Bloqué
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="bloc">
+
+
+<h2>📂 Éléments de l'enquête</h2>
+
+
+
+<div class="preuves">
+
+
+
+<div class="preuve">
+
+📍 Lieu :
+<br>
+Les Tilleuls
+
+</div>
+
+
+
+
+<div class="preuve">
+
+🕙 Heure de l'incident :
+<br>
+22h00
+
+</div>
+
+
+
+
+<div class="preuve">
+
+🔎 Preuves découvertes :
+<br>
+Aucune pour le moment
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="bloc">
+
+
+<h2>🗂️ Chronologie</h2>
+
+
+
+<div class="timeline">
+
+
+<div>
+
+17/12/2026 - 21:00
+
+<br>
+
+Dernières activités connues.
+
+</div>
+
+
+
+<div>
+
+17/12/2026 - 22:00
+
+<br>
+
+Incident signalé.
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+function ouvrirRyan(){
+
+window.location.href="ryan.html";
+
+}
+
+
+
+
+
+let minutes = 0;
+
+
+
+setInterval(()=>{
+
+
+minutes++;
+
+
+let heure = 22 + Math.floor(minutes/60);
+
+let minute = minutes % 60;
+
+
+
+if(heure > 23){
+
+heure = heure - 24;
+
+}
+
+
+
+document.getElementById("heure").innerHTML =
+String(heure).padStart(2,"0")
++
+":"
++
+String(minute).padStart(2,"0");
+
+
+
+},60000);
+
+
+
+</script>
+
+
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BTA - Tableau d'enquête</title>
 
 <link rel="stylesheet" href="../style.css">
