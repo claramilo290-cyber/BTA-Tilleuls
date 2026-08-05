@@ -4,11 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Base personnes BTA</title>
+<title>Recherche personnes</title>
 
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ordinateur.css">
 
 </head>
 
@@ -16,519 +15,81 @@
 <body>
 
 
-<div class="page_dossier">
+<h1>👤 Base personnes</h1>
 
 
-<h1>👥 Base personnes</h1>
-
-<h2>Recherche administrative</h2>
+<input id="recherche" placeholder="Nom ou prénom">
 
 
-
-<div class="carte">
-
-
-<input 
-id="recherche"
-type="text"
-placeholder="Nom, prénom ou ville..."
-onkeyup="rechercher()"
->
-
-
-
-<select id="filtre" onchange="rechercher()">
-
-
-<option value="tous">
-Toutes les personnes
-</option>
-
-
-<option value="oui">
-Personnes recherchées
-</option>
-
-
-<option value="non">
-Personnes non recherchées
-</option>
-
-
-</select>
-
-
-</div>
-
-
-
-
-
-<div id="liste"></div>
-
-
-
-
-
-
-
-<div id="fiche" class="carte cache">
-
-
-<h2>Fiche personne</h2>
-
-
-<div id="details"></div>
-
-
-<br>
-
-
-<button onclick="fermerFiche()">
-
-Fermer
-
+<button onclick="chercher()">
+Rechercher
 </button>
 
 
-
-</div>
-
-
-
-
-
-
-
-<br>
-
-
-<button onclick="retour()">
-
-⬅ Retour bureau
-
-</button>
-
-
-
-
-</div>
-
-
-
+<div id="resultats"></div>
 
 
 
 <script src="base_personnes.js"></script>
 
 
-
 <script>
 
 
-
-function afficher(liste){
-
-
-let zone=document.getElementById("liste");
+function chercher(){
 
 
-zone.innerHTML="";
-
-
-
-liste.forEach(function(p){
-
-
-
-zone.innerHTML += `
-
-
-<div class="carte">
-
-
-<h3>
-
-${p.prenom} ${p.nom}
-
-</h3>
-
-
-<p>
-
-📍 ${p.ville} - ${p.departement}
-
-</p>
-
-
-<p>
-
-💼 ${p.profession}
-
-</p>
-
-
-<p>
-
-Recherche :
-${p.recherche}
-
-</p>
-
-
-
-<button onclick="ouvrirFiche(${p.id})">
-
-Voir la fiche
-
-</button>
-
-
-</div>
-
-
-`;
-
-
-
-});
-
-
-
-}
-
-
-
-
-
-
-
-function rechercher(){
-
-
-let texte=document
-.getElementById("recherche")
+let recherche =
+document.getElementById("recherche")
 .value
 .toLowerCase();
 
 
 
-let filtre=document
-.getElementById("filtre")
-.value;
+let resultat =
+personnes.filter(p =>
 
-
-
-let resultat=personnes.filter(function(p){
-
-
-
-let correspond =
-
-p.nom.toLowerCase().includes(texte)
-
+p.nom.toLowerCase().includes(recherche)
 ||
+p.prenom.toLowerCase().includes(recherche)
 
-p.prenom.toLowerCase().includes(texte)
+);
 
-||
 
-p.ville.toLowerCase().includes(texte);
 
+document.getElementById("resultats").innerHTML =
 
+resultat.map(p=>`
 
-let rechercheOk=true;
+<div>
 
+<h2>${p.prenom} ${p.nom}</h2>
 
+<p>Date naissance : ${p.dateNaissance}</p>
 
-if(filtre=="oui"){
+<p>Lieu naissance : ${p.lieuNaissance}</p>
 
-rechercheOk =
-p.recherche=="Oui";
+<p>Ville : ${p.ville}</p>
 
-}
+<p>Profession : ${p.profession}</p>
 
+<p>Téléphone : ${p.telephone}</p>
 
+<p>Antécédents : ${p.antecedents}</p>
 
-if(filtre=="non"){
-
-rechercheOk =
-p.recherche=="Non";
-
-}
-
-
-
-return correspond && rechercheOk;
-
-
-
-});
-
-
-
-afficher(resultat);
-
-
-
-}
-
-
-
-
-
-
-
-
-
-function ouvrirFiche(id){
-
-
-
-let p=personnes.find(function(x){
-
-return x.id===id;
-
-});
-
-
-
-
-document
-.getElementById("fiche")
-.classList.remove("cache");
-
-
-
-
-
-let voitures="";
-
-
-
-if(p.vehicules && p.vehicules.length>0){
-
-
-p.vehicules.forEach(function(v){
-
-
-
-voitures += `
-
-
-<div class="carte">
-
-
-<h3>🚗 Véhicule</h3>
-
-
-<p>
-Marque :
-${v.marque}
-</p>
-
-
-<p>
-Modèle :
-${v.modele}
-</p>
-
-
-<p>
-Couleur :
-${v.couleur}
-</p>
-
-
-<p>
-Immatriculation :
-${v.immatriculation}
-</p>
-
-
-<p>
-Propriétaire :
-${v.proprietaire}
-</p>
+<p>Recherche : ${p.recherche}</p>
 
 
 </div>
 
-
-`;
-
-
-
-});
+`).join("");
 
 
 }
-
-else{
-
-
-voitures =
-"<p>Aucun véhicule enregistré</p>";
-
-
-
-}
-
-
-
-
-
-
-
-document
-.getElementById("details")
-.innerHTML = `
-
-
-
-<h2>
-${p.prenom} ${p.nom}
-</h2>
-
-
-
-<p>
-Date de naissance :
-${p.dateNaissance}
-</p>
-
-
-
-<p>
-Lieu de naissance :
-${p.lieuNaissance}
-</p>
-
-
-
-<p>
-Âge :
-${p.age}
-</p>
-
-
-
-<p>
-Adresse :
-${p.adresse}
-</p>
-
-
-
-<p>
-Ville :
-${p.ville}
-</p>
-
-
-
-<p>
-Département :
-${p.departement}
-</p>
-
-
-
-<p>
-Profession :
-${p.profession}
-</p>
-
-
-
-<p>
-Téléphone :
-${p.telephone}
-</p>
-
-
-
-<h3>
-🚗 Véhicules
-</h3>
-
-
-${voitures}
-
-
-
-<h3>
-⚖️ Historique judiciaire
-</h3>
-
-
-
-<p>
-Antécédents :
-${p.antecedents}
-</p>
-
-
-
-<p>
-Recherché :
-${p.recherche}
-</p>
-
-
-
-<p>
-Motif :
-${p.motifRecherche}
-</p>
-
-
-`;
-
-
-
-}
-
-
-
-
-
-
-function fermerFiche(){
-
-
-document
-.getElementById("fiche")
-.classList.add("cache");
-
-
-}
-
-
-
-
-
-function retour(){
-
-
-window.location.href="bureau.html";
-
-
-}
-
-
-
-
-
-afficher(personnes);
-
 
 
 </script>
 
 
-
-
 </body>
-
 </html>
