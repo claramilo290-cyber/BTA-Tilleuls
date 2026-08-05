@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Ordinateur Gendarmerie - Affaire 2026/593</title>
+<link rel="stylesheet" href="ordinateur.css">
+</head>
 
+<body>
+
+<header>
+<h1>💻 Ordinateur Gendarmerie</h1>
+<h2>Affaire 2026/593</h2>
+</header>
+
+
+<nav>
+<button>📁 Dossier affaire</button>
+<button>👤 Personnes</button>
+<button>🚗 Véhicules</button>
+<button>📧 Messagerie</button>
+<button>⚖️ Procureur</button>
+</nav>
+
+
+<section>
+<h2>Recherche personne</h2>
+
+<input id="recherche" placeholder="Nom ou prénom">
+
+<button onclick="chercher()">
+Rechercher
+</button>
+
+<div id="resultats"></div>
+
+</section>
+
+
+<script src="base_personnes.js"></script>
+
+<script>
+
+function chercher(){
+
+let texte=document
+.getElementById("recherche")
+.value
+.toLowerCase();
+
+
+let resultat=personnes.filter(p =>
+p.nom.toLowerCase().includes(texte) ||
+p.prenom.toLowerCase().includes(texte)
+);
+
+
+document.getElementById("resultats").innerHTML =
+resultat.map(p=>`
+
+<div class="fiche">
+
+<h3>${p.prenom} ${p.nom}</h3>
+
+<p>Date naissance : ${p.dateNaissance}</p>
+<p>Lieu naissance : ${p.lieuNaissance}</p>
+<p>Ville : ${p.ville}</p>
+<p>Profession : ${p.profession}</p>
+<p>Téléphone : ${p.telephone}</p>
+<p>Recherche : ${p.recherche}</p>
+
+</div>
+
+`).join("");
+
+}
+
+</script>
+
+
+</body>
+</html>
