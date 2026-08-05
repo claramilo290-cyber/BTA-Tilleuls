@@ -24,152 +24,16 @@
 <h2>Affaire 2026/593 - Les Tilleuls</h2>
 
 
+<input 
+id="recherche"
+type="text"
+placeholder="Rechercher une personne..."
+onkeyup="chercher()"
+>
 
-<div class="carte">
 
 
-<h3>Ryan Belani</h3>
-
-
-<p>
-
-Statut :
-<br>
-Témoin / personne liée à l'affaire
-
-</p>
-
-
-<p>
-
-Âge :
-<br>
-17 ans
-
-</p>
-
-
-<p>
-
-Informations :
-
-<br><br>
-
-Téléphone saisi lors de l'enquête.
-
-<br>
-Analyse numérique en attente.
-
-<br>
-Relations connues à compléter.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="carte">
-
-
-<h3>Moha</h3>
-
-
-<p>
-
-Statut :
-<br>
-Personne liée au dossier
-
-</p>
-
-
-<p>
-
-Informations :
-
-<br><br>
-
-Contact régulier avec Ryan.
-
-<br>
-Appareil numérique à analyser.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="carte">
-
-
-<h3>Nadia Belani</h3>
-
-
-<p>
-
-Statut :
-<br>
-Famille
-
-</p>
-
-
-<p>
-
-Âge :
-<br>
-7 ans
-
-</p>
-
-
-<p>
-
-Lien :
-
-<br>
-Petite sœur de Ryan Belani.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="carte">
-
-
-<h3>Personnes inconnues</h3>
-
-
-<p>
-
-Aucune information disponible.
-
-<br><br>
-
-Les recherches peuvent être complétées avec les nouveaux éléments.
-
-</p>
-
-
-</div>
-
+<div id="listePersonnes"></div>
 
 
 
@@ -183,15 +47,152 @@ Les recherches peuvent être complétées avec les nouveaux éléments.
 </button>
 
 
-
-
 </div>
 
 
 
 
+<script src="base_personnes.js"></script>
+
 
 <script>
+
+
+function afficher(liste){
+
+
+let zone =
+document.getElementById("listePersonnes");
+
+
+zone.innerHTML="";
+
+
+
+liste.forEach(function(personne){
+
+
+
+zone.innerHTML += `
+
+
+<div class="carte">
+
+
+<h3>${personne.prenom} ${personne.nom}</h3>
+
+
+<p>
+Âge : ${personne.age}
+</p>
+
+
+<p>
+Statut : ${personne.statut}
+</p>
+
+
+<p>
+Lien enquête :
+<br>
+${personne.lien}
+</p>
+
+
+<button onclick="voirFiche(${personne.id})">
+
+Voir fiche
+
+</button>
+
+
+</div>
+
+
+`;
+
+
+
+});
+
+
+}
+
+
+
+
+
+function chercher(){
+
+
+let texte =
+document
+.getElementById("recherche")
+.value
+.toLowerCase();
+
+
+
+let resultat =
+personnes.filter(function(p){
+
+
+return (
+
+p.nom.toLowerCase().includes(texte)
+
+||
+
+p.prenom.toLowerCase().includes(texte)
+
+);
+
+
+
+});
+
+
+
+afficher(resultat);
+
+
+
+}
+
+
+
+
+
+function voirFiche(id){
+
+
+let p =
+personnes.find(x=>x.id===id);
+
+
+
+alert(
+
+"FICHE PERSONNE\n\n"+
+
+p.prenom+" "+p.nom+
+
+"\n\nAge : "+p.age+
+
+"\nStatut : "+p.statut+
+
+"\nLien enquête : "+p.lien+
+
+"\nNotes : "+p.notes
+
+);
+
+
+
+}
+
+
+
 
 
 function retour(){
@@ -199,6 +200,12 @@ function retour(){
 window.location.href="bureau.html";
 
 }
+
+
+
+
+afficher(personnes);
+
 
 
 </script>
