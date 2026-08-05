@@ -24,13 +24,16 @@
 <h2>Affaire 2026/593 - Les Tilleuls</h2>
 
 
+
 <div class="carte">
 
 
 <h3>⚖️ Procureur</h3>
 
+
 <p>
-Objet : Autorisation de poursuite des investigations
+<b>Objet :</b>
+Demande d'autorisation d'analyse numérique
 </p>
 
 
@@ -40,17 +43,25 @@ Bonjour,
 
 <br><br>
 
-Suite aux premiers éléments recueillis dans l'affaire 2026/593,
-vous êtes autorisés à poursuivre les recherches concernant les personnes
-liées au dossier.
+Dans le cadre de l'affaire 2026/593,
+vous pouvez formuler une demande concernant
+l'analyse d'un élément saisi.
 
 <br><br>
 
-Les saisies numériques devront être réalisées conformément à la procédure.
+Votre demande doit être motivée :
+<br>
+- expliquer le lien avec l'enquête ;
+<br>
+- préciser les raisons de la demande ;
+<br>
+- expliquer l'intérêt des éléments recherchés.
 
 <br><br>
 
-Cordialement.
+Cordialement,
+<br>
+Le parquet.
 
 </p>
 
@@ -64,90 +75,202 @@ Cordialement.
 <div class="carte">
 
 
-<h3>👮 Chef de brigade</h3>
+<h3>✍️ Votre réponse</h3>
 
 
-<p>
-Objet : Ouverture de l'affaire
-</p>
+<textarea 
+id="reponse"
+placeholder="Écrivez votre demande au procureur ici..."
+></textarea>
 
 
-<p>
-
-L'équipe est chargée d'analyser :
 
 <br><br>
 
-- Les téléphones saisis
-<br>
-- Les fichiers personnels
-<br>
-- Les déplacements connus
-<br>
-- Les relations entre les personnes
 
-</p>
+<button onclick="envoyerMail()">
 
-
-</div>
-
-
-
-
-
-
-<div class="carte">
-
-
-<h3>🔎 Analyse numérique</h3>
-
-
-<p>
-Objet : Matériel récupéré
-</p>
-
-
-<p>
-
-Deux appareils ont été placés sous scellés.
-
-<br><br>
-
-Analyse en attente.
-
-</p>
-
-
-</div>
-
-
-
-
-<br>
-
-
-<button onclick="retour()">
-
-⬅ Retour au bureau
+Envoyer
 
 </button>
 
 
+
 </div>
+
+
+
+
+
+<div id="retour" class="carte cache">
+
+
+</div>
+
+
+
+
+
+
+<br>
+
+
+<button onclick="retourBureau()">
+
+⬅ Retour bureau
+
+</button>
+
+
+
+</div>
+
+
 
 
 
 <script>
 
 
-function retour(){
+function envoyerMail(){
 
-window.location.href="bureau.html";
+
+let texte =
+document.getElementById("reponse").value.toLowerCase();
+
+
+
+let points = 0;
+
+
+
+// critères de qualité
+
+
+if(
+texte.includes("affaire")
+||
+texte.includes("enquête")
+){
+
+points++;
 
 }
 
 
+
+if(
+texte.includes("raison")
+||
+texte.includes("permet")
+||
+texte.includes("afin")
+){
+
+points++;
+
+}
+
+
+
+if(
+texte.includes("preuve")
+||
+texte.includes("élément")
+||
+texte.includes("information")
+){
+
+points++;
+
+}
+
+
+
+if(
+texte.includes("téléphone")
+||
+texte.includes("appareil")
+||
+texte.includes("donnée")
+){
+
+points++;
+
+}
+
+
+
+
+let resultat =
+document.getElementById("retour");
+
+
+
+resultat.classList.remove("cache");
+
+
+
+
+
+if(points >= 3){
+
+
+resultat.innerHTML =
+
+`
+<h3>✅ Autorisation accordée</h3>
+
+<p>
+Votre demande est suffisamment motivée.
+<br><br>
+Le procureur autorise la poursuite des investigations.
+</p>
+`;
+
+
+
+}
+
+else{
+
+
+resultat.innerHTML =
+
+`
+<h3>❌ Demande refusée</h3>
+
+<p>
+Votre demande manque de justification.
+<br><br>
+Le procureur demande une motivation plus précise.
+</p>
+`;
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+function retourBureau(){
+
+
+window.location.href="bureau.html";
+
+
+}
+
+
+
 </script>
+
 
 
 </body>
