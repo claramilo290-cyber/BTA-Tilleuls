@@ -1,82 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ordinateur Gendarmerie - Affaire 2026/593</title>
+
 <link rel="stylesheet" href="ordinateur.css">
+
 </head>
+
 
 <body>
 
+
 <header>
+
 <h1>💻 Ordinateur Gendarmerie</h1>
+
 <h2>Affaire 2026/593</h2>
+
+<p>Poste informatique enquêteur</p>
+
 </header>
 
 
+
 <nav>
-<button>📁 Dossier affaire</button>
-<button>👤 Personnes</button>
-<button>🚗 Véhicules</button>
-<button>📧 Messagerie</button>
-<button>⚖️ Procureur</button>
+
+<a href="ordinateur.html">
+🏠 Accueil
+</a>
+
+<a href="personnes.html">
+👤 Personnes
+</a>
+
+<a href="mails.html">
+📧 Messagerie
+</a>
+
+<a href="bureau.html">
+📂 Bureau
+</a>
+
+<a href="../pages/enquete.html">
+🔎 Enquête
+</a>
+
 </nav>
 
 
-<section>
-<h2>Recherche personne</h2>
 
-<input id="recherche" placeholder="Nom ou prénom">
 
-<button onclick="chercher()">
-Rechercher
-</button>
+<main>
 
-<div id="resultats"></div>
+
+<section class="dossier">
+
+<h2>📁 Dossier actuel</h2>
+
+<p>
+<strong>Affaire :</strong> 2026/593
+</p>
+
+<p>
+<strong>Statut :</strong> En cours
+</p>
+
+<p>
+<strong>Service :</strong> Gendarmerie
+</p>
 
 </section>
 
 
-<script src="base_personnes.js"></script>
 
-<script>
-
-function chercher(){
-
-let texte=document
-.getElementById("recherche")
-.value
-.toLowerCase();
+<section class="applications">
 
 
-let resultat=personnes.filter(p =>
-p.nom.toLowerCase().includes(texte) ||
-p.prenom.toLowerCase().includes(texte)
-);
+<h2>Applications disponibles</h2>
 
 
-document.getElementById("resultats").innerHTML =
-resultat.map(p=>`
 
-<div class="fiche">
+<div class="app">
 
-<h3>${p.prenom} ${p.nom}</h3>
+<h3>👤 Base personnes</h3>
 
-<p>Date naissance : ${p.dateNaissance}</p>
-<p>Lieu naissance : ${p.lieuNaissance}</p>
-<p>Ville : ${p.ville}</p>
-<p>Profession : ${p.profession}</p>
-<p>Téléphone : ${p.telephone}</p>
-<p>Recherche : ${p.recherche}</p>
+<p>
+Recherche des personnes enregistrées.
+</p>
+
+<a href="personnes.html">
+Ouvrir
+</a>
 
 </div>
 
-`).join("");
 
-}
 
-</script>
+
+<div class="app">
+
+<h3>🚗 Base véhicules</h3>
+
+<p>
+Recherche véhicules et propriétaires.
+</p>
+
+<a href="bureau.html">
+Ouvrir
+</a>
+
+</div>
+
+
+
+
+<div class="app">
+
+<h3>📧 Messagerie</h3>
+
+<p>
+Réception et envoi des mails.
+</p>
+
+<a href="mails.html">
+Ouvrir
+</a>
+
+</div>
+
+
+
+
+<div class="app">
+
+<h3>📂 Bureau enquête</h3>
+
+<p>
+Documents, procédures et fichiers.
+</p>
+
+<a href="bureau.html">
+Ouvrir
+</a>
+
+</div>
+
+
+
+</section>
+
+
+</main>
+
+
+
+
+<footer>
+
+<p>
+Gendarmerie - Système interne sécurisé
+</p>
+
+</footer>
+
 
 
 </body>
+
 </html>
