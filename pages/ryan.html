@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Téléphone Ryan</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="iphone">
+
+
+
+<!-- ECRAN VERROUILLAGE -->
+
+<div id="lockscreen" class="ecran verrou">
+
+
+<div class="barre_statut">
+
+<span>22:00</span>
+
+<span>📶 5G 🔋96%</span>
+
+</div>
+
+
+
+<div class="fond">
+
+
+<div class="heure">
+
+22:00
+
+</div>
+
+
+<div class="date">
+
+Jeudi 17 décembre 2026
+
+</div>
+
+
+
+<div class="notification">
+
+🔒
+
+</div>
+
+
+
+<div class="glisser">
+
+Balayer pour ouvrir
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ECRAN ACCUEIL -->
+
+
+<div id="accueil" class="ecran accueil cache">
+
+
+
+<div class="barre_statut">
+
+<span id="heureAccueil">
+22:00
+</span>
+
+<span>
+📶 5G 🔋96%
+</span>
+
+</div>
+
+
+
+
+<div class="applications">
+
+
+
+<div class="app" onclick="ouvrirApp('messages')">
+
+💬
+
+<p>Messages</p>
+
+</div>
+
+
+
+
+<div class="app" onclick="ouvrirApp('contacts')">
+
+👥
+
+<p>Contacts</p>
+
+</div>
+
+
+
+
+<div class="app" onclick="ouvrirApp('photos')">
+
+🖼️
+
+<p>Photos</p>
+
+</div>
+
+
+
+
+<div class="app">
+
+📸
+
+<p>Flash</p>
+
+</div>
+
+
+
+
+<div class="app">
+
+📞
+
+<p>Téléphone</p>
+
+</div>
+
+
+
+
+<div class="app">
+
+⚙️
+
+<p>Réglages</p>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<div class="dock">
+
+🌐
+📷
+🎵
+📁
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- APPLICATION MESSAGE POUR TEST -->
+
+
+<div id="messages" class="ecran application cache">
+
+
+<h2>💬 Messages</h2>
+
+
+<div class="message">
+
+Maman ❤️
+
+<br>
+
+Dernier message :
+"Rentre bien ce soir"
+
+</div>
+
+
+
+<div class="message">
+
+Moha
+
+<br>
+
+Conversation récente
+
+</div>
+
+
+
+<button onclick="retourAccueil()">
+
+Accueil
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BOUTON BAS -->
+
+<div class="bouton_home"
+onclick="retourAccueil()">
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+
+let ouvert=false;
+
+
+
+document.getElementById("lockscreen")
+.onclick=function(){
+
+
+document.getElementById("lockscreen")
+.classList.add("cache");
+
+
+document.getElementById("accueil")
+.classList.remove("cache");
+
+
+}
+
+
+
+
+function ouvrirApp(app){
+
+
+document.getElementById("accueil")
+.classList.add("cache");
+
+
+document.getElementById(app)
+.classList.remove("cache");
+
+
+}
+
+
+
+function retourAccueil(){
+
+
+document.querySelectorAll(".ecran")
+.forEach(e=>{
+
+e.classList.add("cache");
+
+});
+
+
+document.getElementById("accueil")
+.classList.remove("cache");
+
+
+}
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
