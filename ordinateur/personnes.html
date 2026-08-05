@@ -6,6 +6,420 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Base personnes - BTA</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="page_dossier">
+
+
+<h1>👥 Base personnes</h1>
+
+<h2>Recherche administrative</h2>
+
+
+
+<div class="carte">
+
+
+<input 
+id="recherche"
+type="text"
+placeholder="Rechercher un nom, prénom ou ville..."
+onkeyup="rechercher()"
+>
+
+
+
+<select id="filtre" onchange="rechercher()">
+
+<option value="tous">
+Toutes les personnes
+</option>
+
+
+<option value="oui">
+Personnes recherchées
+</option>
+
+
+<option value="non">
+Personnes non recherchées
+</option>
+
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+<div id="liste"></div>
+
+
+
+
+
+<div id="fiche" class="carte cache">
+
+
+<h2>Fiche personne</h2>
+
+
+<div id="contenuFiche"></div>
+
+
+<button onclick="fermerFiche()">
+Fermer
+</button>
+
+
+</div>
+
+
+
+
+
+<br>
+
+
+<button onclick="retour()">
+
+⬅ Retour bureau
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="base_personnes.js"></script>
+
+
+<script>
+
+
+
+let affichage = personnes;
+
+
+
+
+function afficher(liste){
+
+
+let zone = document.getElementById("liste");
+
+
+zone.innerHTML="";
+
+
+
+liste.forEach(function(p){
+
+
+
+zone.innerHTML += `
+
+
+<div class="carte">
+
+
+<h3>
+${p.prenom} ${p.nom}
+</h3>
+
+
+<p>
+📍 ${p.ville} (${p.departement})
+</p>
+
+
+<p>
+💼 ${p.profession}
+</p>
+
+
+<p>
+Recherche :
+${p.recherche}
+</p>
+
+
+
+<button onclick="ouvrirFiche(${p.id})">
+
+Ouvrir fiche
+
+</button>
+
+
+
+</div>
+
+
+`;
+
+
+
+});
+
+
+}
+
+
+
+
+
+function rechercher(){
+
+
+
+let texte = document
+.getElementById("recherche")
+.value
+.toLowerCase();
+
+
+
+let filtre =
+document
+.getElementById("filtre")
+.value;
+
+
+
+
+affichage =
+personnes.filter(function(p){
+
+
+
+let rechercheTexte =
+
+p.nom.toLowerCase().includes(texte)
+
+||
+
+p.prenom.toLowerCase().includes(texte)
+
+||
+
+p.ville.toLowerCase().includes(texte);
+
+
+
+let rechercheFiltre = true;
+
+
+
+if(filtre=="oui"){
+
+rechercheFiltre =
+p.recherche=="Oui";
+
+}
+
+
+
+if(filtre=="non"){
+
+rechercheFiltre =
+p.recherche=="Non";
+
+}
+
+
+
+return rechercheTexte && rechercheFiltre;
+
+
+
+});
+
+
+
+afficher(affichage);
+
+
+
+}
+
+
+
+
+
+
+
+
+function ouvrirFiche(id){
+
+
+
+let p =
+personnes.find(function(x){
+
+return x.id===id;
+
+});
+
+
+
+
+
+document
+.getElementById("fiche")
+.classList.remove("cache");
+
+
+
+
+
+document
+.getElementById("contenuFiche")
+.innerHTML = `
+
+
+
+<h3>
+${p.prenom} ${p.nom}
+</h3>
+
+
+<p>
+Date de naissance :
+${p.dateNaissance}
+</p>
+
+
+<p>
+Lieu de naissance :
+${p.lieuNaissance}
+</p>
+
+
+<p>
+Adresse :
+${p.adresse}
+</p>
+
+
+<p>
+Ville :
+${p.ville}
+</p>
+
+
+<p>
+Département :
+${p.departement}
+</p>
+
+
+<p>
+Profession :
+${p.profession}
+</p>
+
+
+<p>
+Téléphone :
+${p.telephone}
+</p>
+
+
+<p>
+Véhicule :
+${p.vehicule}
+</p>
+
+
+<p>
+Antécédents :
+${p.antecedents}
+</p>
+
+
+<p>
+Recherché :
+${p.recherche}
+</p>
+
+
+<p>
+Motif :
+${p.motifRecherche}
+</p>
+
+
+`;
+
+
+
+}
+
+
+
+
+
+function fermerFiche(){
+
+
+document
+.getElementById("fiche")
+.classList.add("cache");
+
+
+}
+
+
+
+
+
+function retour(){
+
+
+window.location.href="bureau.html";
+
+
+}
+
+
+
+
+afficher(personnes);
+
+
+
+</script>
+
+
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Fichier personnes - Affaire 2026/593</title>
 
 <link rel="stylesheet" href="../style.css">
