@@ -1,56 +1,933 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Affaire 2026/593</title>
-<link rel="stylesheet" href="style.css">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Affaire 2026/593
+
+</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<script defer
+src="script.js"></script>
+
 </head>
 
 <body>
 
-<header>
-<h1>🕵️ Affaire 2026/593</h1>
-<p>Simulation enquête gendarmerie</p>
-</header>
+<div id="bootScreen">
 
+<div class="bootLogo">
 
-<main>
+<div class="logoCircle">
 
-<div class="menu">
-
-<div class="card">
-<h2>💻 Ordinateur Gendarmerie</h2>
-<p>Poste informatique enquêteur</p>
-
-<a href="ordinateur/ordinateur.html">
-Ouvrir ordinateur
-</a>
-</div>
-
-
-<div class="card">
-<h2>📱 Téléphones</h2>
-<p>Analyse des appareils</p>
-
-<a href="telephone/telephone.html">
-Ouvrir téléphones
-</a>
-</div>
-
-
-<div class="card">
-<h2>🔎 Enquête</h2>
-
-<a href="pages/enquete.html">
-Ouvrir enquête
-</a>
-</div>
-
+🦅
 
 </div>
 
-</main>
+<h1>
+
+Système d'Enquête
+
+</h1>
+
+<p>
+
+Chargement du poste enquêteur...
+
+</p>
+
+<div class="bootBar">
+
+<div id="bootProgress"></div>
+
+</div>
+
+</div>
+
+</div>
 
 
+<div id="desktop">
+
+<header id="topBar">
+
+<div id="systemName">
+
+🦅
+Système d'Enquête
+
+</div>
+
+<div id="dateHeure">
+
+00:00
+
+</div>
+
+</header></header>
+
+
+<main id="desktopArea">
+
+
+<div class="iconGrid">
+
+
+<div class="desktopIcon"
+onclick="openApp('affaires')">
+
+<div class="icon">
+
+📁
+
+</div>
+
+<span>
+
+Affaires
+
+</span>
+
+</div>
+
+
+
+<div class="desktopIcon"
+onclick="openApp('personnes')">
+
+<div class="icon">
+
+👤
+
+</div>
+
+<span>
+
+Personnes
+
+</span>
+
+</div>
+
+
+
+<div class="desktopIcon"
+onclick="openApp('vehicules')">
+
+<div class="icon">
+
+🚗
+
+</div>
+
+<span>
+
+Véhicules
+
+</span>
+
+</div>
+
+
+
+<div class="desktopIcon"
+onclick="openApp('mails')">
+
+<div class="icon">
+
+📧
+
+</div>
+
+<span>
+
+Messagerie
+
+</span>
+
+</div>
+
+
+
+<div class="desktopIcon"
+onclick="openApp('procureur')">
+
+<div class="icon">
+
+⚖️
+
+</div>
+
+<span>
+
+Procureur
+
+</span>
+
+</div>
+
+
+
+<div class="desktopIcon"
+onclick="openApp('procedures')">
+
+<div class="icon">
+
+📄
+
+</div>
+
+<span>
+
+Procédures
+
+</span>
+
+</div>
+
+
+
+<div class="desktopIcon"
+onclick="openApp('telephones')">
+
+<div class="icon">
+
+📱
+
+</div>
+
+<span>
+
+Téléphones saisis
+
+</span>
+
+</div>
+
+
+
+<div class="desktopIcon"
+onclick="openApp('scelles')">
+
+<div class="icon">
+
+📦
+
+</div>
+
+<span>
+
+Scellés
+
+</span>
+
+</div>
+
+
+</div></main>
+
+
+
+<!-- Fenêtres des applications -->
+
+<div id="windowContainer">
+
+
+
+<div class="appWindow"
+id="affairesWindow">
+
+<div class="windowHeader">
+
+<span>
+📁 Affaires
+</span>
+
+<button onclick="closeApp('affaires')">
+✖
+</button>
+
+</div>
+
+
+<div class="windowContent">
+
+<h2>
+Affaires enregistrées
+</h2>
+
+
+<div class="folder">
+
+📁 2026-593 ⭐
+
+<p>
+Affaire principale - Enquête en cours
+</p>
+
+</div>
+
+
+<div class="folder">
+
+📁 2026-578
+
+<p>
+Cambriolages multiples
+</p>
+
+</div>
+
+
+<div class="folder">
+
+📁 2026-561
+
+<p>
+Disparition inquiétante
+</p>
+
+</div>
+
+
+<div class="folder">
+
+📁 Archives 2025
+
+<p>
+Affaires clôturées
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="appWindow"
+id="personnesWindow">
+
+
+<div class="windowHeader">
+
+<span>
+👤 Base personnes
+</span>
+
+<button onclick="closeApp('personnes')">
+✖
+</button>
+
+</div>
+
+
+<div class="windowContent">
+
+<h2>
+Recherche personne
+</h2>
+
+
+<input
+type="text"
+id="searchPersonne"
+placeholder="Nom ou prénom">
+
+
+<button onclick="searchPerson()">
+
+Rechercher
+
+</button>
+
+
+<div id="personResult">
+
+</div>
+
+
+</div>
+
+
+</div><div class="appWindow"
+id="vehiculesWindow">
+
+
+<div class="windowHeader">
+
+<span>
+🚗 Base véhicules
+</span>
+
+
+<button onclick="closeApp('vehicules')">
+
+✖
+
+</button>
+
+
+</div>
+
+
+
+<div class="windowContent">
+
+
+<h2>
+Recherche véhicule
+</h2>
+
+
+<input
+type="text"
+id="searchVehicule"
+placeholder="Plaque, marque, modèle...">
+
+
+
+<button onclick="searchVehicle()">
+
+Rechercher
+
+</button>
+
+
+
+<div id="vehicleResult">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="appWindow"
+id="mailsWindow">
+
+
+<div class="windowHeader">
+
+
+<span>
+
+📧 Messagerie
+
+</span>
+
+
+<button onclick="closeApp('mails')">
+
+✖
+
+</button>
+
+
+</div>
+
+
+
+<div class="windowContent">
+
+
+<h2>
+Boîte mail interne
+</h2>
+
+
+<div class="mail">
+
+<strong>
+Procureur
+</strong>
+
+
+<p>
+Nouvelle demande concernant l'affaire 2026-593.
+</p>
+
+
+</div>
+
+
+
+<div class="mail">
+
+<strong>
+Laboratoire
+
+</strong>
+
+
+<p>
+Résultats d'analyse disponibles.
+</p>
+
+
+</div>
+
+
+<button>
+
+Nouveau message
+
+</button>
+
+
+</div>
+
+
+</div><div class="appWindow"
+id="procureurWindow">
+
+
+<div class="windowHeader">
+
+<span>
+⚖️ Procureur
+</span>
+
+
+<button onclick="closeApp('procureur')">
+
+✖
+
+</button>
+
+
+</div>
+
+
+
+<div class="windowContent">
+
+
+<h2>
+Échanges judiciaires
+</h2>
+
+
+
+<div class="mail">
+
+
+<strong>
+Parquet régional
+</strong>
+
+
+<p>
+
+Demandes en attente concernant les actes d'enquête.
+
+</p>
+
+
+</div>
+
+
+
+<div class="mail">
+
+
+<strong>
+Autorisation recherche
+
+</strong>
+
+
+<p>
+
+Statut :
+En attente de validation.
+
+</p>
+
+
+</div>
+
+
+
+<textarea
+placeholder="Écrire une demande au procureur...">
+
+</textarea>
+
+
+<br>
+
+
+<button>
+
+Envoyer
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="appWindow"
+id="proceduresWindow">
+
+
+<div class="windowHeader">
+
+
+<span>
+📄 Procédures
+</span>
+
+
+<button onclick="closeApp('procedures')">
+
+✖
+
+</button>
+
+
+</div>
+
+
+
+<div class="windowContent">
+
+
+<h2>
+Documents enquête
+
+</h2>
+
+
+<div class="document">
+
+📄 Rapport d'intervention
+
+</div>
+
+
+<div class="document">
+
+📄 Procès-verbal d'audition
+
+</div>
+
+
+<div class="document">
+
+📄 Réquisition
+
+</div>
+
+
+<div class="document">
+
+📄 Rapport technique
+
+</div>
+
+
+</div>
+
+
+</div><div class="appWindow"
+id="telephonesWindow">
+
+
+<div class="windowHeader">
+
+
+<span>
+📱 Téléphones saisis
+</span>
+
+
+<button onclick="closeApp('telephones')">
+
+✖
+
+</button>
+
+
+</div>
+
+
+
+<div class="windowContent">
+
+
+<h2>
+Appareils enregistrés
+
+</h2>
+
+
+
+<div class="phoneCard">
+
+
+<h3>
+📱 Téléphone Ryan
+</h3>
+
+
+<p>
+
+Statut :
+Saisi - Analyse en cours
+
+</p>
+
+
+<p>
+
+Protection :
+Code PIN activé
+
+</p>
+
+
+<button>
+
+Ouvrir
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="phoneCard">
+
+
+<h3>
+📱 Téléphone Moha
+</h3>
+
+
+<p>
+
+Statut :
+Saisi - En attente d'analyse
+
+</p>
+
+
+<p>
+
+Protection :
+Mot de passe requis
+
+</p>
+
+
+<button>
+
+Ouvrir
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="appWindow"
+id="scellesWindow">
+
+
+<div class="windowHeader">
+
+
+<span>
+📦 Scellés
+</span>
+
+
+
+<button onclick="closeApp('scelles')">
+
+✖
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="windowContent">
+
+
+<h2>
+Registre des scellés
+
+</h2>
+
+
+
+<div class="document">
+
+📦 Téléphone - SC-001
+
+</div>
+
+
+
+<div class="document">
+
+📦 Disque dur - SC-002
+
+</div>
+
+
+
+<div class="document">
+
+📦 Documents papier - SC-003
+
+</div>
+
+
+
+</div>
+
+
+
+</div></div>
+
+
+<!-- Barre des tâches -->
+
+<footer id="taskbar">
+
+
+<div id="startButton">
+
+🪟 Menu
+
+</div>
+
+
+
+<div id="taskApps">
+
+</div>
+
+
+
+<div id="systemInfo">
+
+
+<span id="network">
+
+📶 Connecté
+
+</span>
+
+
+<span id="clock">
+
+00:00
+
+</span>
+
+
+</div>
+
+
+</footer>
+
+
+
+</div>
+
+<!-- Zone de notifications système -->
+
+<div id="notifications">
+
+</div>
+
+
+<!-- Menu démarrer -->
+
+<div id="startMenu">
+
+<h3>
+🦅 Système d'enquête
+</h3>
+
+
+<div onclick="openApp('affaires')">
+📁 Affaires
+</div>
+
+
+<div onclick="openApp('personnes')">
+👤 Personnes
+</div>
+
+
+<div onclick="openApp('vehicules')">
+🚗 Véhicules
+</div>
+
+
+<div onclick="openApp('mails')">
+📧 Messagerie
+</div>
+
+
+<div onclick="openApp('procureur')">
+⚖️ Procureur
+</div>
+
+
+</div>
+  
 </body>
+
 </html>
