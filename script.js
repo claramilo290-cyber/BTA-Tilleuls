@@ -1,42 +1,72 @@
-function connexion(){
+// Horloge système
+
+function updateClock(){
+
+    let date = new Date();
+
+    let heure =
+    date.getHours()
+    .toString()
+    .padStart(2,"0");
+
+    let minute =
+    date.getMinutes()
+    .toString()
+    .padStart(2,"0");
 
 
-let identifiant =
-document.getElementById("identifiant").value;
+    let element =
+    document.getElementById("clock");
 
 
-let motdepasse =
-document.getElementById("motdepasse").value;
+    if(element){
 
+        element.innerHTML =
+        heure + ":" + minute;
 
-
-if(
-identifiant === "BTA-TILLEULS" 
-&& 
-motdepasse === "GND2026"
-){
-
-window.location.href="pages/enquete.html";
-
-}
-
-
-else if(
-identifiant === "RYAN-BELANI"
-&&
-motdepasse === "RB2026"
-){
-
-window.location.href="pages/ryan.html";
+    }
 
 }
 
 
-else{
+setInterval(updateClock,1000);
 
-alert("Identifiant ou mot de passe incorrect");
+updateClock();
+
+
+
+
+// Ouverture d'une application
+
+function openApp(app){
+
+    let fenetre =
+    document.getElementById(app+"Window");
+
+
+    if(fenetre){
+
+        fenetre.style.display="block";
+
+    }
 
 }
 
+
+
+
+// Fermeture d'une application
+
+function closeApp(app){
+
+    let fenetre =
+    document.getElementById(app+"Window");
+
+
+    if(fenetre){
+
+        fenetre.style.display="none";
+
+    }
 
 }
