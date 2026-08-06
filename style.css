@@ -1,1201 +1,168 @@
-/* =========================
-   BASE GENERALE
-========================= */
-
-
 *{
-
-box-sizing:border-box;
-
-}
-
-
-
-body{
-
-margin:0;
-
-padding:0;
-
-font-family:Arial, Helvetica, sans-serif;
-
-background:#080c10;
-
-color:white;
-
-}
-
-
-
-button{
-
-background:#29485f;
-
-color:white;
-
-border:none;
-
-padding:12px 20px;
-
-border-radius:10px;
-
-cursor:pointer;
-
-font-size:15px;
-
-}
-
-
-
-button:hover{
-
-background:#3c6b8c;
-
-}
-
-
-
-.cache{
-
-display:none;
-
-}
-
-
-
-
-
-/* =========================
-   ORDINATEUR BTA
-========================= */
-
-
-.ordinateur{
-
-min-height:100vh;
-
-background:#0d141b;
-
-padding:30px;
-
-}
-
-
-
-.ordinateur header{
-
-background:#162532;
-
-padding:25px;
-
-border-radius:20px;
-
-border:1px solid #334b5c;
-
-margin-bottom:30px;
-
-}
-
-
-
-.ordinateur h1{
-
-font-size:34px;
-
-}
-
-
-
-.etat{
-
-color:#b8c4cc;
-
-margin-top:20px;
-
-}
-
-
-
-
-.menu_pc{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.icone_pc{
-
-background:#192f3f;
-
-padding:30px;
-
-border-radius:20px;
-
-text-align:center;
-
-cursor:pointer;
-
-border:1px solid #31536b;
-
-transition:0.3s;
-
-}
-
-
-
-.icone_pc:hover{
-
-transform:scale(1.04);
-
-background:#24465d;
-
-}
-
-
-
-.icone_pc h3{
-
-font-size:22px;
-
-}
-
-
-
-.icone_pc p{
-
-color:#bbc6ce;
-
-}
-
-
-
-
-
-/* =========================
-   PAGES DOSSIERS
-========================= */
-
-
-.page_dossier{
-
-min-height:100vh;
-
-background:#101820;
-
-padding:30px;
-
-}
-
-
-
-.page_dossier h1{
-
-font-size:32px;
-
-}
-
-
-
-.carte{
-
-background:#192b38;
-
-border-radius:20px;
-
-padding:25px;
-
-margin-bottom:25px;
-
-border:1px solid #304858;
-
-}
-
-
-
-.carte h3{
-
-margin-top:0;
-
-}
-
-
-
-
-
-/* =========================
-   MAILS
-========================= */
-
-
-textarea{
-
-width:100%;
-
-height:220px;
-
-resize:none;
-
-background:#080c10;
-
-color:white;
-
-border:1px solid #3b5668;
-
-border-radius:15px;
-
-padding:15px;
-
-font-size:16px;
-
-}
-
-
-
-.mail{
-
-background:#1b303e;
-
-padding:20px;
-
-border-radius:15px;
-
-margin-bottom:20px;
-
-}
-
-
-
-.mail_reponse{
-
-background:#223b4d;
-
-padding:20px;
-
-border-radius:15px;
-
-}
-
-
-
-
-
-/* =========================
-   TELEPHONE
-========================= */
-
-
-.telephone{
-
-width:390px;
-
-height:850px;
-
-margin:30px auto;
-
-background:black;
-
-border-radius:50px;
-
-overflow:hidden;
-
-position:relative;
-
-box-shadow:0 0 50px #000;
-
-}
-
-
-
-.ecran{
-
-position:absolute;
-
-width:100%;
-
-height:100%;
-
-}
-
-
-
-
-
-/* BARRE DU HAUT */
-
-
-.statut{
-
-display:flex;
-
-justify-content:space-between;
-
-padding:18px;
-
-font-size:15px;
-
-z-index:5;
-
-}
-
-
-
-
-
-/* ECRAN VERROUILLE */
-
-
-.verrouillage{
-
-background-image:url("../images/ryan/fond_ecran.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-
-
-.fondVerrou{
-
-text-align:center;
-
-padding-top:100px;
-
-}
-
-
-
-.heureGrande{
-
-font-size:80px;
-
-font-weight:300;
-
-}
-
-
-
-.date{
-
-font-size:20px;
-
-}
-
-
-
-.notification{
-
-background:rgba(40,40,40,0.7);
-
-margin:20px;
-
-padding:15px;
-
-border-radius:20px;
-
-backdrop-filter:blur(10px);
-
-}
-
-
-
-.ouvrir{
-
-position:absolute;
-
-bottom:60px;
-
-width:100%;
-
-text-align:center;
-
-}
-
-
-
-
-
-/* ACCUEIL TELEPHONE */
-
-
-.accueil{
-
-background-image:url("../images/ryan/fond_ecran.jpg");
-
-background-size:cover;
-
-}
-
-
-
-.encoche{
-
-height:30px;
-
-width:120px;
-
-background:black;
-
-border-radius:20px;
-
-margin:auto;
-
-}
-
-
-
-.grilleApplications{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
-padding:35px 20px;
-
-}
-
-
-
-.application{
-
-text-align:center;
-
-}
-
-
-
-.icone{
-
-height:60px;
-
-width:60px;
-
-border-radius:18px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-margin:auto;
-
-font-size:30px;
-
-}
-
-
-
-.bleu{
-
-background:#007aff;
-
-}
-
-
-
-.vert{
-
-background:#34c759;
-
-}
-
-
-
-.rouge{
-
-background:#ff3b30;
-
-}
-
-
-
-.violet{
-
-background:#af52de;
-
-}
-
-
-
-.gris{
-
-background:#555;
-
-}
-
-
-
-.noir{
-
-background:#111;
-
-}
-
-
-
-.dock{
-
-position:absolute;
-
-bottom:25px;
-
-left:20px;
-
-right:20px;
-
-background:rgba(255,255,255,0.25);
-
-padding:15px;
-
-border-radius:30px;
-
-display:flex;
-
-justify-content:space-around;
-
-font-size:28px;
-
-}
-
-
-
-
-
-/* =========================
-   APPLICATIONS TELEPHONE
-========================= */
-
-
-.applicationPage{
-
-background:#111;
-
-padding:20px;
-
-}
-
-
-
-.barreApp{
-
-display:flex;
-
-align-items:center;
-
-gap:20px;
-
-}
-
-
-
-.conversation{
-
-background:#222;
-
-padding:18px;
-
-border-radius:15px;
-
-margin:15px 0;
-
-}
-
-
-
-.contactFiche{
-
-background:#222;
-
-padding:20px;
-
-border-radius:15px;
-
-margin:15px 0;
-
-}
-
-
-
-
-
-/* PHOTOS */
-
-
-.galerie{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:15px;
-
-}
-
-
-
-.photo img{
-
-width:100%;
-
-border-radius:15px;
-
-}
-
-
-
-
-
-/* BOUTON HOME */
-
-
-.boutonHome{
-
-position:absolute;
-
-bottom:10px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-height:5px;
-
-width:120px;
-
-background:white;
-
-border-radius:10px;
-
-}*{
     box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 
 body{
 
     margin:0;
-    padding:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0b0f14;
+    height:100vh;
+    background:#111827;
     color:white;
 
 }
 
 
-/* =========================
-   PAGE ORDINATEUR BTA
-========================= */
 
+.loading{
 
-.ordinateur{
-
-    min-height:100vh;
-    padding:30px;
-    background:#0b1118;
-
-}
-
-
-
-.ordinateur header{
-
-    background:#172330;
-    padding:25px;
-    border-radius:20px;
-    margin-bottom:30px;
-    border:1px solid #34495e;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+    135deg,
+    #0b1d33,
+    #1e3a5f
+    );
 
 }
 
 
 
-.ordinateur h1{
+.loading h1{
 
-    margin-top:0;
-    font-size:32px;
-
-}
-
-
-
-.etat{
-
-    margin-top:20px;
-    color:#bfc7cf;
+    font-size:40px;
 
 }
 
 
 
-/* MENU ORDINATEUR */
+.loader{
 
-
-.menu_pc{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:25px;
-
-}
-
-
-
-.icone_pc{
-
-    background:#1b2c3b;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-    cursor:pointer;
-    transition:0.3s;
-    border:1px solid #38536a;
-
-}
-
-
-
-.icone_pc:hover{
-
-    transform:scale(1.05);
-    background:#254257;
-
-}
-
-
-
-.icone_pc h3{
-
-    font-size:22px;
-    margin:15px 0 10px;
-
-}
-
-
-
-.icone_pc p{
-
-    color:#bfc7cf;
-
-}
-
-
-
-
-
-/* NOTIFICATIONS PC */
-
-
-.notification_pc{
-
-    margin-top:40px;
-    background:#172330;
-    padding:25px;
-    border-radius:20px;
-
-}
-
-
-
-.notification_pc div{
-
-    background:#233746;
-    padding:15px;
-    margin-top:15px;
-    border-radius:12px;
-
-}
-
-
-
-
-
-/* =========================
-   PAGES DOSSIERS
-========================= */
-
-
-.page_dossier{
-
-    min-height:100vh;
-    padding:30px;
-    background:#101820;
-
-}
-
-
-
-.carte{
-
-    background:#1c2c38;
-    padding:20px;
-    border-radius:15px;
-    margin:15px 0;
-
-}
-
-
-
-
-
-/* =========================
-   TELEPHONE RYAN
-========================= */
-
-
-.telephone{
-
-    width:390px;
-    height:850px;
-    margin:30px auto;
-    background:black;
-    border-radius:50px;
+    margin-top:30px;
+    width:250px;
+    height:8px;
+    background:#333;
+    border-radius:10px;
     overflow:hidden;
-    position:relative;
-    box-shadow:0 0 50px black;
 
 }
 
 
 
-.ecran{
+.loader::after{
 
-    position:absolute;
-    width:100%;
+    content:"";
+    display:block;
     height:100%;
+    width:50%;
+
+    background:#d4af37;
+
+    animation:load 1.5s infinite;
 
 }
 
 
 
-.cache{
+@keyframes load{
+
+0%{
+
+transform:translateX(-100%);
+
+}
+
+
+100%{
+
+transform:translateX(250%);
+
+}
+
+
+}
+
+
+
+
+.home{
 
     display:none;
+    text-align:center;
+    padding-top:100px;
+
+}
+
+
+
+.home h1{
+
+    font-size:45px;
+    letter-spacing:3px;
+
+}
+
+
+
+.home p{
+
+    font-size:22px;
 
 }
 
 
 
 
-/* BARRE DU HAUT */
+.choices{
 
-
-.statut{
+    margin-top:60px;
 
     display:flex;
-    justify-content:space-between;
-    padding:18px;
-    font-size:14px;
-    color:white;
-
-}
-
-
-
-
-
-/* ECRAN VERROUILLAGE */
-
-
-.verrouillage{
-
-    background-size:cover;
-    background-position:center;
-
-}
-
-
-
-.fondVerrou{
-
-    text-align:center;
-    padding-top:90px;
-
-}
-
-
-
-.heureGrande{
-
-    font-size:75px;
-    font-weight:300;
-
-}
-
-
-
-.date{
-
-    font-size:20px;
-    margin-top:10px;
-
-}
-
-
-
-.notification{
-
-    background:rgba(50,50,50,0.7);
-    margin:20px;
-    padding:15px;
-    border-radius:20px;
-    backdrop-filter:blur(10px);
-
-}
-
-
-
-.iconeNotif{
-
-    font-size:30px;
-
-}
-
-
-
-.ouvrir{
-
-    position:absolute;
-    bottom:60px;
-    width:100%;
-    text-align:center;
-    color:white;
-
-}
-
-
-
-
-
-/* ACCUEIL TELEPHONE */
-
-
-.accueil{
-
-    background-image:url("../images/ryan/fond_ecran.jpg");
-    background-size:cover;
-    background-position:center;
-
-}
-
-
-
-.encoche{
-
-    width:120px;
-    height:30px;
-    background:black;
-    border-radius:20px;
-    margin:0 auto;
-
-}
-
-
-
-.grilleApplications{
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    padding:35px 20px;
-
-}
-
-
-
-.application{
-
-    text-align:center;
-
-}
-
-
-
-.icone{
-
-    width:60px;
-    height:60px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
     justify-content:center;
-    margin:auto;
-    font-size:32px;
+    gap:50px;
 
 }
 
 
 
-.icone p{
+.choices a{
 
-    font-size:12px;
+    width:220px;
+    height:180px;
 
-}
-
-
-
-.bleu{
-
-    background:#1677ff;
-
-}
-
-
-
-.vert{
-
-    background:#20c463;
-
-}
-
-
-
-.rouge{
-
-    background:#ff3b30;
-
-}
-
-
-
-.violet{
-
-    background:#8e44ad;
-
-}
-
-
-
-.gris{
-
-    background:#555;
-
-}
-
-
-
-.noir{
-
-    background:#111;
-
-}
-
-
-
-.dock{
-
-    position:absolute;
-    bottom:30px;
-    left:20px;
-    right:20px;
-    background:rgba(255,255,255,0.2);
-    backdrop-filter:blur(10px);
-    padding:15px;
-    border-radius:30px;
     display:flex;
-    justify-content:space-around;
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#1f2937;
+
+    border:2px solid #d4af37;
+
+    border-radius:20px;
+
     font-size:28px;
 
-}
-
-
-
-
-
-/* APPLICATIONS */
-
-
-.applicationPage{
-
-    background:#111;
-    padding:20px;
+    transition:.3s;
 
 }
 
 
 
-.barreApp{
+.choices a:hover{
 
-    display:flex;
-    align-items:center;
-    gap:20px;
+    transform:scale(1.08);
 
-}
-
-
-
-.barreApp button{
-
-    background:#333;
-    color:white;
-    border:0;
-    border-radius:10px;
-    padding:10px;
-
-}
-
-
-
-.conversation{
-
-    background:#222;
-    padding:15px;
-    border-radius:15px;
-    margin-top:15px;
-
-}
-
-
-
-.contactFiche{
-
-    background:#222;
-    padding:20px;
-    border-radius:15px;
-    margin:15px 0;
-
-}
-
-
-
-.galerie{
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-
-}
-
-
-
-.photo img{
-
-    width:100%;
-    border-radius:15px;
-
-}
-
-
-
-
-.boutonHome{
-
-    position:absolute;
-    bottom:10px;
-    left:50%;
-    transform:translateX(-50%);
-    width:120px;
-    height:5px;
-    background:white;
-    border-radius:10px;
+    background:#374151;
 
 }
