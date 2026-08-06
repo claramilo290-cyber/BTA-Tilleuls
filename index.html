@@ -927,17 +927,10 @@ Registre des scellés
 
 
 <script src="ordinateur/base_personnes.js"></script>
-  <script>
 
-console.log(personnes);
-
+<script>
 
 function searchPerson(){
-
-  ...
-}
-
-</script>
 
 let recherche = document
 .getElementById("searchPersonne")
@@ -958,7 +951,7 @@ p.prenom.toLowerCase().includes(recherche)
 
 if(resultat.length === 0){
 
-document.getElementById("personResult").innerHTML = 
+document.getElementById("personResult").innerHTML =
 "<p>Aucune personne trouvée</p>";
 
 return;
@@ -988,6 +981,7 @@ document.getElementById("personResult").innerHTML = resultat.map(p => `
 }
 
 </script>
+
 
 </body>
 
