@@ -929,59 +929,8 @@ Registre des scellés
 <script src="ordinateur/base_personnes.js"></script>
 
 <script>
-
-function searchPerson(){
-
-let recherche = document
-.getElementById("searchPersonne")
-.value
-.toLowerCase()
-.trim();
-
-
-let resultat = personnes.filter(p =>
-
-p.nom.toLowerCase().includes(recherche)
-||
-p.prenom.toLowerCase().includes(recherche)
-
-);
-
-
-
-if(resultat.length === 0){
-
-document.getElementById("personResult").innerHTML =
-"<p>Aucune personne trouvée</p>";
-
-return;
-
-}
-
-
-
-document.getElementById("personResult").innerHTML = resultat.map(p => `
-
-<div class="resultCard">
-
-<h3>${p.prenom} ${p.nom}</h3>
-
-<p>ID : ${p.id}</p>
-
-<p>Date naissance : ${p.dateNaissance || "Non renseignée"}</p>
-
-<p>Lieu naissance : ${p.lieuNaissance || "Non renseigné"}</p>
-
-<p>Téléphone : ${p.telephone || "Non renseigné"}</p>
-
-</div>
-
-`).join("");
-
-}
-
+alert("TEST OK");
 </script>
-
 
 </body>
 
