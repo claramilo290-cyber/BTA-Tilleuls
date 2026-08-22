@@ -675,13 +675,14 @@
      IMPORTANT : même dossier
 ========================================= -->
 
-<script src="./base_personnes.js"
-        onload="alert('FICHIER BASE CHARGÉ')"
-        onerror="alert('ERREUR : base_personnes.js introuvable')">
-</script>
+<script src="./base_personnes.js"></script>
 
 <script>
-alert("TEST ORDINATEUR");
+if (Array.isArray(window.personnes)) {
+    alert("BASE OK : " + window.personnes.length + " personne(s)");
+} else {
+    alert("BASE ERREUR : window.personnes n'est pas un tableau");
+}
 </script>
 
     
