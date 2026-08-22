@@ -2,533 +2,802 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Poste GN - Système d'enquête</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="ordinateur.css">
+    <title>Poste GN - BTA Les Tilleuls</title>
+
+    <link
+        rel="stylesheet"
+        href="ordinateur.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- BUREAU -->
 
-    <main class="desktop">
+<!-- =========================================
+     BUREAU PRINCIPAL
+========================================= -->
 
-        <div class="wallpaper">
+<main class="desktop">
 
-            <div class="gn-logo">
-                <div class="eagle">🦅</div>
 
-                <h1>GENDARMERIE NATIONALE</h1>
+    <!-- FOND D'ÉCRAN -->
 
-                <p>POSTE DE TRAVAIL — SYSTÈME D'ENQUÊTE</p>
+    <div class="wallpaper">
+
+        <div class="gn-logo">
+
+            <div class="eagle">
+                ⚜
+            </div>
+
+            <h1>
+                GENDARMERIE NATIONALE
+            </h1>
+
+            <p>
+                BTA LES TILLEULS
+            </p>
+
+            <p class="system-name">
+                POSTE DE TRAVAIL — SYSTÈME D'ENQUÊTE
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         ICÔNES DU BUREAU
+    ========================================= -->
+
+    <section class="desktop-icons">
+
+
+        <button
+            class="desktop-icon"
+            onclick="openWindow('affairesWindow')"
+        >
+
+            <span>📁</span>
+
+            <strong>
+                Affaires
+            </strong>
+
+        </button>
+
+
+
+        <button
+            class="desktop-icon"
+            onclick="openWindow('personnesWindow')"
+        >
+
+            <span>👤</span>
+
+            <strong>
+                Personnes
+            </strong>
+
+        </button>
+
+
+
+        <button
+            class="desktop-icon"
+            onclick="openWindow('vehiculesWindow')"
+        >
+
+            <span>🚗</span>
+
+            <strong>
+                Véhicules
+            </strong>
+
+        </button>
+
+
+
+        <button
+            class="desktop-icon"
+            onclick="openWindow('mailsWindow')"
+        >
+
+            <span>📧</span>
+
+            <strong>
+                Messagerie
+            </strong>
+
+        </button>
+
+
+
+        <button
+            class="desktop-icon"
+            onclick="openWindow('proceduresWindow')"
+        >
+
+            <span>📄</span>
+
+            <strong>
+                Procédures
+            </strong>
+
+        </button>
+
+
+
+        <button
+            class="desktop-icon"
+            onclick="openWindow('scellesWindow')"
+        >
+
+            <span>📦</span>
+
+            <strong>
+                Scellés
+            </strong>
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FENÊTRE AFFAIRES
+    ========================================= -->
+
+    <section
+        class="app-window"
+        id="affairesWindow"
+    >
+
+        <header class="window-header">
+
+            <span>
+                📁 Base des affaires
+            </span>
+
+            <button
+                onclick="closeWindow('affairesWindow')"
+            >
+                ✕
+            </button>
+
+        </header>
+
+
+        <div class="window-body">
+
+            <h2>
+                Affaires enregistrées
+            </h2>
+
+
+            <article class="case-card">
+
+                <h3>
+                    2026-593 — Affaire principale
+                </h3>
+
+                <p>
+                    Enquête en cours.
+                </p>
+
+                <span class="status">
+                    EN COURS
+                </span>
+
+            </article>
+
+
+            <article class="case-card">
+
+                <h3>
+                    2026-578 — Cambriolages multiples
+                </h3>
+
+                <p>
+                    Plusieurs faits recensés sur le secteur.
+                </p>
+
+                <span class="status">
+                    EN COURS
+                </span>
+
+            </article>
+
+
+            <article class="case-card">
+
+                <h3>
+                    2026-561 — Disparition inquiétante
+                </h3>
+
+                <p>
+                    Investigations en cours.
+                </p>
+
+                <span class="status">
+                    ENQUÊTE
+                </span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FENÊTRE PERSONNES
+    ========================================= -->
+
+    <section
+        class="app-window"
+        id="personnesWindow"
+    >
+
+        <header class="window-header">
+
+            <span>
+                👤 Base personnes
+            </span>
+
+            <button
+                onclick="closeWindow('personnesWindow')"
+            >
+                ✕
+            </button>
+
+        </header>
+
+
+        <div class="window-body">
+
+            <h2>
+                Recherche de personne
+            </h2>
+
+
+            <div class="search-box">
+
+                <input
+                    id="personSearch"
+                    type="text"
+                    placeholder="Nom, prénom ou identifiant"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="searchPerson()"
+                >
+                    Rechercher
+                </button>
+
+            </div>
+
+
+            <div id="personResult">
+
+                <p class="empty-result">
+
+                    Entrez un nom pour effectuer une recherche.
+
+                </p>
+
             </div>
 
         </div>
 
+    </section>
 
-        <!-- ICÔNES DU BUREAU -->
 
-        <section class="desktop-icons">
 
-            <button class="desktop-icon"
-                    onclick="openWindow('affairesWindow')">
+    <!-- =========================================
+         FENÊTRE VÉHICULES
+    ========================================= -->
 
-                <span>📁</span>
-                <strong>Affaires</strong>
+    <section
+        class="app-window"
+        id="vehiculesWindow"
+    >
 
+        <header class="window-header">
+
+            <span>
+                🚗 Base véhicules
+            </span>
+
+            <button
+                onclick="closeWindow('vehiculesWindow')"
+            >
+                ✕
+            </button>
+
+        </header>
+
+
+        <div class="window-body">
+
+            <h2>
+                Recherche de véhicule
+            </h2>
+
+
+            <div class="search-box">
+
+                <input
+                    id="vehicleSearch"
+                    type="text"
+                    placeholder="Immatriculation, marque ou modèle"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="searchVehicle()"
+                >
+                    Rechercher
+                </button>
+
+            </div>
+
+
+            <div id="vehicleResult">
+
+                <p class="empty-result">
+
+                    Entrez une immatriculation,
+                    une marque ou un modèle.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FENÊTRE MAILS
+    ========================================= -->
+
+    <section
+        class="app-window"
+        id="mailsWindow"
+    >
+
+        <header class="window-header">
+
+            <span>
+                📧 Messagerie interne
+            </span>
+
+            <button
+                onclick="closeWindow('mailsWindow')"
+            >
+                ✕
+            </button>
+
+        </header>
+
+
+        <div class="window-body">
+
+            <h2>
+                Boîte de réception
+            </h2>
+
+
+            <article class="mail-card">
+
+                <strong>
+                    Commandement territorial
+                </strong>
+
+                <p>
+                    Mise à jour des dossiers en cours demandée.
+                </p>
+
+                <small>
+                    Aujourd'hui — 09:14
+                </small>
+
+            </article>
+
+
+            <article class="mail-card">
+
+                <strong>
+                    Unité scientifique
+                </strong>
+
+                <p>
+                    Résultats disponibles dans un dossier d'enquête.
+                </p>
+
+                <small>
+                    Hier — 17:42
+                </small>
+
+            </article>
+
+
+            <article class="mail-card">
+
+                <strong>
+                    BTA voisine
+                </strong>
+
+                <p>
+                    Transmission d'informations concernant un véhicule.
+                </p>
+
+                <small>
+                    04/08/2026 — 08:31
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FENÊTRE PROCÉDURES
+    ========================================= -->
+
+    <section
+        class="app-window"
+        id="proceduresWindow"
+    >
+
+        <header class="window-header">
+
+            <span>
+                📄 Procédures
+            </span>
+
+            <button
+                onclick="closeWindow('proceduresWindow')"
+            >
+                ✕
+            </button>
+
+        </header>
+
+
+        <div class="window-body">
+
+            <h2>
+                Documents disponibles
+            </h2>
+
+
+            <div class="document-item">
+
+                📄 Procès-verbal d'audition
+
+            </div>
+
+
+            <div class="document-item">
+
+                📄 Rapport d'intervention
+
+            </div>
+
+
+            <div class="document-item">
+
+                📄 Réquisition
+
+            </div>
+
+
+            <div class="document-item">
+
+                📄 Rapport technique
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FENÊTRE SCELLÉS
+    ========================================= -->
+
+    <section
+        class="app-window"
+        id="scellesWindow"
+    >
+
+        <header class="window-header">
+
+            <span>
+                📦 Registre des scellés
+            </span>
+
+            <button
+                onclick="closeWindow('scellesWindow')"
+            >
+                ✕
+            </button>
+
+        </header>
+
+
+        <div class="window-body">
+
+            <h2>
+                Scellés enregistrés
+            </h2>
+
+
+            <div class="document-item">
+
+                📦 SC-001 — Support numérique
+
+            </div>
+
+
+            <div class="document-item">
+
+                📦 SC-002 — Documents
+
+            </div>
+
+
+            <div class="document-item">
+
+                📦 SC-003 — Objet personnel
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BARRE DES TÂCHES
+    ========================================= -->
+
+    <footer class="taskbar">
+
+
+        <div class="start-area">
+
+            <span class="windows-logo">
+
+                ⚜
+
+            </span>
+
+
+            <strong>
+
+                BTA Les Tilleuls
+
+            </strong>
+
+        </div>
+
+
+
+        <div class="taskbar-center">
+
+
+            <button
+                onclick="openWindow('affairesWindow')"
+            >
+                📁
             </button>
 
 
-            <button class="desktop-icon"
-                    onclick="openWindow('personnesWindow')">
-
-                <span>👤</span>
-                <strong>Personnes</strong>
-
+            <button
+                onclick="openWindow('personnesWindow')"
+            >
+                👤
             </button>
 
 
-            <button class="desktop-icon"
-                    onclick="openWindow('vehiculesWindow')">
-
-                <span>🚗</span>
-                <strong>Véhicules</strong>
-
+            <button
+                onclick="openWindow('vehiculesWindow')"
+            >
+                🚗
             </button>
 
 
-            <button class="desktop-icon"
-                    onclick="openWindow('mailsWindow')">
-
-                <span>📧</span>
-                <strong>Mails</strong>
-
+            <button
+                onclick="openWindow('mailsWindow')"
+            >
+                📧
             </button>
 
 
-            <button class="desktop-icon"
-                    onclick="openWindow('proceduresWindow')">
+        </div>
 
-                <span>📄</span>
-                <strong>Procédures</strong>
 
-            </button>
 
+        <div class="system-area">
 
-            <button class="desktop-icon"
-                    onclick="openWindow('scellesWindow')">
+            <span>
+                🔒
+            </span>
 
-                <span>📦</span>
-                <strong>Scellés</strong>
+            <span>
+                📶
+            </span>
 
-            </button>
+            <span id="clock">
 
-        </section>
+                00:00
 
+            </span>
 
-        <!-- FENÊTRE AFFAIRES -->
+        </div>
 
-        <section class="app-window"
-                 id="affairesWindow">
 
-            <header class="window-header">
+    </footer>
 
-                <span>📁 Base des affaires</span>
 
-                <button onclick="closeWindow('affairesWindow')">
-                    ✕
-                </button>
+</main>
 
-            </header>
 
 
-            <div class="window-body">
-
-                <h2>Affaires enregistrées</h2>
-
-                <article class="case-card">
-
-                    <h3>2026-593 — Enquête en cours</h3>
-
-                    <p>
-                        Dossier principal actuellement suivi par l'unité.
-                    </p>
-
-                    <span class="status">
-                        EN COURS
-                    </span>
-
-                </article>
-
-
-                <article class="case-card">
-
-                    <h3>2026-578 — Cambriolages multiples</h3>
-
-                    <p>
-                        Série de faits faisant l'objet d'une enquête.
-                    </p>
-
-                    <span class="status">
-                        EN COURS
-                    </span>
-
-                </article>
-
-
-                <article class="case-card">
-
-                    <h3>2026-561 — Disparition inquiétante</h3>
-
-                    <p>
-                        Dossier transmis pour investigations.
-                    </p>
-
-                    <span class="status">
-                        ENQUÊTE
-                    </span>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- FENÊTRE PERSONNES -->
-
-        <section class="app-window"
-                 id="personnesWindow">
-
-            <header class="window-header">
-
-                <span>👤 Base personnes</span>
-
-                <button onclick="closeWindow('personnesWindow')">
-                    ✕
-                </button>
-
-            </header>
-
-
-            <div class="window-body">
-
-                <h2>Recherche personne</h2>
-
-                <div class="search-box">
-
-                    <input
-                        id="personSearch"
-                        type="text"
-                        placeholder="Nom, prénom ou identifiant"
-                    >
-
-                    <button onclick="searchPerson()">
-                        Rechercher
-                    </button>
-
-                </div>
-
-
-                <div id="personResult">
-
-                    <p class="empty-result">
-                        Entrez un nom pour effectuer une recherche.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FENÊTRE VÉHICULES -->
-
-        <section class="app-window"
-                 id="vehiculesWindow">
-
-            <header class="window-header">
-
-                <span>🚗 Base véhicules</span>
-
-                <button onclick="closeWindow('vehiculesWindow')">
-                    ✕
-                </button>
-
-            </header>
-
-
-            <div class="window-body">
-
-                <h2>Recherche véhicule</h2>
-
-                <div class="search-box">
-
-                    <input
-                        id="vehicleSearch"
-                        type="text"
-                        placeholder="Immatriculation, marque ou modèle"
-                    >
-
-                    <button onclick="searchVehicle()">
-                        Rechercher
-                    </button>
-
-                </div>
-
-
-                <div id="vehicleResult">
-
-                    <p class="empty-result">
-                        Entrez une immatriculation ou un modèle.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FENÊTRE MAILS -->
-
-        <section class="app-window"
-                 id="mailsWindow">
-
-            <header class="window-header">
-
-                <span>📧 Messagerie interne</span>
-
-                <button onclick="closeWindow('mailsWindow')">
-                    ✕
-                </button>
-
-            </header>
-
-
-            <div class="window-body">
-
-                <h2>Boîte de réception</h2>
-
-
-                <article class="mail-card">
-
-                    <strong>Parquet régional</strong>
-
-                    <p>
-                        Demande de transmission concernant le dossier
-                        2026-593.
-                    </p>
-
-                    <small>
-                        Aujourd'hui — 09:14
-                    </small>
-
-                </article>
-
-
-                <article class="mail-card">
-
-                    <strong>Unité scientifique</strong>
-
-                    <p>
-                        Résultats d'analyse disponibles dans le dossier
-                        correspondant.
-                    </p>
-
-                    <small>
-                        Hier — 17:42
-                    </small>
-
-                </article>
-
-
-                <article class="mail-card">
-
-                    <strong>Commandement</strong>
-
-                    <p>
-                        Rappel des consignes relatives aux dossiers
-                        actuellement ouverts.
-                    </p>
-
-                    <small>
-                        04/08/2026 — 08:31
-                    </small>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- FENÊTRE PROCÉDURES -->
-
-        <section class="app-window"
-                 id="proceduresWindow">
-
-            <header class="window-header">
-
-                <span>📄 Procédures</span>
-
-                <button onclick="closeWindow('proceduresWindow')">
-                    ✕
-                </button>
-
-            </header>
-
-
-            <div class="window-body">
-
-                <h2>Documents disponibles</h2>
-
-
-                <div class="document-item">
-                    📄 Procès-verbal d'audition
-                </div>
-
-                <div class="document-item">
-                    📄 Rapport d'intervention
-                </div>
-
-                <div class="document-item">
-                    📄 Réquisition judiciaire
-                </div>
-
-                <div class="document-item">
-                    📄 Rapport technique
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FENÊTRE SCELLÉS -->
-
-        <section class="app-window"
-                 id="scellesWindow">
-
-            <header class="window-header">
-
-                <span>📦 Registre des scellés</span>
-
-                <button onclick="closeWindow('scellesWindow')">
-                    ✕
-                </button>
-
-            </header>
-
-
-            <div class="window-body">
-
-                <h2>Scellés enregistrés</h2>
-
-
-                <div class="document-item">
-                    📦 SC-001 — Appareil électronique
-                </div>
-
-                <div class="document-item">
-                    📦 SC-002 — Support informatique
-                </div>
-
-                <div class="document-item">
-                    📦 SC-003 — Documents
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- BARRE DES TÂCHES -->
-
-        <footer class="taskbar">
-
-            <div class="start-area">
-
-                <span class="windows-logo">⊞</span>
-
-                <strong>Poste GN</strong>
-
-            </div>
-
-
-            <div class="taskbar-center">
-
-                <button onclick="openWindow('affairesWindow')">
-                    📁
-                </button>
-
-                <button onclick="openWindow('personnesWindow')">
-                    👤
-                </button>
-
-                <button onclick="openWindow('mailsWindow')">
-                    📧
-                </button>
-
-            </div>
-
-
-            <div class="system-area">
-
-                <span>🔒</span>
-
-                <span>📶</span>
-
-                <span id="clock">
-                    00:00
-                </span>
-
-            </div>
-
-        </footer>
-
-    </main>
-
-
-    <script>
-
-      <script src="base_personnes.js"></script>
+<!-- =========================================
+     BASE DES PERSONNES
+     IMPORTANT : même dossier
+========================================= -->
 
 <script src="base_personnes.js"></script>
-    
-    <script>
+
+
+
+<!-- =========================================
+     JAVASCRIPT DU POSTE
+========================================= -->
+
+<script>
+
+
+/* =========================================
+   HORLOGE
+========================================= */
 
 function updateClock() {
 
     const now = new Date();
 
     const hours =
-        String(now.getHours()).padStart(2, "0");
+        String(now.getHours())
+        .padStart(2, "0");
 
     const minutes =
-        String(now.getMinutes()).padStart(2, "0");
+        String(now.getMinutes())
+        .padStart(2, "0");
 
-    const clock = document.getElementById("clock");
+
+    const clock =
+        document.getElementById("clock");
+
 
     if (clock) {
-        clock.textContent = hours + ":" + minutes;
+
+        clock.textContent =
+            hours + ":" + minutes;
+
     }
 
 }
 
+
 updateClock();
 
-setInterval(updateClock, 1000);
+setInterval(
+    updateClock,
+    1000
+);
 
 
-/* OUVRIR UNE FENÊTRE */
+
+/* =========================================
+   OUVRIR UNE FENÊTRE
+========================================= */
 
 function openWindow(id) {
 
     const windowElement =
         document.getElementById(id);
 
+
     if (windowElement) {
-        windowElement.style.display = "flex";
+
+        windowElement.style.display =
+            "flex";
+
     }
 
 }
 
 
-/* FERMER UNE FENÊTRE */
+
+/* =========================================
+   FERMER UNE FENÊTRE
+========================================= */
 
 function closeWindow(id) {
 
     const windowElement =
         document.getElementById(id);
 
+
     if (windowElement) {
-        windowElement.style.display = "none";
+
+        windowElement.style.display =
+            "none";
+
     }
 
 }
 
 
-/* RECHERCHE PERSONNE */
+
+/* =========================================
+   RECHERCHE PERSONNES
+========================================= */
 
 function searchPerson() {
 
+
+    const input =
+        document.getElementById(
+            "personSearch"
+        );
+
+
+    const result =
+        document.getElementById(
+            "personResult"
+        );
+
+
     const search =
-        document
-        .getElementById("personSearch")
-        .value
+        input.value
         .trim()
         .toLowerCase();
 
-    const result =
-        document.getElementById("personResult");
 
 
-    if (!search) {
+    if (search === "") {
 
         result.innerHTML =
             "<p class='empty-result'>Veuillez saisir un nom.</p>";
@@ -538,27 +807,51 @@ function searchPerson() {
     }
 
 
+
+    /* Vérification de la base */
+
+    const liste =
+        window.personnes || [];
+
+
     const resultats =
-        personnes.filter(function(personne) {
+        liste.filter(
+            function(personne) {
 
-            const nom =
-                String(personne.nom || "")
-                .toLowerCase();
 
-            const prenom =
-                String(personne.prenom || "")
-                .toLowerCase();
+                const nom =
+                    String(
+                        personne.nom || ""
+                    )
+                    .toLowerCase();
 
-            const id =
-                String(personne.id || "");
 
-            return (
-                nom.includes(search) ||
-                prenom.includes(search) ||
-                id === search
-            );
+                const prenom =
+                    String(
+                        personne.prenom || ""
+                    )
+                    .toLowerCase();
 
-        });
+
+                const id =
+                    String(
+                        personne.id || ""
+                    );
+
+
+                return (
+
+                    nom.includes(search) ||
+
+                    prenom.includes(search) ||
+
+                    id === search
+
+                );
+
+            }
+        );
+
 
 
     if (resultats.length === 0) {
@@ -571,73 +864,241 @@ function searchPerson() {
     }
 
 
+
     result.innerHTML =
-        resultats.map(function(personne) {
+        resultats.map(
+            function(personne) {
 
-            return `
 
-                <article class="person-card">
+                let vehiculesHTML =
+                    "";
 
-                    <h3>
-                        ${personne.prenom || ""}
-                        ${personne.nom || ""}
-                    </h3>
 
-                    <p><strong>Identifiant :</strong>
-                    ${personne.id || "Non renseigné"}</p>
+                if (
+                    personne.vehicules &&
+                    personne.vehicules.length > 0
+                ) {
 
-                    <p><strong>Date de naissance :</strong>
-                    ${personne.dateNaissance || "Non renseignée"}</p>
 
-                    <p><strong>Lieu de naissance :</strong>
-                    ${personne.lieuNaissance || "Non renseigné"}</p>
+                    vehiculesHTML =
+                        "<h4>Éléments enregistrés</h4>";
 
-                    <p><strong>Âge :</strong>
-                    ${personne.age || "Non renseigné"}</p>
 
-                    <p><strong>Adresse :</strong>
-                    ${personne.adresse || "Non renseignée"}</p>
+                    vehiculesHTML +=
+                        personne.vehicules.map(
+                            function(vehicule) {
 
-                    <p><strong>Ville :</strong>
-                    ${personne.ville || "Non renseignée"}</p>
 
-                    <p><strong>Profession :</strong>
-                    ${personne.profession || "Non renseignée"}</p>
+                                return `
 
-                    <p><strong>Téléphone :</strong>
-                    ${personne.telephone || "Non renseigné"}</p>
+                                    <div class="document-item">
 
-                    <p><strong>Antécédents :</strong>
-                    ${personne.antecedents || "Aucun"}</p>
+                                        <strong>
+                                            ${vehicule.marque || ""}
+                                            ${vehicule.modele || ""}
+                                        </strong>
 
-                    <p><strong>Recherche :</strong>
-                    ${personne.recherche || "Non"}</p>
+                                        <br>
 
-                </article>
+                                        Couleur :
+                                        ${vehicule.couleur || "Non renseignée"}
 
-            `;
+                                        <br>
 
-        }).join("");
+                                        Immatriculation :
+                                        ${vehicule.immatriculation || "Non renseignée"}
+
+                                    </div>
+
+                                `;
+
+
+                            }
+                        )
+                        .join("");
+
+                }
+
+
+
+                return `
+
+                    <article class="person-card">
+
+
+                        <h3>
+
+                            ${personne.prenom || ""}
+                            ${personne.nom || ""}
+
+                        </h3>
+
+
+                        <p>
+
+                            <strong>
+                                Identifiant :
+                            </strong>
+
+                            ${personne.id ?? "Non renseigné"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Date de naissance :
+                            </strong>
+
+                            ${personne.dateNaissance || "Non renseignée"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Lieu de naissance :
+                            </strong>
+
+                            ${personne.lieuNaissance || "Non renseigné"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Âge :
+                            </strong>
+
+                            ${personne.age ?? "Non renseigné"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Adresse :
+                            </strong>
+
+                            ${personne.adresse || "Non renseignée"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Ville :
+                            </strong>
+
+                            ${personne.ville || "Non renseignée"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Département :
+                            </strong>
+
+                            ${personne.departement || "Non renseigné"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Profession :
+                            </strong>
+
+                            ${personne.profession || "Non renseignée"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Téléphone :
+                            </strong>
+
+                            ${personne.telephone || "Non renseigné"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Antécédents :
+                            </strong>
+
+                            ${personne.antecedents || "Aucun"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Recherche :
+                            </strong>
+
+                            ${personne.recherche || "Non"}
+
+                        </p>
+
+
+                        ${vehiculesHTML}
+
+
+                    </article>
+
+                `;
+
+
+            }
+        )
+        .join("");
+
 
 }
 
 
-/* RECHERCHE VÉHICULE */
+
+/* =========================================
+   RECHERCHE VÉHICULES
+========================================= */
 
 function searchVehicle() {
 
+
+    const input =
+        document.getElementById(
+            "vehicleSearch"
+        );
+
+
+    const result =
+        document.getElementById(
+            "vehicleResult"
+        );
+
+
     const search =
-        document
-        .getElementById("vehicleSearch")
-        .value
+        input.value
         .trim()
         .toLowerCase();
 
-    const result =
-        document.getElementById("vehicleResult");
 
 
-    if (!search) {
+    if (search === "") {
 
         result.innerHTML =
             "<p class='empty-result'>Veuillez saisir une recherche.</p>";
@@ -647,29 +1108,161 @@ function searchVehicle() {
     }
 
 
-    result.innerHTML = `
 
-        <article class="vehicle-card">
+    const liste =
+        window.personnes || [];
 
-            <h3>Recherche effectuée</h3>
 
-            <p>
-                Aucun véhicule correspondant trouvé.
-            </p>
+    let resultats = [];
 
-            <small>
-                Recherche : ${search}
-            </small>
 
-        </article>
+    liste.forEach(
+        function(personne) {
 
-    `;
+
+            if (!personne.vehicules) {
+
+                return;
+
+            }
+
+
+            personne.vehicules.forEach(
+                function(vehicule) {
+
+
+                    const marque =
+                        String(
+                            vehicule.marque || ""
+                        )
+                        .toLowerCase();
+
+
+                    const modele =
+                        String(
+                            vehicule.modele || ""
+                        )
+                        .toLowerCase();
+
+
+                    const immatriculation =
+                        String(
+                            vehicule.immatriculation || ""
+                        )
+                        .toLowerCase();
+
+
+
+                    if (
+
+                        marque.includes(search) ||
+
+                        modele.includes(search) ||
+
+                        immatriculation.includes(search)
+
+                    ) {
+
+
+                        resultats.push({
+
+                            personne:
+                                personne,
+
+                            vehicule:
+                                vehicule
+
+                        });
+
+                    }
+
+
+                }
+            );
+
+
+        }
+    );
+
+
+
+    if (resultats.length === 0) {
+
+        result.innerHTML =
+            "<p class='empty-result'>Aucun résultat trouvé.</p>";
+
+        return;
+
+    }
+
+
+
+    result.innerHTML =
+        resultats.map(
+            function(item) {
+
+
+                return `
+
+                    <article class="vehicle-card">
+
+                        <h3>
+
+                            ${item.vehicule.marque || ""}
+                            ${item.vehicule.modele || ""}
+
+                        </h3>
+
+
+                        <p>
+
+                            <strong>
+                                Couleur :
+                            </strong>
+
+                            ${item.vehicule.couleur || "Non renseignée"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Immatriculation :
+                            </strong>
+
+                            ${item.vehicule.immatriculation || "Non renseignée"}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Propriétaire :
+                            </strong>
+
+                            ${item.personne.prenom || ""}
+                            ${item.personne.nom || ""}
+
+                        </p>
+
+                    </article>
+
+                `;
+
+
+            }
+        )
+        .join("");
+
 
 }
 
-    </script>
 
-    
+</script>
+
+
 </body>
 
 </html>
