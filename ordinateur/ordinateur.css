@@ -1,42 +1,599 @@
-body{
-background:#111;
-color:white;
-font-family:Arial;
-margin:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-header{
-background:#1b263b;
-padding:20px;
-text-align:center;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-nav{
-display:flex;
-gap:10px;
-padding:20px;
+body {
+    background: #07111c;
+    color: #f1f5f9;
 }
 
-button{
-background:#415a77;
-color:white;
-border:none;
-padding:12px;
-cursor:pointer;
+
+/* =========================
+   BUREAU
+   ========================= */
+
+.desktop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
-section{
-padding:20px;
+.wallpaper {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(35, 74, 107, 0.5),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #06111c 0%,
+            #0b2235 45%,
+            #07131f 100%
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-input{
-padding:10px;
-width:300px;
+.wallpaper::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+
+    border: 2px solid rgba(255,255,255,0.035);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 80px rgba(255,255,255,0.018),
+        0 0 0 160px rgba(255,255,255,0.012);
 }
 
-.fiche{
-background:#222;
-border:1px solid #555;
-padding:15px;
-margin:10px;
+.gn-logo {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    opacity: 0.78;
+}
+
+.eagle {
+    font-size: 95px;
+    margin-bottom: 10px;
+    filter: grayscale(1);
+}
+
+.gn-logo h1 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.gn-logo p {
+    margin-top: 12px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #aab8c5;
+}
+
+
+/* =========================
+   ICÔNES
+   ========================= */
+
+.desktop-icons {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    z-index: 5;
+}
+
+.desktop-icon {
+    width: 95px;
+    min-height: 82px;
+
+    border: 0;
+    background: transparent;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+    border-radius: 8px;
+
+    transition:
+        background 0.15s,
+        transform 0.15s;
+}
+
+.desktop-icon:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.desktop-icon:active {
+    transform: scale(0.95);
+}
+
+.desktop-icon span {
+    font-size: 34px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
+}
+
+.desktop-icon strong {
+    font-size: 12px;
+    font-weight: normal;
+    text-shadow: 0 2px 3px black;
+}
+
+
+/* =========================
+   FENÊTRES
+   ========================= */
+
+.app-window {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -53%);
+
+    width: min(850px, 85vw);
+    height: min(620px, 75vh);
+
+    display: none;
+    flex-direction: column;
+
+    background: #101923;
+
+    border: 1px solid #526272;
+    border-radius: 8px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.65),
+        0 0 0 1px rgba(255,255,255,0.03);
+
+    overflow: hidden;
+
+    z-index: 20;
+}
+
+
+/* barre de fenêtre */
+
+.window-header {
+    height: 48px;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #263442,
+            #1b2631
+        );
+
+    border-bottom: 1px solid #43515e;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.window-header button {
+    width: 32px;
+    height: 30px;
+
+    border: 0;
+    border-radius: 5px;
+
+    background: transparent;
+    color: #dce5ec;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.window-header button:hover {
+    background: #b91c1c;
+    color: white;
+}
+
+
+/* contenu */
+
+.window-body {
+    flex: 1;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            rgba(12,20,29,0.96),
+            rgba(12,20,29,0.96)
+        );
+}
+
+.window-body h2 {
+    margin-bottom: 22px;
+
+    font-size: 23px;
+    font-weight: 500;
+
+    color: #e6edf3;
+}
+
+
+/* =========================
+   RECHERCHE
+   ========================= */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+
+    height: 43px;
+
+    padding: 0 13px;
+
+    border: 1px solid #526272;
+    border-radius: 5px;
+
+    outline: none;
+
+    background: #080f16;
+    color: white;
+
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #7895ac;
+    box-shadow: 0 0 0 2px rgba(120,149,172,0.12);
+}
+
+.search-box button {
+    height: 43px;
+
+    padding: 0 20px;
+
+    border: 1px solid #6f8496;
+    border-radius: 5px;
+
+    background: #253746;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background: #324c60;
+}
+
+
+/* =========================
+   CARTES
+   ========================= */
+
+.case-card,
+.person-card,
+.vehicle-card,
+.mail-card {
+    padding: 18px;
+    margin-bottom: 12px;
+
+    background: #17222d;
+
+    border: 1px solid #344554;
+    border-radius: 6px;
+
+    transition: background 0.15s;
+}
+
+.case-card:hover,
+.person-card:hover,
+.vehicle-card:hover,
+.mail-card:hover {
+    background: #1c2b38;
+}
+
+.case-card h3,
+.person-card h3,
+.vehicle-card h3,
+.mail-card strong {
+    margin-bottom: 9px;
+
+    display: block;
+
+    color: #edf4f8;
+    font-size: 16px;
+}
+
+.case-card p,
+.person-card p,
+.vehicle-card p,
+.mail-card p {
+    margin-bottom: 7px;
+
+    color: #aebdca;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.mail-card small {
+    color: #718394;
+    font-size: 11px;
+}
+
+
+/* statut */
+
+.status {
+    display: inline-block;
+
+    margin-top: 5px;
+    padding: 4px 8px;
+
+    border-radius: 3px;
+
+    background: #174c36;
+    color: #9ae6c0;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* résultat vide */
+
+.empty-result {
+    padding: 25px;
+
+    border: 1px dashed #40505e;
+    border-radius: 6px;
+
+    text-align: center;
+
+    color: #8393a1;
+}
+
+
+/* documents */
+
+.document-item {
+    padding: 15px;
+    margin-bottom: 9px;
+
+    border: 1px solid #344554;
+    border-radius: 5px;
+
+    background: #17222d;
+
+    color: #d6e0e8;
+
+    cursor: pointer;
+}
+
+.document-item:hover {
+    background: #223442;
+}
+
+
+/* =========================
+   BARRE DES TÂCHES
+   ========================= */
+
+.taskbar {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20,31,42,0.98),
+            rgba(8,15,22,0.98)
+        );
+
+    border-top: 1px solid #3e4d5a;
+
+    box-shadow:
+        0 -5px 20px rgba(0,0,0,0.25);
+
+    z-index: 50;
+}
+
+
+/* gauche */
+
+.start-area {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 160px;
+
+    color: #dce6ed;
+
+    font-size: 13px;
+}
+
+.windows-logo {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background: #263746;
+
+    font-size: 20px;
+}
+
+
+/* centre */
+
+.taskbar-center {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.taskbar-center button {
+    width: 40px;
+    height: 38px;
+
+    border: 0;
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.taskbar-center button:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+
+/* droite */
+
+.system-area {
+    min-width: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    color: #b8c5ce;
+
+    font-size: 12px;
+}
+
+#clock {
+    min-width: 42px;
+    text-align: center;
+}
+
+
+/* =========================
+   BARRE DE DÉFILEMENT
+   ========================= */
+
+.window-body::-webkit-scrollbar {
+    width: 9px;
+}
+
+.window-body::-webkit-scrollbar-track {
+    background: #0b1219;
+}
+
+.window-body::-webkit-scrollbar-thumb {
+    background: #3b4b59;
+    border-radius: 10px;
+}
+
+.window-body::-webkit-scrollbar-thumb:hover {
+    background: #526678;
+}
+
+
+/* =========================
+   PETITS ÉCRANS
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .gn-logo h1 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .gn-logo p {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .eagle {
+        font-size: 65px;
+    }
+
+    .desktop-icons {
+        gap: 5px;
+    }
+
+    .desktop-icon {
+        width: 75px;
+    }
+
+    .app-window {
+        width: 94vw;
+        height: 78vh;
+    }
+
+    .start-area strong {
+        display: none;
+    }
+
 }
