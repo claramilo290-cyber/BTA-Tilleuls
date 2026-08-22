@@ -1,4 +1,10 @@
 window.personnes = [
+    {
+        id: 999,
+        nom: "TEST",
+        prenom: "TEST",
+        age: 99
+    },
 
     {
         id: 1,
