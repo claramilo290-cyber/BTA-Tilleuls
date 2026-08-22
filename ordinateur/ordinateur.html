@@ -675,10 +675,13 @@
      IMPORTANT : même dossier
 ========================================= -->
 
- <script src="./base_personnes.js"></script>
+<script src="./base_personnes.js"
+        onload="alert('FICHIER BASE CHARGÉ')"
+        onerror="alert('ERREUR : base_personnes.js introuvable')">
+</script>
 
-    <script>
-alert("BASE : " + window.personnes.length);
+<script>
+alert("TEST ORDINATEUR");
 </script>
 
     
