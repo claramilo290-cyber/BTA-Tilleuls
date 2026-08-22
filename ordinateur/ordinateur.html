@@ -677,47 +677,6 @@
 
  <script src="./base_personnes.js"></script>
 
-<div id="debugBase" style="
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 999999;
-    background: white;
-    color: black;
-    padding: 15px;
-    border: 3px solid red;
-    font-size: 18px;
-">
-
-Chargement...
-
-</div>
-
-<script>
-
-const debug =
-    document.getElementById("debugBase");
-
-if (window.personnes) {
-
-    debug.innerHTML =
-        "BASE OK<br>" +
-        "Nombre : " +
-        window.personnes.length +
-        "<br>" +
-        "Premier : " +
-        window.personnes[0].prenom +
-        " " +
-        window.personnes[0].nom;
-
-} else {
-
-    debug.innerHTML =
-        "BASE NON CHARGÉE";
-
-}
-
-</script>
     
 <!-- =========================================
      JAVASCRIPT DU POSTE
