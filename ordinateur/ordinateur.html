@@ -30,6 +30,1247 @@
 <div class="desktop">
 
 
+    <!-- EN-TÊTE -->
+
+    <header class="desktop-header">
+
+        <div class="header-left">
+
+            <div class="gn-emblem">
+                ⚜
+            </div>
+
+            <div>
+
+                <h1>
+                    GENDARMERIE NATIONALE
+                </h1>
+
+                <p>
+                    BTA LES TILLEULS
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-center">
+
+            <strong>
+                POSTE DE TRAVAIL
+            </strong>
+
+            <span>
+                SYSTÈME D'ENQUÊTE
+            </span>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <span id="clock">
+                00:00
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         APPLICATIONS
+    ================================================== -->
+
+    <nav class="app-bar">
+
+        <button
+            type="button"
+            onclick="openWindow('affairesWindow')"
+        >
+            📁 Affaires
+        </button>
+
+
+        <button
+            type="button"
+            onclick="openWindow('personnesWindow')"
+        >
+            👤 Personnes
+        </button>
+
+
+        <button
+            type="button"
+            onclick="openWindow('vehiculesWindow')"
+        >
+            🚗 Véhicules
+        </button>
+
+
+        <button
+            type="button"
+            onclick="openWindow('mailsWindow')"
+        >
+            📧 Messagerie
+        </button>
+
+
+        <button
+            type="button"
+            onclick="openWindow('proceduresWindow')"
+        >
+            📄 Procédures
+        </button>
+
+
+        <button
+            type="button"
+            onclick="openWindow('scellesWindow')"
+        >
+            📦 Scellés
+        </button>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         AFFAIRES
+    ================================================== -->
+
+    <section
+        class="window"
+        id="affairesWindow"
+    >
+
+        <div class="windowHeader">
+
+            <strong>
+                📁 Affaires
+            </strong>
+
+            <button
+                type="button"
+                onclick="closeWindow('affairesWindow')"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="windowContent">
+
+            <h2>
+                Affaires enregistrées
+            </h2>
+
+
+            <article class="case-card">
+
+                <h3>
+                    2026-593 — Affaire principale
+                </h3>
+
+                <p>
+                    Enquête en cours.
+                </p>
+
+                <span class="status">
+                    EN COURS
+                </span>
+
+            </article>
+
+
+            <article class="case-card">
+
+                <h3>
+                    2026-578 — Cambriolages multiples
+                </h3>
+
+                <p>
+                    Plusieurs faits recensés.
+                </p>
+
+                <span class="status">
+                    EN COURS
+                </span>
+
+            </article>
+
+
+            <article class="case-card">
+
+                <h3>
+                    2026-561 — Disparition inquiétante
+                </h3>
+
+                <p>
+                    Investigations en cours.
+                </p>
+
+                <span class="status">
+                    ENQUÊTE
+                </span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PERSONNES
+    ================================================== -->
+
+    <section
+        class="window"
+        id="personnesWindow"
+    >
+
+        <div class="windowHeader">
+
+            <strong>
+                👤 Recherche personne
+            </strong>
+
+            <button
+                type="button"
+                onclick="closeWindow('personnesWindow')"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="windowContent">
+
+            <h2>
+                Recherche personne
+            </h2>
+
+
+            <input
+                type="text"
+                id="personSearch"
+                placeholder="Nom, prénom ou identifiant"
+                autocomplete="off"
+            >
+
+
+            <button
+                type="button"
+                onclick="searchPerson()"
+            >
+                Rechercher
+            </button>
+
+
+            <div id="personResult">
+
+                <p class="empty-result">
+                    Entrez un nom pour effectuer une recherche.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         VÉHICULES
+    ================================================== -->
+
+    <section
+        class="window"
+        id="vehiculesWindow"
+    >
+
+        <div class="windowHeader">
+
+            <strong>
+                🚗 Recherche véhicule
+            </strong>
+
+            <button
+                type="button"
+                onclick="closeWindow('vehiculesWindow')"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="windowContent">
+
+            <h2>
+                Recherche véhicule
+            </h2>
+
+
+            <input
+                type="text"
+                id="vehicleSearch"
+                placeholder="Immatriculation, marque ou modèle"
+                autocomplete="off"
+            >
+
+
+            <button
+                type="button"
+                onclick="searchVehicle()"
+            >
+                Rechercher
+            </button>
+
+
+            <div id="vehicleResult">
+
+                <p class="empty-result">
+                    Entrez une recherche.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MESSAGERIE
+    ================================================== -->
+
+    <section
+        class="window"
+        id="mailsWindow"
+    >
+
+        <div class="windowHeader">
+
+            <strong>
+                📧 Messagerie
+            </strong>
+
+            <button
+                type="button"
+                onclick="closeWindow('mailsWindow')"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="windowContent">
+
+            <h2>
+                Messagerie interne
+            </h2>
+
+
+            <article class="mail-card">
+
+                <strong>
+                    Commandement territorial
+                </strong>
+
+                <p>
+                    Mise à jour des dossiers en cours.
+                </p>
+
+                <small>
+                    Aujourd'hui
+                </small>
+
+            </article>
+
+
+            <article class="mail-card">
+
+                <strong>
+                    Unité scientifique
+                </strong>
+
+                <p>
+                    Résultats disponibles.
+                </p>
+
+                <small>
+                    Aujourd'hui
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROCÉDURES
+    ================================================== -->
+
+    <section
+        class="window"
+        id="proceduresWindow"
+    >
+
+        <div class="windowHeader">
+
+            <strong>
+                📄 Procédures
+            </strong>
+
+            <button
+                type="button"
+                onclick="closeWindow('proceduresWindow')"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="windowContent">
+
+            <h2>
+                Procédures
+            </h2>
+
+
+            <article class="document-card">
+                📄 Procès-verbal d'audition
+            </article>
+
+
+            <article class="document-card">
+                📄 Rapport d'intervention
+            </article>
+
+
+            <article class="document-card">
+                📄 Réquisition
+            </article>
+
+
+            <article class="document-card">
+                📄 Rapport technique
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SCELLÉS
+    ================================================== -->
+
+    <section
+        class="window"
+        id="scellesWindow"
+    >
+
+        <div class="windowHeader">
+
+            <strong>
+                📦 Registre des scellés
+            </strong>
+
+            <button
+                type="button"
+                onclick="closeWindow('scellesWindow')"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div class="windowContent">
+
+            <h2>
+                Registre des scellés
+            </h2>
+
+
+            <article class="evidence-card">
+                📦 SC-001 — Support numérique
+            </article>
+
+
+            <article class="evidence-card">
+                📦 SC-002 — Documents
+            </article>
+
+
+            <article class="evidence-card">
+                📦 SC-003 — Objet personnel
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BARRE DU BAS
+    ================================================== -->
+
+    <footer class="desktop-footer">
+
+        <div>
+            ⚜ BTA Les Tilleuls
+        </div>
+
+
+        <div class="footer-icons">
+
+            <button
+                type="button"
+                onclick="openWindow('affairesWindow')"
+            >
+                📁
+            </button>
+
+
+            <button
+                type="button"
+                onclick="openWindow('personnesWindow')"
+            >
+                👤
+            </button>
+
+
+            <button
+                type="button"
+                onclick="openWindow('vehiculesWindow')"
+            >
+                🚗
+            </button>
+
+
+            <button
+                type="button"
+                onclick="openWindow('mailsWindow')"
+            >
+                📧
+            </button>
+
+        </div>
+
+
+        <div>
+            🔒 Poste sécurisé
+        </div>
+
+    </footer>
+
+</div>
+
+
+
+<!-- =====================================================
+     BASE PERSONNES
+     
+     UNE SEULE FOIS
+===================================================== -->
+
+<script src="./base_personnes.js"></script>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   HORLOGE
+===================================================== */
+
+function updateClock() {
+
+    const now =
+        new Date();
+
+
+    const hours =
+        String(
+            now.getHours()
+        ).padStart(2, "0");
+
+
+    const minutes =
+        String(
+            now.getMinutes()
+        ).padStart(2, "0");
+
+
+    const clock =
+        document.getElementById(
+            "clock"
+        );
+
+
+    if (clock) {
+
+        clock.textContent =
+            hours + ":" + minutes;
+
+    }
+
+}
+
+
+updateClock();
+
+
+setInterval(
+    updateClock,
+    1000
+);
+
+
+
+/* =====================================================
+   OUVERTURE FENÊTRE
+===================================================== */
+
+function openWindow(id) {
+
+    const element =
+        document.getElementById(id);
+
+
+    if (!element) {
+        return;
+    }
+
+
+    element.style.display =
+        "flex";
+
+}
+
+
+
+/* =====================================================
+   FERMETURE FENÊTRE
+===================================================== */
+
+function closeWindow(id) {
+
+    const element =
+        document.getElementById(id);
+
+
+    if (!element) {
+        return;
+    }
+
+
+    element.style.display =
+        "none";
+
+}
+
+
+
+/* =====================================================
+   RECHERCHE PERSONNE
+===================================================== */
+
+function searchPerson() {
+
+    const input =
+        document.getElementById(
+            "personSearch"
+        );
+
+
+    const result =
+        document.getElementById(
+            "personResult"
+        );
+
+
+    if (!input || !result) {
+        return;
+    }
+
+
+    const search =
+        input.value
+        .trim()
+        .toLowerCase();
+
+
+    if (!search) {
+
+        result.innerHTML =
+            `
+            <p class="empty-result">
+                Entrez un nom pour effectuer une recherche.
+            </p>
+            `;
+
+        return;
+
+    }
+
+
+    /*
+       On accepte les deux possibilités :
+       window.personnes
+       ou personnes
+    */
+
+    const base =
+        Array.isArray(
+            window.personnes
+        )
+        ?
+        window.personnes
+        :
+        (
+            typeof personnes !== "undefined"
+            &&
+            Array.isArray(personnes)
+            ?
+            personnes
+            :
+            []
+        );
+
+
+    if (base.length === 0) {
+
+        result.innerHTML =
+            `
+            <p class="empty-result">
+                Base de personnes indisponible.
+            </p>
+            `;
+
+        return;
+
+    }
+
+
+    const resultats =
+        base.filter(
+            function(personne) {
+
+                const nom =
+                    String(
+                        personne.nom || ""
+                    ).toLowerCase();
+
+
+                const prenom =
+                    String(
+                        personne.prenom || ""
+                    ).toLowerCase();
+
+
+                const id =
+                    String(
+                        personne.id || ""
+                    ).toLowerCase();
+
+
+                return (
+                    nom.includes(search)
+                    ||
+                    prenom.includes(search)
+                    ||
+                    id === search
+                );
+
+            }
+        );
+
+
+    if (resultats.length === 0) {
+
+        result.innerHTML =
+            `
+            <p class="empty-result">
+                Aucune personne trouvée.
+            </p>
+            `;
+
+        return;
+
+    }
+
+
+    result.innerHTML =
+        resultats
+        .map(
+            function(personne) {
+
+                return `
+
+                    <article class="person-card">
+
+                        <h3>
+                            ${personne.prenom || ""}
+                            ${personne.nom || ""}
+                        </h3>
+
+
+                        <p>
+                            <strong>
+                                Identifiant :
+                            </strong>
+
+                            ${personne.id ?? "Non renseigné"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Date de naissance :
+                            </strong>
+
+                            ${personne.dateNaissance || "Non renseignée"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Lieu de naissance :
+                            </strong>
+
+                            ${personne.lieuNaissance || "Non renseigné"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Âge :
+                            </strong>
+
+                            ${personne.age ?? "Non renseigné"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Adresse :
+                            </strong>
+
+                            ${personne.adresse || "Non renseignée"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Ville :
+                            </strong>
+
+                            ${personne.ville || "Non renseignée"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Département :
+                            </strong>
+
+                            ${personne.departement || "Non renseigné"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Profession :
+                            </strong>
+
+                            ${personne.profession || "Non renseignée"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Téléphone :
+                            </strong>
+
+                            ${personne.telephone || "Non renseigné"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Antécédents :
+                            </strong>
+
+                            ${personne.antecedents || "Aucun"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Recherche :
+                            </strong>
+
+                            ${personne.recherche || "Non"}
+                        </p>
+
+
+                        ${
+                            personne.motifRecherche
+                            ?
+                            `
+                            <p>
+                                <strong>
+                                    Motif :
+                                </strong>
+
+                                ${personne.motifRecherche}
+                            </p>
+                            `
+                            :
+                            ""
+                        }
+
+
+                        ${
+                            Array.isArray(
+                                personne.vehicules
+                            )
+                            &&
+                            personne.vehicules.length
+                            ?
+                            `
+
+                            <hr>
+
+                            <h4>
+                                Véhicule(s)
+                            </h4>
+
+                            ${
+                                personne.vehicules
+                                .map(
+                                    function(vehicle) {
+
+                                        return `
+
+                                            <div class="vehicle-card">
+
+                                                <strong>
+                                                    ${vehicle.marque || ""}
+                                                    ${vehicle.modele || ""}
+                                                </strong>
+
+                                                <p>
+                                                    Couleur :
+                                                    ${vehicle.couleur || "Non renseignée"}
+                                                </p>
+
+                                                <p>
+                                                    Immatriculation :
+                                                    ${vehicle.immatriculation || "Non renseignée"}
+                                                </p>
+
+                                                <p>
+                                                    Propriétaire :
+                                                    ${vehicle.proprietaire || "Non renseigné"}
+                                                </p>
+
+                                            </div>
+
+                                        `;
+
+                                    }
+                                )
+                                .join("")
+                            }
+
+                            `
+                            :
+                            ""
+                        }
+
+                    </article>
+
+                `;
+
+            }
+        )
+        .join("");
+
+}
+
+
+
+/* =====================================================
+   RECHERCHE VÉHICULE
+===================================================== */
+
+function searchVehicle() {
+
+    const input =
+        document.getElementById(
+            "vehicleSearch"
+        );
+
+
+    const result =
+        document.getElementById(
+            "vehicleResult"
+        );
+
+
+    if (!input || !result) {
+        return;
+    }
+
+
+    const search =
+        input.value
+        .trim()
+        .toLowerCase();
+
+
+    if (!search) {
+
+        result.innerHTML =
+            `
+            <p class="empty-result">
+                Entrez une recherche.
+            </p>
+            `;
+
+        return;
+
+    }
+
+
+    const base =
+        Array.isArray(
+            window.personnes
+        )
+        ?
+        window.personnes
+        :
+        [];
+
+
+    const trouves = [];
+
+
+    base.forEach(
+        function(personne) {
+
+            if (
+                !Array.isArray(
+                    personne.vehicules
+                )
+            ) {
+                return;
+            }
+
+
+            personne.vehicules.forEach(
+                function(vehicle) {
+
+                    const texte =
+                        (
+                            String(
+                                vehicle.marque || ""
+                            )
+                            +
+                            " "
+                            +
+                            String(
+                                vehicle.modele || ""
+                            )
+                            +
+                            " "
+                            +
+                            String(
+                                vehicle.couleur || ""
+                            )
+                            +
+                            " "
+                            +
+                            String(
+                                vehicle.immatriculation || ""
+                            )
+                        )
+                        .toLowerCase();
+
+
+                    if (
+                        texte.includes(search)
+                    ) {
+
+                        trouves.push({
+
+                            personne:
+                                personne,
+
+                            vehicle:
+                                vehicle
+
+                        });
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+    if (trouves.length === 0) {
+
+        result.innerHTML =
+            `
+            <p class="empty-result">
+                Aucun véhicule correspondant trouvé.
+            </p>
+            `;
+
+        return;
+
+    }
+
+
+    result.innerHTML =
+        trouves
+        .map(
+            function(item) {
+
+                return `
+
+                    <article class="vehicle-card">
+
+                        <h3>
+                            ${item.vehicle.marque || ""}
+                            ${item.vehicle.modele || ""}
+                        </h3>
+
+
+                        <p>
+                            <strong>
+                                Couleur :
+                            </strong>
+
+                            ${item.vehicle.couleur || "Non renseignée"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Immatriculation :
+                            </strong>
+
+                            ${item.vehicle.immatriculation || "Non renseignée"}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Propriétaire :
+                            </strong>
+
+                            ${item.vehicle.proprietaire || "Non renseigné"}
+                        </p>
+
+
+                        <hr>
+
+
+                        <p>
+                            <strong>
+                                Personne :
+                            </strong>
+
+                            ${item.personne.prenom || ""}
+                            ${item.personne.nom || ""}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                Identifiant :
+                            </strong>
+
+                            ${item.personne.id ?? "Non renseigné"}
+                        </p>
+
+                    </article>
+
+                `;
+
+            }
+        )
+        .join("");
+
+}
+
+
+</script>
+
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Poste GN - BTA Les Tilleuls</title>
+
+    <link
+        rel="stylesheet"
+        href="./ordinateur.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BUREAU
+===================================================== -->
+
+<div class="desktop">
+
+
     <!-- =================================================
          EN-TÊTE
     ================================================== -->
