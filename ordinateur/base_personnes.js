@@ -1,4 +1,4 @@
-let personnes = [
+window.personnes = [
 
 {
 id:1,
