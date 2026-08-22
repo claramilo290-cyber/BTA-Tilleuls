@@ -456,92 +456,66 @@
 
     <script>
 
-        /* HORLOGE */
+      <script src="base_personnes.js"></script>
 
-        function updateClock() {
+<script src="base_personnes.js"></script>
+    
+    <script>
 
-            const now = new Date();
+function updateClock() {
 
-            const hours =
-                String(now.getHours()).padStart(2, "0");
+    const now = new Date();
 
-            const minutes =
-                String(now.getMinutes()).padStart(2, "0");
+    const hours =
+        String(now.getHours()).padStart(2, "0");
 
-            const clock =
-                document.getElementById("clock");
+    const minutes =
+        String(now.getMinutes()).padStart(2, "0");
 
-            if (clock) {
-                clock.textContent =
-                    hours + ":" + minutes;
-            }
+    const clock = document.getElementById("clock");
 
-        }
+    if (clock) {
+        clock.textContent = hours + ":" + minutes;
+    }
 
-        updateClock();
+}
 
-        setInterval(updateClock, 1000);
+updateClock();
 
-
-        /* OUVERTURE FENÊTRE */
-
-        function openWindow(id) {
-
-            const windowElement =
-                document.getElementById(id);
-
-            if (windowElement) {
-
-                windowElement.style.display = "flex";
-
-            }
-
-        }
+setInterval(updateClock, 1000);
 
 
-        /* FERMETURE FENÊTRE */
+/* OUVRIR UNE FENÊTRE */
 
-        function closeWindow(id) {
+function openWindow(id) {
 
-            const windowElement =
-                document.getElementById(id);
+    const windowElement =
+        document.getElementById(id);
 
-            if (windowElement) {
+    if (windowElement) {
+        windowElement.style.display = "flex";
+    }
 
-                windowElement.style.display = "none";
-
-            }
-
-        }
+}
 
 
-        /* RECHERCHE TEMPORAIRE */
+/* FERMER UNE FENÊTRE */
 
-        function searchPerson() {
+function closeWindow(id) {
 
-            const search =
-                document
-                .getElementById("personSearch")
-                .value
-                .trim()
-                .toLowerCase();
+    const windowElement =
+        document.getElementById(id);
 
+    if (windowElement) {
+        windowElement.style.display = "none";
+    }
 
-            const result =
-                document.getElementById("personResult");
+}
 
 
-            if (!search) {
+/* RECHERCHE PERSONNE */
 
-                result.innerHTML =
-                    "<p class='empty-result'>Veuillez saisir un nom.</p>";
-
-                return;
-
-            }
-
-
-           function searchPerson() {
+function searchPerson() {
 
     const search =
         document
@@ -549,7 +523,6 @@
         .value
         .trim()
         .toLowerCase();
-
 
     const result =
         document.getElementById("personResult");
@@ -577,8 +550,7 @@
                 .toLowerCase();
 
             const id =
-                String(personne.id || "")
-                .toLowerCase();
+                String(personne.id || "");
 
             return (
                 nom.includes(search) ||
@@ -611,55 +583,35 @@
                         ${personne.nom || ""}
                     </h3>
 
-                    <p>
-                        <strong>Identifiant :</strong>
-                        ${personne.id ?? "Non renseigné"}
-                    </p>
+                    <p><strong>Identifiant :</strong>
+                    ${personne.id || "Non renseigné"}</p>
 
-                    <p>
-                        <strong>Date de naissance :</strong>
-                        ${personne.dateNaissance || "Non renseignée"}
-                    </p>
+                    <p><strong>Date de naissance :</strong>
+                    ${personne.dateNaissance || "Non renseignée"}</p>
 
-                    <p>
-                        <strong>Lieu de naissance :</strong>
-                        ${personne.lieuNaissance || "Non renseigné"}
-                    </p>
+                    <p><strong>Lieu de naissance :</strong>
+                    ${personne.lieuNaissance || "Non renseigné"}</p>
 
-                    <p>
-                        <strong>Âge :</strong>
-                        ${personne.age ?? "Non renseigné"}
-                    </p>
+                    <p><strong>Âge :</strong>
+                    ${personne.age || "Non renseigné"}</p>
 
-                    <p>
-                        <strong>Adresse :</strong>
-                        ${personne.adresse || "Non renseignée"}
-                    </p>
+                    <p><strong>Adresse :</strong>
+                    ${personne.adresse || "Non renseignée"}</p>
 
-                    <p>
-                        <strong>Ville :</strong>
-                        ${personne.ville || "Non renseignée"}
-                    </p>
+                    <p><strong>Ville :</strong>
+                    ${personne.ville || "Non renseignée"}</p>
 
-                    <p>
-                        <strong>Profession :</strong>
-                        ${personne.profession || "Non renseignée"}
-                    </p>
+                    <p><strong>Profession :</strong>
+                    ${personne.profession || "Non renseignée"}</p>
 
-                    <p>
-                        <strong>Téléphone :</strong>
-                        ${personne.telephone || "Non renseigné"}
-                    </p>
+                    <p><strong>Téléphone :</strong>
+                    ${personne.telephone || "Non renseigné"}</p>
 
-                    <p>
-                        <strong>Antécédents :</strong>
-                        ${personne.antecedents || "Aucun"}
-                    </p>
+                    <p><strong>Antécédents :</strong>
+                    ${personne.antecedents || "Aucun"}</p>
 
-                    <p>
-                        <strong>Recherche :</strong>
-                        ${personne.recherche || "Non"}
-                    </p>
+                    <p><strong>Recherche :</strong>
+                    ${personne.recherche || "Non"}</p>
 
                 </article>
 
@@ -670,62 +622,53 @@
 }
 
 
-            result.innerHTML =
-                "<p class='empty-result'>Aucune personne trouvée.</p>";
+/* RECHERCHE VÉHICULE */
 
-        }
+function searchVehicle() {
 
+    const search =
+        document
+        .getElementById("vehicleSearch")
+        .value
+        .trim()
+        .toLowerCase();
 
-        /* RECHERCHE VÉHICULE TEMPORAIRE */
-
-        function searchVehicle() {
-
-            const search =
-                document
-                .getElementById("vehicleSearch")
-                .value
-                .trim()
-                .toLowerCase();
+    const result =
+        document.getElementById("vehicleResult");
 
 
-            const result =
-                document.getElementById("vehicleResult");
+    if (!search) {
+
+        result.innerHTML =
+            "<p class='empty-result'>Veuillez saisir une recherche.</p>";
+
+        return;
+
+    }
 
 
-            if (!search) {
+    result.innerHTML = `
 
-                result.innerHTML =
-                    "<p class='empty-result'>Veuillez saisir une recherche.</p>";
+        <article class="vehicle-card">
 
-                return;
+            <h3>Recherche effectuée</h3>
 
-            }
+            <p>
+                Aucun véhicule correspondant trouvé.
+            </p>
 
+            <small>
+                Recherche : ${search}
+            </small>
 
-            result.innerHTML = `
+        </article>
 
-                <article class="vehicle-card">
+    `;
 
-                    <h3>Recherche effectuée</h3>
-
-                    <p>
-                        Aucun véhicule correspondant trouvé dans
-                        cette version de test.
-                    </p>
-
-                    <small>
-                        Recherche : ${search}
-                    </small>
-
-                </article>
-
-            `;
-
-        }
+}
 
     </script>
 
-    <script src="base_personnes.js"></script>
     
 </body>
 
