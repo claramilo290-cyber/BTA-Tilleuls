@@ -19,44 +19,7 @@
 
 </head>
 
-
 <body>
-
-<h1 style="color:red; position:fixed; top:10px; left:10px; z-index:99999;">
-<div id="testBase" style="
-position:fixed;
-top:10px;
-right:10px;
-z-index:99999;
-background:white;
-color:black;
-padding:15px;
-font-size:20px;
-">
-Chargement de la base...
-</div>
-
-<script>
-setTimeout(function () {
-
-    const test = document.getElementById("testBase");
-
-    if (window.personnes) {
-
-        test.textContent =
-            "PERSONNES CHARGÉES : " +
-            window.personnes.length;
-
-    } else {
-
-        test.textContent =
-            "ERREUR : BASE NON CHARGÉE";
-
-    }
-
-}, 1000);
-</script>
-</h1>
 <!-- =========================================
      BUREAU PRINCIPAL
 ========================================= -->
