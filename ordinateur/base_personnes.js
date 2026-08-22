@@ -5821,7 +5821,7 @@ proprietaire:"Oui"
 antecedents:"Dégradation ancienne",
 recherche:"Oui",
 motifRecherche:"Autre affaire, sans lien avec le dossier principal"
-}
-];
 
-window.personnes = personnes;
+}
+
+];
