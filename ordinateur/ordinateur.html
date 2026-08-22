@@ -1299,7 +1299,16 @@ function searchVehicle() {
 
 </script>
 
+<script src="./base_personnes.js"></script>
 
+<script>
+if (window.personnes) {
+    console.log("BASE OK :", window.personnes.length);
+} else {
+    console.log("BASE NON CHARGÉE");
+}
+</script>
+    
 </body>
 
 </html>
