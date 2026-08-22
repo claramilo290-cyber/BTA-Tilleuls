@@ -2,60 +2,623 @@
 <html lang="fr">
 
 <head>
-<meta charset="UTF-8">
-<title>Ordinateur Gendarmerie - Affaire 2026/593</title>
-<link rel="stylesheet" href="ordinateur.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Poste GN - Système d'enquête</title>
+
+    <link rel="stylesheet" href="ordinateur.css">
 </head>
 
 <body>
 
-<header>
-<h1>💻 Ordinateur Gendarmerie</h1>
-<h2>Affaire 2026/593</h2>
-</header>
+    <!-- BUREAU -->
+
+    <main class="desktop">
+
+        <div class="wallpaper">
+
+            <div class="gn-logo">
+                <div class="eagle">🦅</div>
+
+                <h1>GENDARMERIE NATIONALE</h1>
+
+                <p>POSTE DE TRAVAIL — SYSTÈME D'ENQUÊTE</p>
+            </div>
+
+        </div>
 
 
-<nav>
+        <!-- ICÔNES DU BUREAU -->
 
-<a href="ordinateur.html">🏠 Accueil</a>
+        <section class="desktop-icons">
 
-<a href="personnes.html">👤 Personnes</a>
+            <button class="desktop-icon"
+                    onclick="openWindow('affairesWindow')">
 
-<a href="mails.html">📧 Mails</a>
+                <span>📁</span>
+                <strong>Affaires</strong>
 
-<a href="bureau.html">📂 Bureau</a>
-
-</nav>
-
-
-<main>
-
-<h2>Poste enquêteur</h2>
-
-<p>
-Bienvenue sur l'ordinateur de la gendarmerie.
-</p>
+            </button>
 
 
-<div>
+            <button class="desktop-icon"
+                    onclick="openWindow('personnesWindow')">
 
-<h3>Modules :</h3>
+                <span>👤</span>
+                <strong>Personnes</strong>
 
-<ul>
-
-<li>Recherche personnes</li>
-<li>Recherche véhicules</li>
-<li>Messagerie</li>
-<li>Procédures</li>
-<li>Dossier affaire 2026/593</li>
-
-</ul>
-
-</div>
+            </button>
 
 
-</main>
+            <button class="desktop-icon"
+                    onclick="openWindow('vehiculesWindow')">
 
+                <span>🚗</span>
+                <strong>Véhicules</strong>
+
+            </button>
+
+
+            <button class="desktop-icon"
+                    onclick="openWindow('mailsWindow')">
+
+                <span>📧</span>
+                <strong>Mails</strong>
+
+            </button>
+
+
+            <button class="desktop-icon"
+                    onclick="openWindow('proceduresWindow')">
+
+                <span>📄</span>
+                <strong>Procédures</strong>
+
+            </button>
+
+
+            <button class="desktop-icon"
+                    onclick="openWindow('scellesWindow')">
+
+                <span>📦</span>
+                <strong>Scellés</strong>
+
+            </button>
+
+        </section>
+
+
+        <!-- FENÊTRE AFFAIRES -->
+
+        <section class="app-window"
+                 id="affairesWindow">
+
+            <header class="window-header">
+
+                <span>📁 Base des affaires</span>
+
+                <button onclick="closeWindow('affairesWindow')">
+                    ✕
+                </button>
+
+            </header>
+
+
+            <div class="window-body">
+
+                <h2>Affaires enregistrées</h2>
+
+                <article class="case-card">
+
+                    <h3>2026-593 — Enquête en cours</h3>
+
+                    <p>
+                        Dossier principal actuellement suivi par l'unité.
+                    </p>
+
+                    <span class="status">
+                        EN COURS
+                    </span>
+
+                </article>
+
+
+                <article class="case-card">
+
+                    <h3>2026-578 — Cambriolages multiples</h3>
+
+                    <p>
+                        Série de faits faisant l'objet d'une enquête.
+                    </p>
+
+                    <span class="status">
+                        EN COURS
+                    </span>
+
+                </article>
+
+
+                <article class="case-card">
+
+                    <h3>2026-561 — Disparition inquiétante</h3>
+
+                    <p>
+                        Dossier transmis pour investigations.
+                    </p>
+
+                    <span class="status">
+                        ENQUÊTE
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FENÊTRE PERSONNES -->
+
+        <section class="app-window"
+                 id="personnesWindow">
+
+            <header class="window-header">
+
+                <span>👤 Base personnes</span>
+
+                <button onclick="closeWindow('personnesWindow')">
+                    ✕
+                </button>
+
+            </header>
+
+
+            <div class="window-body">
+
+                <h2>Recherche personne</h2>
+
+                <div class="search-box">
+
+                    <input
+                        id="personSearch"
+                        type="text"
+                        placeholder="Nom, prénom ou identifiant"
+                    >
+
+                    <button onclick="searchPerson()">
+                        Rechercher
+                    </button>
+
+                </div>
+
+
+                <div id="personResult">
+
+                    <p class="empty-result">
+                        Entrez un nom pour effectuer une recherche.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FENÊTRE VÉHICULES -->
+
+        <section class="app-window"
+                 id="vehiculesWindow">
+
+            <header class="window-header">
+
+                <span>🚗 Base véhicules</span>
+
+                <button onclick="closeWindow('vehiculesWindow')">
+                    ✕
+                </button>
+
+            </header>
+
+
+            <div class="window-body">
+
+                <h2>Recherche véhicule</h2>
+
+                <div class="search-box">
+
+                    <input
+                        id="vehicleSearch"
+                        type="text"
+                        placeholder="Immatriculation, marque ou modèle"
+                    >
+
+                    <button onclick="searchVehicle()">
+                        Rechercher
+                    </button>
+
+                </div>
+
+
+                <div id="vehicleResult">
+
+                    <p class="empty-result">
+                        Entrez une immatriculation ou un modèle.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FENÊTRE MAILS -->
+
+        <section class="app-window"
+                 id="mailsWindow">
+
+            <header class="window-header">
+
+                <span>📧 Messagerie interne</span>
+
+                <button onclick="closeWindow('mailsWindow')">
+                    ✕
+                </button>
+
+            </header>
+
+
+            <div class="window-body">
+
+                <h2>Boîte de réception</h2>
+
+
+                <article class="mail-card">
+
+                    <strong>Parquet régional</strong>
+
+                    <p>
+                        Demande de transmission concernant le dossier
+                        2026-593.
+                    </p>
+
+                    <small>
+                        Aujourd'hui — 09:14
+                    </small>
+
+                </article>
+
+
+                <article class="mail-card">
+
+                    <strong>Unité scientifique</strong>
+
+                    <p>
+                        Résultats d'analyse disponibles dans le dossier
+                        correspondant.
+                    </p>
+
+                    <small>
+                        Hier — 17:42
+                    </small>
+
+                </article>
+
+
+                <article class="mail-card">
+
+                    <strong>Commandement</strong>
+
+                    <p>
+                        Rappel des consignes relatives aux dossiers
+                        actuellement ouverts.
+                    </p>
+
+                    <small>
+                        04/08/2026 — 08:31
+                    </small>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FENÊTRE PROCÉDURES -->
+
+        <section class="app-window"
+                 id="proceduresWindow">
+
+            <header class="window-header">
+
+                <span>📄 Procédures</span>
+
+                <button onclick="closeWindow('proceduresWindow')">
+                    ✕
+                </button>
+
+            </header>
+
+
+            <div class="window-body">
+
+                <h2>Documents disponibles</h2>
+
+
+                <div class="document-item">
+                    📄 Procès-verbal d'audition
+                </div>
+
+                <div class="document-item">
+                    📄 Rapport d'intervention
+                </div>
+
+                <div class="document-item">
+                    📄 Réquisition judiciaire
+                </div>
+
+                <div class="document-item">
+                    📄 Rapport technique
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FENÊTRE SCELLÉS -->
+
+        <section class="app-window"
+                 id="scellesWindow">
+
+            <header class="window-header">
+
+                <span>📦 Registre des scellés</span>
+
+                <button onclick="closeWindow('scellesWindow')">
+                    ✕
+                </button>
+
+            </header>
+
+
+            <div class="window-body">
+
+                <h2>Scellés enregistrés</h2>
+
+
+                <div class="document-item">
+                    📦 SC-001 — Appareil électronique
+                </div>
+
+                <div class="document-item">
+                    📦 SC-002 — Support informatique
+                </div>
+
+                <div class="document-item">
+                    📦 SC-003 — Documents
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BARRE DES TÂCHES -->
+
+        <footer class="taskbar">
+
+            <div class="start-area">
+
+                <span class="windows-logo">⊞</span>
+
+                <strong>Poste GN</strong>
+
+            </div>
+
+
+            <div class="taskbar-center">
+
+                <button onclick="openWindow('affairesWindow')">
+                    📁
+                </button>
+
+                <button onclick="openWindow('personnesWindow')">
+                    👤
+                </button>
+
+                <button onclick="openWindow('mailsWindow')">
+                    📧
+                </button>
+
+            </div>
+
+
+            <div class="system-area">
+
+                <span>🔒</span>
+
+                <span>📶</span>
+
+                <span id="clock">
+                    00:00
+                </span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <script>
+
+        /* HORLOGE */
+
+        function updateClock() {
+
+            const now = new Date();
+
+            const hours =
+                String(now.getHours()).padStart(2, "0");
+
+            const minutes =
+                String(now.getMinutes()).padStart(2, "0");
+
+            const clock =
+                document.getElementById("clock");
+
+            if (clock) {
+                clock.textContent =
+                    hours + ":" + minutes;
+            }
+
+        }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+
+
+        /* OUVERTURE FENÊTRE */
+
+        function openWindow(id) {
+
+            const windowElement =
+                document.getElementById(id);
+
+            if (windowElement) {
+
+                windowElement.style.display = "flex";
+
+            }
+
+        }
+
+
+        /* FERMETURE FENÊTRE */
+
+        function closeWindow(id) {
+
+            const windowElement =
+                document.getElementById(id);
+
+            if (windowElement) {
+
+                windowElement.style.display = "none";
+
+            }
+
+        }
+
+
+        /* RECHERCHE TEMPORAIRE */
+
+        function searchPerson() {
+
+            const search =
+                document
+                .getElementById("personSearch")
+                .value
+                .trim()
+                .toLowerCase();
+
+
+            const result =
+                document.getElementById("personResult");
+
+
+            if (!search) {
+
+                result.innerHTML =
+                    "<p class='empty-result'>Veuillez saisir un nom.</p>";
+
+                return;
+
+            }
+
+
+            if (search === "belani") {
+
+                result.innerHTML = `
+
+                    <article class="person-card">
+
+                        <h3>Belani — Fiche de test</h3>
+
+                        <p><strong>Identifiant :</strong> 1</p>
+
+                        <p><strong>Statut :</strong> Fiche fictive</p>
+
+                        <p><strong>Téléphone :</strong> +39 XX XX XX XX XX</p>
+
+                    </article>
+
+                `;
+
+                return;
+
+            }
+
+
+            result.innerHTML =
+                "<p class='empty-result'>Aucune personne trouvée.</p>";
+
+        }
+
+
+        /* RECHERCHE VÉHICULE TEMPORAIRE */
+
+        function searchVehicle() {
+
+            const search =
+                document
+                .getElementById("vehicleSearch")
+                .value
+                .trim()
+                .toLowerCase();
+
+
+            const result =
+                document.getElementById("vehicleResult");
+
+
+            if (!search) {
+
+                result.innerHTML =
+                    "<p class='empty-result'>Veuillez saisir une recherche.</p>";
+
+                return;
+
+            }
+
+
+            result.innerHTML = `
+
+                <article class="vehicle-card">
+
+                    <h3>Recherche effectuée</h3>
+
+                    <p>
+                        Aucun véhicule correspondant trouvé dans
+                        cette version de test.
+                    </p>
+
+                    <small>
+                        Recherche : ${search}
+                    </small>
+
+                </article>
+
+            `;
+
+        }
+
+    </script>
 
 </body>
+
 </html>
