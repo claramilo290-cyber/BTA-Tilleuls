@@ -675,7 +675,17 @@
      IMPORTANT : même dossier
 ========================================= -->
 
-<script src="./base_personnes.js"></script>
+<script>
+window.onerror = function(message, source, line, column) {
+    alert(
+        "ERREUR JAVASCRIPT\n\n" +
+        message +
+        "\nLigne : " +
+        line
+    );
+};
+</script>
+    <script src="./base_personnes.js"></script>
 <script>
 alert(
     "TYPE = " +
