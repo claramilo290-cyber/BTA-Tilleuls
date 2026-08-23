@@ -728,8 +728,15 @@ window.personnes = [
     situationFamiliale: "Célibataire",
     profession: "Manutentionnaire",
     lieuDeTravail: "Plateforme LogiSud",
+
+    situationAdministrative: {
+    oqtf: "Oui",
+    statut: "En cours"
+},
+   
     telephone: "+39 76 41 20 95 63",
-    appareils: [
+    
+   appareils: [
         {
             type: "Téléphone",
             marque: "Xiaomi",
@@ -744,10 +751,6 @@ window.personnes = [
     recherche: "Oui",
     motifRecherche: "mandat d'arrêt pour coup et blessure",
     
-    situationAdministrative: {
-    oqtf: "Oui",
-    statut: "En cours"
-},
 },
 
 {
