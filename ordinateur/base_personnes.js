@@ -742,7 +742,11 @@ window.personnes = [
     vehicules: [],
     antecedents: "Aucun",
     recherche: "Oui",
-    motifRecherche: "Recherche judiciaire fictive"
+    motifRecherche: "mandat d'arrêt pour coup et blessure",
+    situationAdministrative: {
+    oqtf: "Oui",
+    statut: "En cours"
+},
 },
 
 {
