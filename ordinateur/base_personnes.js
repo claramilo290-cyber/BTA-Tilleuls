@@ -751,7 +751,7 @@ window.personnes = [
 
     antecedents: "Aucun",
     recherche: "Oui",
-    motifRecherche: "Recherche judiciaire fictive"
+    motifRecherche: "Mandat d'arrêt pour coup et blessure"
 },
 
 {
