@@ -28,18 +28,7 @@ window.personnes = [
         }
     ],
 
-    vehicules: [
-        {
-            type: "",
-            marque: "",
-            modele: "",
-            couleur: "",
-            immatriculation: "",
-            proprietaire: "",
-            assure: "",
-            controleTechnique: ""
-        }
-    ],
+    vehicules: [],
 
     antecedents: "Aucun",
     recherche: "Non",
