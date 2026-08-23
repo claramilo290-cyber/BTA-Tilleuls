@@ -92,7 +92,7 @@ window.personnes = [
     age: 30,
     adresse: "5 rue Deville",
     ville: "Toulouse",
-    departement: "Aude",
+    departement: "Haute-Garonne",
     situationFamiliale: "Divorcésans enfant",
     profession: "Recherche emploie",
     lieuDeTravail: "France travail",
