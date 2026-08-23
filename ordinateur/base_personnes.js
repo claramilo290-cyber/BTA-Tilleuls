@@ -4,7 +4,7 @@ window.personnes = [
     id: 1,
     nom: "Belani",
     prenom: "Ryan",
-    dateNaissance: "2004-04-14",
+    dateNaissance: "2004-10-08",
     lieuNaissance: "Narbonne (11)",
     nationalite: "Française",
     age: 20,
