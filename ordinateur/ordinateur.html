@@ -773,82 +773,43 @@ function closeWindow(id) {
 
 function searchPerson() {
 
+    const input = document.getElementById("personSearch");
+    const result = document.getElementById("personResult");
 
-    const input =
-        document.getElementById(
-            "personSearch"
-        );
-
-
-    const result =
-        document.getElementById(
-            "personResult"
-        );
-
-
-    const search =
-        input.value
-        .trim()
-        .toLowerCase();
-
-
-
-    if (search === "") {
-
-        result.innerHTML =
-            "<p class='empty-result'>Veuillez saisir un nom.</p>";
-
+    if (!input || !result) {
         return;
-
     }
 
+    const search = input.value.trim().toLowerCase();
 
+    if (search === "") {
+        result.innerHTML =
+            "<p class='empty-result'>Veuillez saisir un nom.</p>";
+        return;
+    }
 
-    /* Vérification de la base */
+    const liste = Array.isArray(window.personnes)
+        ? window.personnes
+        : [];
 
-    const liste =
-        window.personnes || [];
+    const resultats = liste.filter(function (personne) {
 
+        const nom =
+            String(personne.nom || "").toLowerCase();
 
-    const resultats =
-        liste.filter(
-            function(personne) {
+        const prenom =
+            String(personne.prenom || "").toLowerCase();
 
+        const id =
+            String(personne.id || "").toLowerCase();
 
-                const nom =
-                    String(
-                        personne.nom || ""
-                    )
-                    .toLowerCase();
-
-
-                const prenom =
-                    String(
-                        personne.prenom || ""
-                    )
-                    .toLowerCase();
-
-
-                const id =
-                    String(
-                        personne.id || ""
-                    );
-
-
-                return (
-
-                    nom.includes(search) ||
-
-                    prenom.includes(search) ||
-
-                    id === search
-
-                );
-
-            }
+        return (
+            nom.includes(search) ||
+            prenom.includes(search) ||
+            id === search
         );
 
-
+    });
 
     if (resultats.length === 0) {
 
@@ -856,218 +817,246 @@ function searchPerson() {
             "<p class='empty-result'>Aucune personne trouvée.</p>";
 
         return;
-
     }
 
+    result.innerHTML = resultats.map(function (personne) {
 
+        let appareilsHTML = "";
 
-    result.innerHTML =
-        resultats.map(
-            function(personne) {
+        if (
+            Array.isArray(personne.appareils) &&
+            personne.appareils.length > 0
+        ) {
 
+            appareilsHTML = `
+                <h4>Appareil(s) enregistré(s)</h4>
 
-                let vehiculesHTML =
-                    "";
+                ${personne.appareils.map(function (appareil) {
 
+                    return `
+                        <div class="document-item">
 
-                if (
-                    personne.vehicules &&
-                    personne.vehicules.length > 0
-                ) {
+                            <strong>
+                                ${appareil.type || "Appareil"}
+                            </strong>
 
+                            <br>
 
-                    vehiculesHTML =
-                        "<h4>Éléments enregistrés</h4>";
+                            Marque :
+                            ${appareil.marque || "Non renseignée"}
 
+                            <br>
 
-                    vehiculesHTML +=
-                        personne.vehicules.map(
-                            function(vehicule) {
+                            Modèle :
+                            ${appareil.modele || "Non renseigné"}
 
+                            <br>
 
-                                return `
+                            Couleur :
+                            ${appareil.couleur || "Non renseignée"}
 
-                                    <div class="document-item">
-
-                                        <strong>
-                                            ${vehicule.marque || ""}
-                                            ${vehicule.modele || ""}
-                                        </strong>
-
-                                        <br>
-
-                                        Couleur :
-                                        ${vehicule.couleur || "Non renseignée"}
-
-                                        <br>
-
-                                        Immatriculation :
-                                        ${vehicule.immatriculation || "Non renseignée"}
-
-                                    </div>
-
-                                `;
-
-
+                            ${
+                                appareil.stockage
+                                ? `<br>Stockage : ${appareil.stockage}`
+                                : ""
                             }
-                        )
-                        .join("");
 
+                            ${
+                                appareil.numeroSerie
+                                ? `<br>Numéro de série : ${appareil.numeroSerie}`
+                                : ""
+                            }
+
+                        </div>
+                    `;
+
+                }).join("")}
+            `;
+
+        } else {
+
+            appareilsHTML = `
+                <h4>Appareil(s)</h4>
+                <p>Aucun appareil enregistré.</p>
+            `;
+
+        }
+
+
+        let vehiculesHTML = "";
+
+        if (
+            Array.isArray(personne.vehicules) &&
+            personne.vehicules.length > 0
+        ) {
+
+            vehiculesHTML = `
+                <h4>Véhicule(s)</h4>
+
+                ${personne.vehicules.map(function (vehicule) {
+
+                    return `
+                        <div class="document-item">
+
+                            <strong>
+                                ${vehicule.marque || "Marque inconnue"}
+                                ${vehicule.modele || ""}
+                            </strong>
+
+                            ${
+                                vehicule.type
+                                ? `<br>Type : ${vehicule.type}`
+                                : ""
+                            }
+
+                            <br>
+
+                            Couleur :
+                            ${vehicule.couleur || "Non renseignée"}
+
+                            <br>
+
+                            Immatriculation :
+                            ${vehicule.immatriculation || "Non renseignée"}
+
+                            ${
+                                vehicule.numeroSerie
+                                ? `<br>Numéro de série : ${vehicule.numeroSerie}`
+                                : ""
+                            }
+
+                            <br>
+
+                            Propriétaire :
+                            ${vehicule.proprietaire || "Non renseigné"}
+
+                            <br>
+
+                            Assuré :
+                            ${vehicule.assure || "Non renseigné"}
+
+                            <br>
+
+                            Contrôle technique :
+                            ${vehicule.controleTechnique || "Non renseigné"}
+
+                        </div>
+                    `;
+
+                }).join("")}
+            `;
+
+        } else {
+
+            vehiculesHTML = `
+                <h4>Véhicule(s)</h4>
+                <p>Aucun véhicule enregistré.</p>
+            `;
+
+        }
+
+
+        return `
+
+            <article class="person-card">
+
+                <h3>
+                    ${personne.prenom || ""}
+                    ${personne.nom || ""}
+                </h3>
+
+                <p>
+                    <strong>Identifiant :</strong>
+                    ${personne.id ?? "Non renseigné"}
+                </p>
+
+                <p>
+                    <strong>Date de naissance :</strong>
+                    ${personne.dateNaissance || "Non renseignée"}
+                </p>
+
+                <p>
+                    <strong>Lieu de naissance :</strong>
+                    ${personne.lieuNaissance || "Non renseigné"}
+                </p>
+
+                <p>
+                    <strong>Nationalité :</strong>
+                    ${personne.nationalite || "Non renseignée"}
+                </p>
+
+                <p>
+                    <strong>Âge :</strong>
+                    ${personne.age ?? "Non renseigné"}
+                </p>
+
+                <p>
+                    <strong>Adresse :</strong>
+                    ${personne.adresse || "Non renseignée"}
+                </p>
+
+                <p>
+                    <strong>Ville :</strong>
+                    ${personne.ville || "Non renseignée"}
+                </p>
+
+                <p>
+                    <strong>Département :</strong>
+                    ${personne.departement || "Non renseigné"}
+                </p>
+
+                <p>
+                    <strong>Situation familiale :</strong>
+                    ${personne.situationFamiliale || "Non renseignée"}
+                </p>
+
+                <p>
+                    <strong>Profession :</strong>
+                    ${personne.profession || "Non renseignée"}
+                </p>
+
+                <p>
+                    <strong>Lieu de travail :</strong>
+                    ${personne.lieuDeTravail || "Non renseigné"}
+                </p>
+
+                <p>
+                    <strong>Téléphone :</strong>
+                    ${personne.telephone || "Non renseigné"}
+                </p>
+
+                <p>
+                    <strong>Antécédents :</strong>
+                    ${personne.antecedents || "Aucun"}
+                </p>
+
+                <p>
+                    <strong>Recherche :</strong>
+                    ${personne.recherche || "Non"}
+                </p>
+
+                ${
+                    personne.motifRecherche
+                    ? `
+                        <p>
+                            <strong>Motif de recherche :</strong>
+                            ${personne.motifRecherche}
+                        </p>
+                    `
+                    : ""
                 }
 
+                ${appareilsHTML}
 
+                ${vehiculesHTML}
 
-                return `
+            </article>
 
-                    <article class="person-card">
+        `;
 
-
-                        <h3>
-
-                            ${personne.prenom || ""}
-                            ${personne.nom || ""}
-
-                        </h3>
-
-
-                        <p>
-
-                            <strong>
-                                Identifiant :
-                            </strong>
-
-                            ${personne.id ?? "Non renseigné"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Date de naissance :
-                            </strong>
-
-                            ${personne.dateNaissance || "Non renseignée"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Lieu de naissance :
-                            </strong>
-
-                            ${personne.lieuNaissance || "Non renseigné"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Âge :
-                            </strong>
-
-                            ${personne.age ?? "Non renseigné"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Adresse :
-                            </strong>
-
-                            ${personne.adresse || "Non renseignée"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Ville :
-                            </strong>
-
-                            ${personne.ville || "Non renseignée"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Département :
-                            </strong>
-
-                            ${personne.departement || "Non renseigné"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Profession :
-                            </strong>
-
-                            ${personne.profession || "Non renseignée"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Téléphone :
-                            </strong>
-
-                            ${personne.telephone || "Non renseigné"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Antécédents :
-                            </strong>
-
-                            ${personne.antecedents || "Aucun"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Recherche :
-                            </strong>
-
-                            ${personne.recherche || "Non"}
-
-                        </p>
-
-
-                        ${vehiculesHTML}
-
-
-                    </article>
-
-                `;
-
-
-            }
-        )
-        .join("");
-
-
+    }).join("");
 }
-
-
-
+    
 /* =========================================
    RECHERCHE VÉHICULES
 ========================================= */
