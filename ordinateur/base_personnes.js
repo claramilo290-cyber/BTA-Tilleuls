@@ -743,6 +743,7 @@ window.personnes = [
     antecedents: "Aucun",
     recherche: "Oui",
     motifRecherche: "mandat d'arrêt pour coup et blessure",
+    
     situationAdministrative: {
     oqtf: "Oui",
     statut: "En cours"
