@@ -24,7 +24,8 @@ window.personnes = [
             marque: "Iphone",
             modele: "17 pro max",
             couleur: "Bleu nuit",
-            stockage: "256 Go"
+            stockage: "256 Go",
+            numeroSerie: "n°6708-685P-12KI"
         }
     ],
 
@@ -59,7 +60,8 @@ window.personnes = [
             marque: "Samsung",
             modele: "Galaxy S25 FE",
             couleur: "Violet",
-            stockage: "256 Go"
+            stockage: "256 Go",
+            numeroSerie: "n°0879-543N-55SG"
         }
     ],
 
@@ -80,32 +82,50 @@ window.personnes = [
     recherche: "Non",
     motifRecherche: ""
 },
-    {
-        id: 215,
-        nom: "Robert",
-        prenom: "Julien",
-        dateNaissance: "1985-08-21",
-        lieuNaissance: "Toulouse",
-        age: 41,
-        adresse: "Rue Alsace Lorraine",
-        ville: "Toulouse",
-        departement: "Haute-Garonne",
-        profession: "Ancien agent de sécurité",
-        telephone: "+39 65 10 98 32 76",
+   {
+    id: 3,
+    nom: "Dupont",
+    prenom: "Julien",
+    dateNaissance: "1996-06-19",
+    lieuNaissance: "Ville (département)",
+    nationalite: "Française",
+    age: 30,
+    adresse: "5 rue Deville",
+    ville: "Toulouse",
+    departement: "Aude",
+    situationFamiliale: "Divorcésans enfant",
+    profession: "Recherche emploie",
+    lieuDeTravail: "France travail",
 
-        vehicules: [
-            {
-                marque: "BMW",
-                modele: "X3",
-                couleur: "Noire",
-                immatriculation: "MN-215-OP",
-                proprietaire: "Oui"
-            }
-        ],
+    telephone: "+39 34 75 48 06 67",
 
-        antecedents: "Dégradation ancienne",
-        recherche: "Oui",
-        motifRecherche: "Autre affaire, sans lien avec le dossier principal"
-    }
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Iphone",
+            modele: "14",
+            couleur: "vert",
+            stockage: "256 Go",
+            numeroSerie: "n°6275-089R-79GE"
+        }
+    ],
+
+    vehicules: [
+         {
+            type: "voiture",
+            marque: "Audi",
+            modele: "RS3",
+            couleur: "Ice White",
+            immatriculation: "XR-741-FU",
+            proprietaire: "Julien Dupont",
+            assure: "Oui",
+            controleTechnique: "11/08/2026"
+        }
+    ],
+
+    antecedents: "Vol avec violence, rebellions",
+    recherche: "Oui",
+    motifRecherche: "mandat d'arrêt pour Violence-intra-familial"
+},
 
 ];
