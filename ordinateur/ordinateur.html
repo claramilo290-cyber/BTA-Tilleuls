@@ -1036,6 +1036,24 @@ function searchPerson() {
                 </p>
 
                 ${
+    personne.situationAdministrative
+    ?
+    `
+        <p>
+            <strong>Situation administrative :</strong>
+            OQTF : ${personne.situationAdministrative.oqtf || "Non renseignée"}
+        </p>
+
+        <p>
+            <strong>Statut :</strong>
+            ${personne.situationAdministrative.statut || "Non renseigné"}
+        </p>
+    `
+    :
+    ""
+}
+
+                ${
                     personne.motifRecherche
                     ? `
                         <p>
