@@ -36,6 +36,504 @@ window.personnes = [
     motifRecherche: ""
 },
 
+   {
+    id: 8,
+    nom: "Lefèvre",
+    prenom: "Thomas",
+    dateNaissance: "1985-04-12",
+    lieuNaissance: "Narbonne (11)",
+    nationalite: "Française",
+    age: 41,
+    adresse: "13 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié, deux enfants",
+    profession: "Conducteur de bus",
+    lieuDeTravail: "Réseau de transport intercommunal",
+    telephone: "+39 08 21 47 63 95",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S24",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°4187-632K-95RM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Renault",
+            modele: "Clio V",
+            couleur: "Grise",
+            immatriculation: "AB-418-KT",
+            numeroSerie: "n°7352-184R-63QW",
+            proprietaire: "Lefèvre Thomas",
+            assure: "Oui",
+            controleTechnique: "18/06/2028"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 9,
+    nom: "Bernard",
+    prenom: "Laura",
+    dateNaissance: "1997-08-21",
+    lieuNaissance: "Montpellier (34)",
+    nationalite: "Française",
+    age: 29,
+    adresse: "22 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Secrétaire médicale",
+    lieuDeTravail: "Centre médical des Tilleuls",
+    telephone: "+39 09 34 61 28 50",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 15",
+            couleur: "Rose",
+            stockage: "128 Go",
+            numeroSerie: "n°6274-091L-38QP"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 10,
+    nom: "Martinez",
+    prenom: "David",
+    dateNaissance: "1989-02-14",
+    lieuNaissance: "Béziers (34)",
+    nationalite: "Française",
+    age: 37,
+    adresse: "31 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "En couple",
+    profession: "Mécanicien automobile",
+    lieuDeTravail: "Garage du Centre",
+    telephone: "+39 10 52 74 16 83",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Xiaomi",
+            modele: "14T Pro",
+            couleur: "Noir",
+            stockage: "512 Go",
+            numeroSerie: "n°5148-237D-69MK"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Volkswagen",
+            modele: "Golf VIII",
+            couleur: "Bleue",
+            immatriculation: "CD-529-RM",
+            numeroSerie: "n°8416-305Q-72LP",
+            proprietaire: "Martinez David",
+            assure: "Oui",
+            controleTechnique: "04/09/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 11,
+    nom: "Renaud",
+    prenom: "Manon",
+    dateNaissance: "2000-11-03",
+    lieuNaissance: "Carcassonne (11)",
+    nationalite: "Française",
+    age: 25,
+    adresse: "39 avenue Jean Jaurès",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Étudiante en soins infirmiers",
+    lieuDeTravail: "Institut de formation en soins infirmiers",
+    telephone: "+39 11 63 28 41 75",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S25",
+            couleur: "Bleu",
+            stockage: "256 Go",
+            numeroSerie: "n°7381-406P-25RD"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 12,
+    nom: "Gillet",
+    prenom: "François",
+    dateNaissance: "1974-06-17",
+    lieuNaissance: "Toulouse (31)",
+    nationalite: "Française",
+    age: 52,
+    adresse: "44 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié, trois enfants",
+    profession: "Commerçant",
+    lieuDeTravail: "Épicerie du Quartier",
+    telephone: "+39 12 47 65 30 81",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy A36",
+            couleur: "Noir",
+            stockage: "128 Go",
+            numeroSerie: "n°3527-814M-60QK"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Utilitaire",
+            marque: "Citroën",
+            modele: "Berlingo",
+            couleur: "Blanc",
+            immatriculation: "EF-712-NR",
+            numeroSerie: "n°6248-193B-57LX",
+            proprietaire: "Gillet François",
+            assure: "Oui",
+            controleTechnique: "21/03/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 13,
+    nom: "Pons",
+    prenom: "Clément",
+    dateNaissance: "1994-03-28",
+    lieuNaissance: "Narbonne (11)",
+    nationalite: "Française",
+    age: 32,
+    adresse: "52 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Technicien réseau",
+    lieuDeTravail: "Société Informatique Sud",
+    telephone: "+39 13 58 24 76 10",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Google",
+            modele: "Pixel 9 Pro",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°4916-275R-83KM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Toyota",
+            modele: "Yaris",
+            couleur: "Rouge",
+            immatriculation: "GH-384-LP",
+            numeroSerie: "n°7152-408C-91QX",
+            proprietaire: "Pons Clément",
+            assure: "Oui",
+            controleTechnique: "13/10/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 14,
+    nom: "Masson",
+    prenom: "Claire",
+    dateNaissance: "1983-09-09",
+    lieuNaissance: "Nîmes (30)",
+    nationalite: "Française",
+    age: 42,
+    adresse: "61 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Divorcée, un enfant",
+    profession: "Psychologue",
+    lieuDeTravail: "Cabinet des Tilleuls",
+    telephone: "+39 14 62 37 51 84",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 16",
+            couleur: "Violet",
+            stockage: "128 Go",
+            numeroSerie: "n°8635-214L-47HT"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 15,
+    nom: "Kader",
+    prenom: "Samy",
+    dateNaissance: "1992-01-26",
+    lieuNaissance: "Marseille (13)",
+    nationalite: "Française",
+    age: 34,
+    adresse: "73 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Livreur",
+    lieuDeTravail: "RapidColis",
+
+    situationAdministrative: {
+        oqtf: "Oui",
+        statut: "En cours"
+    },
+
+    telephone: "+39 15 73 40 28 61",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Xiaomi",
+            modele: "Redmi Note 14",
+            couleur: "Gris",
+            stockage: "256 Go",
+            numeroSerie: "n°5273-816Q-42RD"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 16,
+    nom: "Lacroix",
+    prenom: "Benoît",
+    dateNaissance: "1980-12-13",
+    lieuNaissance: "Béziers (34)",
+    nationalite: "Française",
+    age: 45,
+    adresse: "84 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié",
+    profession: "Chef d'entreprise",
+    lieuDeTravail: "Lacroix Bâtiment",
+    telephone: "+39 16 24 58 71 93",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S25 Ultra",
+            couleur: "Noir",
+            stockage: "512 Go",
+            numeroSerie: "n°6914-235K-78LM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Camionnette",
+            marque: "Ford",
+            modele: "Transit Custom",
+            couleur: "Blanc",
+            immatriculation: "JK-416-MP",
+            numeroSerie: "n°3847-620R-95QB",
+            proprietaire: "Lacroix Benoît",
+            assure: "Oui",
+            controleTechnique: "26/08/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 17,
+    nom: "Meunier",
+    prenom: "Sarah",
+    dateNaissance: "1998-05-07",
+    lieuNaissance: "Montpellier (34)",
+    nationalite: "Française",
+    age: 28,
+    adresse: "92 avenue Jean Jaurès",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "En couple",
+    profession: "Journaliste",
+    lieuDeTravail: "Le Courrier de Saint-Laurent",
+    telephone: "+39 17 51 63 28 40",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 16 Pro",
+            couleur: "Titane naturel",
+            stockage: "256 Go",
+            numeroSerie: "n°7462-318D-59QF"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 18,
+    nom: "Bennani",
+    prenom: "Omar",
+    dateNaissance: "1987-07-31",
+    lieuNaissance: "Perpignan (66)",
+    nationalite: "Marocaine",
+    age: 39,
+    adresse: "106 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié, deux enfants",
+    profession: "Maçon",
+    lieuDeTravail: "BTP Méditerranée",
+    telephone: "+39 18 63 27 41 95",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S24 FE",
+            couleur: "Bleu",
+            stockage: "128 Go",
+            numeroSerie: "n°3158-704P-26KD"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Fourgon",
+            marque: "Renault",
+            modele: "Trafic",
+            couleur: "Gris",
+            immatriculation: "LM-805-QC",
+            numeroSerie: "n°6284-157M-93RT",
+            proprietaire: "Bennani Omar",
+            assure: "Oui",
+            controleTechnique: "16/01/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 19,
+    nom: "Chevrier",
+    prenom: "Alice",
+    dateNaissance: "1995-10-22",
+    lieuNaissance: "Carcassonne (11)",
+    nationalite: "Française",
+    age: 30,
+    adresse: "117 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Pharmacienne",
+    lieuDeTravail: "Pharmacie des Tilleuls",
+    telephone: "+39 19 72 14 53 68",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Google",
+            modele: "Pixel 9a",
+            couleur: "Blanc",
+            stockage: "128 Go",
+            numeroSerie: "n°4826-731C-54QN"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Peugeot",
+            modele: "208",
+            couleur: "Bleue",
+            immatriculation: "NP-294-HG",
+            numeroSerie: "n°7518-406B-83KM",
+            proprietaire: "Chevrier Alice",
+            assure: "Oui",
+            controleTechnique: "07/07/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+   
        {
     id: 2,
     nom: "Moreau",
