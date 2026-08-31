@@ -1080,26 +1080,22 @@ function searchPerson() {
 ========================================= */
 
 function searchVehicle() {
-
+function searchVehicle() {
 
     const input =
-        document.getElementById(
-            "vehicleSearch"
-        );
-
+        document.getElementById("vehicleSearch");
 
     const result =
-        document.getElementById(
-            "vehicleResult"
-        );
+        document.getElementById("vehicleResult");
 
+    if (!input || !result) {
+        return;
+    }
 
     const search =
         input.value
         .trim()
         .toLowerCase();
-
-
 
     if (search === "") {
 
@@ -1107,86 +1103,54 @@ function searchVehicle() {
             "<p class='empty-result'>Veuillez saisir une recherche.</p>";
 
         return;
-
     }
 
-
-
     const liste =
-        window.personnes || [];
-
+        Array.isArray(window.personnes)
+            ? window.personnes
+            : [];
 
     let resultats = [];
 
+    liste.forEach(function(personne) {
 
-    liste.forEach(
-        function(personne) {
+        if (!Array.isArray(personne.vehicules)) {
+            return;
+        }
+
+        personne.vehicules.forEach(function(vehicule, index) {
+
+            const texteRecherche = [
+
+                vehicule.type,
+                vehicule.marque,
+                vehicule.modele,
+                vehicule.couleur,
+                vehicule.immatriculation,
+                vehicule.numeroSerie,
+                vehicule.proprietaire,
+                vehicule.assure,
+                vehicule.controleTechnique
+
+            ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
 
 
-            if (!personne.vehicules) {
+            if (texteRecherche.includes(search)) {
 
-                return;
+                resultats.push({
+                    personne: personne,
+                    vehicule: vehicule,
+                    indexVehicule: index
+                });
 
             }
 
+        });
 
-            personne.vehicules.forEach(
-                function(vehicule) {
-
-
-                    const marque =
-                        String(
-                            vehicule.marque || ""
-                        )
-                        .toLowerCase();
-
-
-                    const modele =
-                        String(
-                            vehicule.modele || ""
-                        )
-                        .toLowerCase();
-
-
-                    const immatriculation =
-                        String(
-                            vehicule.immatriculation || ""
-                        )
-                        .toLowerCase();
-
-
-
-                    if (
-
-                        marque.includes(search) ||
-
-                        modele.includes(search) ||
-
-                        immatriculation.includes(search)
-
-                    ) {
-
-
-                        resultats.push({
-
-                            personne:
-                                personne,
-
-                            vehicule:
-                                vehicule
-
-                        });
-
-                    }
-
-
-                }
-            );
-
-
-        }
-    );
-
+    });
 
 
     if (resultats.length === 0) {
@@ -1195,83 +1159,179 @@ function searchVehicle() {
             "<p class='empty-result'>Aucun résultat trouvé.</p>";
 
         return;
-
     }
 
 
-
     result.innerHTML =
-        resultats.map(
-            function(item) {
+        resultats.map(function(item) {
+
+            const personne =
+                item.personne;
+
+            const vehicule =
+                item.vehicule;
 
 
-                return `
+            return `
 
-                    <article class="vehicle-card">
+                <article
+                    class="document-item"
+                    onclick="openPersonFromVehicle(${personne.id})"
+                    style="cursor:pointer;"
+                    title="Ouvrir la fiche de ${personne.prenom || ""} ${personne.nom || ""}"
+                >
 
-                        <h3>
-
-                            ${item.vehicule.marque || ""}
-                            ${item.vehicule.modele || ""}
-
-                        </h3>
-
-
-                        <p>
-
-                            <strong>
-                                Couleur :
-                            </strong>
-
-                            ${item.vehicule.couleur || "Non renseignée"}
-
-                        </p>
+                    <h3>
+                        ${vehicule.marque || "Marque inconnue"}
+                        ${vehicule.modele || ""}
+                    </h3>
 
 
-                        <p>
-
-                            <strong>
-                                Immatriculation :
-                            </strong>
-
-                            ${item.vehicule.immatriculation || "Non renseignée"}
-
-                        </p>
+                    <p>
+                        <strong>Type :</strong>
+                        ${vehicule.type || "Non renseigné"}
+                    </p>
 
 
-                        <p>
-
-                            <strong>
-                                Propriétaire :
-                            </strong>
-
-                            ${item.personne.prenom || ""}
-                            ${item.personne.nom || ""}
-
-                        </p>
-
-                    </article>
-
-                `;
+                    <p>
+                        <strong>Marque :</strong>
+                        ${vehicule.marque || "Non renseignée"}
+                    </p>
 
 
-            }
-        )
+                    <p>
+                        <strong>Modèle :</strong>
+                        ${vehicule.modele || "Non renseigné"}
+                    </p>
+
+
+                    <p>
+                        <strong>Couleur :</strong>
+                        ${vehicule.couleur || "Non renseignée"}
+                    </p>
+
+
+                    <p>
+                        <strong>Immatriculation :</strong>
+                        ${vehicule.immatriculation || "Non renseignée"}
+                    </p>
+
+
+                    <p>
+                        <strong>Numéro de série :</strong>
+                        ${vehicule.numeroSerie || "Non renseigné"}
+                    </p>
+
+
+                    <p>
+                        <strong>Propriétaire :</strong>
+                        ${vehicule.proprietaire || "Non renseigné"}
+                    </p>
+
+
+                    <p>
+                        <strong>Assuré :</strong>
+                        ${vehicule.assure || "Non renseigné"}
+                    </p>
+
+
+                    <p>
+                        <strong>Contrôle technique :</strong>
+                        ${vehicule.controleTechnique || "Non renseigné"}
+                    </p>
+
+
+                    <hr>
+
+
+                    <p>
+                        <strong>Personne associée :</strong>
+                        ${personne.prenom || ""}
+                        ${personne.nom || ""}
+                    </p>
+
+
+                    <p>
+                        <strong>Identifiant :</strong>
+                        ${personne.id ?? "Non renseigné"}
+                    </p>
+
+
+                    <p>
+                        <em>
+                            Cliquer pour ouvrir la fiche personne
+                        </em>
+                    </p>
+
+                </article>
+
+            `;
+
+        })
         .join("");
-
 
 }
 
 
-</script>
 
-<script src="./base_personnes.js"></script>
+/* =========================================
+   OUVERTURE FICHE PERSONNE DEPUIS VÉHICULE
+========================================= */
 
-<script>
-if (window.personnes) {
-    console.log("BASE OK :", window.personnes.length);
-} else {
-    console.log("BASE NON CHARGÉE");
+function openPersonFromVehicle(personId) {
+
+    const personne =
+        window.personnes.find(function(personne) {
+
+            return String(personne.id) === String(personId);
+
+        });
+
+
+    if (!personne) {
+        return;
+    }
+
+
+    /*
+       On ferme la fenêtre véhicule.
+    */
+
+    closeWindow("vehiculesWindow");
+
+
+    /*
+       On ouvre la fenêtre personnes.
+    */
+
+    openWindow("personnesWindow");
+
+
+    /*
+       On place automatiquement
+       le nom de la personne dans
+       la recherche.
+    */
+
+    const input =
+        document.getElementById("personSearch");
+
+
+    if (input) {
+
+        input.value =
+            personne.nom;
+
+    }
+
+
+    /*
+       Lance automatiquement
+       la recherche.
+    */
+
+    searchPerson();
+
 }
 </script>
 
