@@ -37,6 +37,815 @@ window.personnes = [
 },
 
    {
+    id: 56,
+    nom: "Arnaud",
+    prenom: "Claire",
+    dateNaissance: "1989-02-17",
+    lieuNaissance: "Montpellier (34)",
+    nationalite: "Française",
+    age: 37,
+    adresse: "215 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Mariée, deux enfants",
+    profession: "Avocate",
+    lieuDeTravail: "Cabinet Arnaud & Associés",
+    telephone: "+39 56 24 81 63 70",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 16 Pro",
+            couleur: "Titane noir",
+            stockage: "512 Go",
+            numeroSerie: "n°5182-736R-41KM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Volvo",
+            modele: "XC40",
+            couleur: "Blanche",
+            immatriculation: "QR-615-LM",
+            numeroSerie: "n°7418-205C-63PX",
+            proprietaire: "Arnaud Claire",
+            assure: "Oui",
+            controleTechnique: "14/06/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 57,
+    nom: "Bastien",
+    prenom: "Éric",
+    dateNaissance: "1961-08-04",
+    lieuNaissance: "Narbonne (11)",
+    nationalite: "Française",
+    age: 65,
+    adresse: "221 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Veuf",
+    profession: "Retraité, ancien facteur",
+    lieuDeTravail: "Retraité",
+    telephone: "+39 57 31 64 20 85",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Nokia",
+            modele: "G60",
+            couleur: "Bleu",
+            stockage: "128 Go",
+            numeroSerie: "n°6841-295B-72QK"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Citroën",
+            modele: "C3",
+            couleur: "Grise",
+            immatriculation: "ST-284-NP",
+            numeroSerie: "n°3517-806L-49RM",
+            proprietaire: "Bastien Eric",
+            assure: "Oui",
+            controleTechnique: "03/11/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 58,
+    nom: "Mahmoud",
+    prenom: "Rami",
+    dateNaissance: "1993-03-22",
+    lieuNaissance: "Perpignan (66)",
+    nationalite: "Syrienne",
+    age: 33,
+    adresse: "228 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Cuisinier",
+    lieuDeTravail: "Restaurant Le Central",
+
+    situationAdministrative: {
+        oqtf: "Oui",
+        statut: "En cours"
+    },
+
+    telephone: "+39 58 47 21 63 90",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy A56",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°4276-813M-59QK"
+        }
+    ],
+
+    vehicules: [],
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 59,
+    nom: "Simon",
+    prenom: "Pauline",
+    dateNaissance: "1998-07-14",
+    lieuNaissance: "Carcassonne (11)",
+    nationalite: "Française",
+    age: 28,
+    adresse: "233 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "En couple",
+    profession: "Vendeuse",
+    lieuDeTravail: "Boutique du Centre",
+    telephone: "+39 59 28 63 71 45",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 15",
+            couleur: "Rose",
+            stockage: "128 Go",
+            numeroSerie: "n°7352-184K-96TR"
+        }
+    ],
+
+    vehicules: [],
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 60,
+    nom: "Bekkali",
+    prenom: "Hamza",
+    dateNaissance: "1987-12-02",
+    lieuNaissance: "Marseille (13)",
+    nationalite: "Marocaine",
+    age: 38,
+    adresse: "241 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié",
+    profession: "Ouvrier du bâtiment",
+    lieuDeTravail: "BatiSud",
+
+    telephone: "+39 60 15 72 48 93",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Xiaomi",
+            modele: "15",
+            couleur: "Gris",
+            stockage: "256 Go",
+            numeroSerie: "n°2916-847C-53LM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Fourgon",
+            marque: "Renault",
+            modele: "Trafic",
+            couleur: "Blanc",
+            immatriculation: "UV-418-KP",
+            numeroSerie: "n°6247-390R-81QF",
+            proprietaire: "Bekkali Hamza",
+            assure: "Oui",
+            controleTechnique: "18/09/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 61,
+    nom: "Aubry",
+    prenom: "Marine",
+    dateNaissance: "2004-04-27",
+    lieuNaissance: "Montpellier (34)",
+    nationalite: "Française",
+    age: 22,
+    adresse: "247 avenue Jean Jaurès",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Étudiante en médecine",
+    lieuDeTravail: "Faculté de médecine de Montpellier",
+    telephone: "+39 61 38 54 20 77",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 16",
+            couleur: "Blanc",
+            stockage: "128 Go",
+            numeroSerie: "n°8164-205P-73KR"
+        }
+    ],
+
+    vehicules: [],
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 62,
+    nom: "Kaci",
+    prenom: "Farid",
+    dateNaissance: "1982-09-19",
+    lieuNaissance: "Béziers (34)",
+    nationalite: "Algérienne",
+    age: 43,
+    adresse: "252 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Divorcé",
+    profession: "Mécanicien",
+    lieuDeTravail: "Garage des Tilleuls",
+    telephone: "+39 62 74 18 53 40",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S24",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°5318-724B-69QM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "BMW",
+            modele: "Série 1",
+            couleur: "Noire",
+            immatriculation: "WX-529-LR",
+            numeroSerie: "n°2841-763K-50PT",
+            proprietaire: "Kaci Farid",
+            assure: "Oui",
+            controleTechnique: "27/07/2027"
+        }
+    ],
+
+    antecedents: "Conduite sans permis ancienne",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 63,
+    nom: "Roche",
+    prenom: "Élodie",
+    dateNaissance: "1991-01-12",
+    lieuNaissance: "Nîmes (30)",
+    nationalite: "Française",
+    age: 35,
+    adresse: "263 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Mariée, un enfant",
+    profession: "Médecin urgentiste",
+    lieuDeTravail: "Centre hospitalier de Saint-Laurent-des-Vignes",
+    telephone: "+39 63 41 25 78 16",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S25 Ultra",
+            couleur: "Noir",
+            stockage: "512 Go",
+            numeroSerie: "n°7428-316R-59HD"
+        }
+    ],
+
+    vehicules: [],
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 64,
+    nom: "Gillet",
+    prenom: "Marc",
+    dateNaissance: "1973-05-22",
+    lieuNaissance: "Narbonne (11)",
+    nationalite: "Française",
+    age: 53,
+    adresse: "271 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié, deux enfants",
+    profession: "Agriculteur",
+    lieuDeTravail: "Exploitation agricole familiale",
+    telephone: "+39 64 52 18 37 90",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy A36",
+            couleur: "Noir",
+            stockage: "128 Go",
+            numeroSerie: "n°4182-635M-97QK"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Tracteur",
+            marque: "John Deere",
+            modele: "6120M",
+            couleur: "Vert",
+            immatriculation: "AG-064-TX",
+            numeroSerie: "n°9517-284C-63RM",
+            proprietaire: "Gillet Marc",
+            assure: "Oui",
+            controleTechnique: "Véhicule agricole"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 65,
+    nom: "Bourgeois",
+    prenom: "Camille",
+    dateNaissance: "1999-10-06",
+    lieuNaissance: "Toulouse (31)",
+    nationalite: "Française",
+    age: 26,
+    adresse: "278 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Photographe",
+    lieuDeTravail: "Indépendante",
+    telephone: "+39 65 27 63 41 58",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 16 Pro",
+            couleur: "Titane naturel",
+            stockage: "256 Go",
+            numeroSerie: "n°6248-317D-50LM"
+        },
+        {
+            type: "Appareil photo",
+            marque: "Sony",
+            modele: "A7 IV",
+            couleur: "Noir",
+            stockage: "1 To",
+            numeroSerie: "n°7315-842P-69RQ"
+        }
+    ],
+
+    vehicules: [],
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 66,
+    nom: "Lamy",
+    prenom: "Jérôme",
+    dateNaissance: "1980-07-28",
+    lieuNaissance: "Carcassonne (11)",
+    nationalite: "Française",
+    age: 46,
+    adresse: "286 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Agent de sécurité",
+    lieuDeTravail: "Société de sécurité privée",
+    telephone: "+39 66 14 83 72 50",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S23",
+            couleur: "Noir",
+            stockage: "128 Go",
+            numeroSerie: "n°4831-726K-95TD"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Dacia",
+            modele: "Duster",
+            couleur: "Noire",
+            immatriculation: "BC-761-RP",
+            numeroSerie: "n°3168-904M-52QX",
+            proprietaire: "Lamy Jérôme",
+            assure: "Oui",
+            controleTechnique: "15/10/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 67,
+    nom: "Chergui",
+    prenom: "Bilal",
+    dateNaissance: "1994-12-09",
+    lieuNaissance: "Perpignan (66)",
+    nationalite: "Algérienne",
+    age: 31,
+    adresse: "294 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Manutentionnaire",
+    lieuDeTravail: "LogiSud",
+
+    telephone: "+39 67 35 41 82 69",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Xiaomi",
+            modele: "Redmi Note 14",
+            couleur: "Bleu",
+            stockage: "256 Go",
+            numeroSerie: "n°5926-814R-37KM"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Violences anciennes",
+    recherche: "Oui",
+    motifRecherche: "Coups et blessures"
+},
+
+{
+    id: 68,
+    nom: "Pichard",
+    prenom: "Sophie",
+    dateNaissance: "1985-03-11",
+    lieuNaissance: "Béziers (34)",
+    nationalite: "Française",
+    age: 41,
+    adresse: "301 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Mariée, deux enfants",
+    profession: "Enseignante",
+    lieuDeTravail: "Collège des Tilleuls",
+    telephone: "+39 68 51 74 26 30",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 15",
+            couleur: "Vert",
+            stockage: "128 Go",
+            numeroSerie: "n°8142-360L-57QK"
+        }
+    ],
+
+    vehicules: [],
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 69,
+    nom: "Benkirane",
+    prenom: "Othmane",
+    dateNaissance: "1989-09-03",
+    lieuNaissance: "Marseille (13)",
+    nationalite: "Marocaine",
+    age: 36,
+    adresse: "309 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié",
+    profession: "Chauffeur-livreur",
+    lieuDeTravail: "TransLog Aude",
+
+    situationAdministrative: {
+        oqtf: "Oui",
+        statut: "En cours"
+    },
+
+    telephone: "+39 69 28 61 43 75",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy A55",
+            couleur: "Gris",
+            stockage: "128 Go",
+            numeroSerie: "n°3725-814B-69LM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Utilitaire",
+            marque: "Peugeot",
+            modele: "Partner",
+            couleur: "Blanc",
+            immatriculation: "DE-692-RP",
+            numeroSerie: "n°5184-307C-72QX",
+            proprietaire: "Benkirane Othmane",
+            assure: "Oui",
+            controleTechnique: "08/05/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 70,
+    nom: "Renaud",
+    prenom: "Julien",
+    dateNaissance: "1996-02-26",
+    lieuNaissance: "Montpellier (34)",
+    nationalite: "Française",
+    age: 30,
+    adresse: "317 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Technicien audiovisuel",
+    lieuDeTravail: "Studio Occitanie",
+
+    telephone: "+39 70 47 25 61 83",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Google",
+            modele: "Pixel 9 Pro",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°6418-327P-95KM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Ford",
+            modele: "Focus",
+            couleur: "Grise",
+            immatriculation: "FG-318-KM",
+            numeroSerie: "n°7254-816R-30QD",
+            proprietaire: "Renaud Julien",
+            assure: "Oui",
+            controleTechnique: "12/02/2027"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 71,
+    nom: "Said",
+    prenom: "Nora",
+    dateNaissance: "2002-08-18",
+    lieuNaissance: "Narbonne (11)",
+    nationalite: "Française",
+    age: 24,
+    adresse: "324 avenue Jean Jaurès",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Étudiante en droit",
+    lieuDeTravail: "Université de Montpellier",
+
+    telephone: "+39 71 53 18 64 27",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 16",
+            couleur: "Noir",
+            stockage: "128 Go",
+            numeroSerie: "n°2864-731Q-59RT"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 72,
+    nom: "Moulin",
+    prenom: "Thierry",
+    dateNaissance: "1972-04-15",
+    lieuNaissance: "Toulouse (31)",
+    nationalite: "Française",
+    age: 54,
+    adresse: "331 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Marié",
+    profession: "Employé communal",
+    lieuDeTravail: "Mairie de Saint-Laurent-des-Vignes",
+
+    telephone: "+39 72 41 63 58 90",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy A16",
+            couleur: "Bleu",
+            stockage: "128 Go",
+            numeroSerie: "n°5187-294M-63KP"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Utilitaire",
+            marque: "Renault",
+            modele: "Kangoo",
+            couleur: "Blanc",
+            immatriculation: "HJ-482-NR",
+            numeroSerie: "n°7315-620B-84QF",
+            proprietaire: "Mairie de Saint-Laurent-des-Vignes",
+            assure: "Oui",
+            controleTechnique: "Véhicule administratif"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 73,
+    nom: "Amara",
+    prenom: "Yacine",
+    dateNaissance: "1992-11-30",
+    lieuNaissance: "Nîmes (30)",
+    nationalite: "Tunisienne",
+    age: 33,
+    adresse: "339 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Agent d'entretien",
+    lieuDeTravail: "ProNet Aude",
+
+    telephone: "+39 73 64 18 25 71",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Xiaomi",
+            modele: "14T",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°8264-351R-79LM"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Dégradation ancienne",
+    recherche: "Oui",
+    motifRecherche: "Rébellion"
+},
+
+{
+    id: 74,
+    nom: "Leroux",
+    prenom: "Céline",
+    dateNaissance: "1990-01-07",
+    lieuNaissance: "Carcassonne (11)",
+    nationalite: "Française",
+    age: 36,
+    adresse: "346 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Mariée, un enfant",
+    profession: "Assistante de direction",
+    lieuDeTravail: "Entreprise locale",
+
+    telephone: "+39 74 25 63 81 40",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 15 Pro Max",
+            couleur: "Titane naturel",
+            stockage: "256 Go",
+            numeroSerie: "n°4173-826P-50KD"
+        }
+    ],
+
+    vehicules: [],
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 75,
+    nom: "Hadjiri",
+    prenom: "Sofiane",
+    dateNaissance: "1984-06-21",
+    lieuNaissance: "Perpignan (66)",
+    nationalite: "Algérienne",
+    age: 42,
+    adresse: "353 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Sans emploi",
+    lieuDeTravail: "",
+
+    telephone: "+39 75 48 21 63 97",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy A25",
+            couleur: "Noir",
+            stockage: "128 Go",
+            numeroSerie: "n°6258-314Q-79RM"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Vols anciens et dégradations",
+    recherche: "Oui",
+    motifRecherche: "Cambriolage"
+},
+   
+   {
     id: 36,
     nom: "Blanc",
     prenom: "Alain",
