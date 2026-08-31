@@ -85,6 +85,217 @@ window.personnes = [
 },
    {
     id: 3,
+    nom: "Belkacem",
+    prenom: "Mohamed",
+    dateNaissance: "2009-06-18",
+    lieuNaissance: "Saint-Laurent-des-Vignes (11)",
+    nationalite: "Française",
+    age: 17,
+    adresse: "24 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Lycéen",
+    lieuDeTravail: "Lycée des Tilleuls",
+
+    telephone: "+39 03 74 18 62 95",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy A25",
+            couleur: "Noir",
+            stockage: "128 Go",
+            numeroSerie: "n°4182-736K-95RM"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucune condamnation connue. Plusieurs signalements administratifs durant l'adolescence.",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 4,
+    nom: "Belkacem",
+    prenom: "Karim",
+    dateNaissance: "1978-11-02",
+    lieuNaissance: "Narbonne (11)",
+    nationalite: "Française",
+    age: 47,
+    adresse: "24 rue du Général de Gaulles",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Divorcé, un enfant",
+    profession: "Chauffeur-livreur",
+    lieuDeTravail: "Transport régional",
+
+    telephone: "+39 04 61 27 53 88",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Samsung",
+            modele: "Galaxy S24",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°6275-184B-73KF"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Peugeot",
+            modele: "508",
+            couleur: "Grise",
+            immatriculation: "KT-384-LP",
+            numeroSerie: "n°8351-407R-62QM",
+            proprietaire: "Karim Belkacem",
+            assure: "Oui",
+            controleTechnique: "18/04/2027"
+        }
+    ],
+
+    antecedents: "Aucun antécédent judiciaire majeur connu",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 5,
+    nom: "Aït Saïd",
+    prenom: "Rachid",
+    dateNaissance: "1984-03-27",
+    lieuNaissance: "Montpellier (34)",
+    nationalite: "Française",
+    age: 42,
+    adresse: "41 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Commerçant",
+    lieuDeTravail: "Commerce indépendant",
+
+    telephone: "+39 05 82 16 47 31",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 15 Pro",
+            couleur: "Noir",
+            stockage: "256 Go",
+            numeroSerie: "n°7316-205Q-48RD"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Audi",
+            modele: "A4",
+            couleur: "Noire",
+            immatriculation: "RV-521-KM",
+            numeroSerie: "n°2947-813L-65PX",
+            proprietaire: "Rachid Aït Saïd",
+            assure: "Oui",
+            controleTechnique: "09/12/2027"
+        }
+    ],
+
+    antecedents: "Antécédents mineurs connus",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 6,
+    nom: "Carpentier",
+    prenom: "Noah",
+    dateNaissance: "1994-01-21",
+    lieuNaissance: "Béziers (34)",
+    nationalite: "Française",
+    age: 32,
+    adresse: "4 impasse des Oliviers",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Technicien informatique",
+    lieuDeTravail: "Société privée de maintenance informatique",
+
+    telephone: "+39 06 43 71 25 90",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Apple",
+            modele: "iPhone 15 Pro Max",
+            couleur: "Titane naturel",
+            stockage: "256 Go",
+            numeroSerie: "n°5824-916C-37LM"
+        }
+    ],
+
+    vehicules: [
+        {
+            type: "Voiture",
+            marque: "Renault",
+            modele: "Megane E-Tech",
+            couleur: "Grise",
+            immatriculation: "NC-642-TW",
+            numeroSerie: "n°4175-308K-92RF",
+            proprietaire: "Noah Carpentier",
+            assure: "Oui",
+            controleTechnique: "Non concerné"
+        }
+    ],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+
+{
+    id: 7,
+    nom: "Moreau",
+    prenom: "Julien",
+    dateNaissance: "2002-07-15",
+    lieuNaissance: "Montpellier (34)",
+    nationalite: "Française",
+    age: 24,
+    adresse: "9 rue des Acacias",
+    ville: "Saint-Laurent-des-Vignes",
+    departement: "Aude",
+    situationFamiliale: "Célibataire",
+    profession: "Agent administratif",
+    lieuDeTravail: "Service administratif territorial",
+
+    telephone: "+39 07 54 18 63 27",
+
+    appareils: [
+        {
+            type: "Téléphone",
+            marque: "Xiaomi",
+            modele: "14T",
+            couleur: "Bleu",
+            stockage: "256 Go",
+            numeroSerie: "n°3648-751M-29QF"
+        }
+    ],
+
+    vehicules: [],
+
+    antecedents: "Aucun",
+    recherche: "Non",
+    motifRecherche: ""
+},
+   
+   {
+    id: 3,
     nom: "Dupont",
     prenom: "Julien",
     dateNaissance: "1996-06-19",
