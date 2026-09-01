@@ -1110,7 +1110,30 @@ function searchVehicle() {
 
     }
 
+function ouvrirFichePersonneDepuisVehicule(personId) {
 
+    const personne =
+        window.personnes.find(function(personne) {
+            return String(personne.id) === String(personId);
+        });
+
+    if (!personne) {
+        return;
+    }
+
+    closeWindow("vehiculesWindow");
+
+    openWindow("personnesWindow");
+
+    const input =
+        document.getElementById("personSearch");
+
+    if (input) {
+        input.value = personne.nom;
+    }
+
+    searchPerson();
+}
 
     const liste =
         window.personnes || [];
@@ -1249,7 +1272,12 @@ function searchVehicle() {
                             ${item.personne.nom || ""}
 
                         </p>
-
+<button
+    type="button"
+    onclick="ouvrirFichePersonneDepuisVehicule(${personne.id})"
+>
+    👤 Ouvrir la fiche de la personne
+</button>
                     </article>
 
                 `;
