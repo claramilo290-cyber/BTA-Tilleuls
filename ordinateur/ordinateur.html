@@ -1081,25 +1081,20 @@ function searchPerson() {
 
 function searchVehicle() {
 
-
     const input =
-        document.getElementById(
-            "vehicleSearch"
-        );
-
+        document.getElementById("vehicleSearch");
 
     const result =
-        document.getElementById(
-            "vehicleResult"
-        );
+        document.getElementById("vehicleResult");
 
+    if (!input || !result) {
+        return;
+    }
 
     const search =
         input.value
         .trim()
         .toLowerCase();
-
-
 
     if (search === "") {
 
@@ -1107,14 +1102,162 @@ function searchVehicle() {
             "<p class='empty-result'>Veuillez saisir une recherche.</p>";
 
         return;
-
     }
+
+    const liste =
+        Array.isArray(window.personnes)
+            ? window.personnes
+            : [];
+
+    let resultats = [];
+
+    liste.forEach(function(personne) {
+
+        if (!Array.isArray(personne.vehicules)) {
+            return;
+        }
+
+        personne.vehicules.forEach(function(vehicule) {
+
+            const texte =
+                [
+                    vehicule.type,
+                    vehicule.marque,
+                    vehicule.modele,
+                    vehicule.couleur,
+                    vehicule.immatriculation,
+                    vehicule.numeroSerie,
+                    vehicule.proprietaire,
+                    vehicule.assure,
+                    vehicule.controleTechnique
+                ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
+
+            if (texte.includes(search)) {
+
+                resultats.push({
+                    personne: personne,
+                    vehicule: vehicule
+                });
+
+            }
+
+        });
+
+    });
+
+    if (resultats.length === 0) {
+
+        result.innerHTML =
+            "<p class='empty-result'>Aucun résultat trouvé.</p>";
+
+        return;
+    }
+
+    result.innerHTML =
+        resultats.map(function(item) {
+
+            return `
+
+                <article class="vehicle-card">
+
+                    <h3>
+                        ${item.vehicule.marque || "Marque inconnue"}
+                        ${item.vehicule.modele || ""}
+                    </h3>
+
+                    <p>
+                        <strong>Type :</strong>
+                        ${item.vehicule.type || "Non renseigné"}
+                    </p>
+
+                    <p>
+                        <strong>Marque :</strong>
+                        ${item.vehicule.marque || "Non renseignée"}
+                    </p>
+
+                    <p>
+                        <strong>Modèle :</strong>
+                        ${item.vehicule.modele || "Non renseigné"}
+                    </p>
+
+                    <p>
+                        <strong>Couleur :</strong>
+                        ${item.vehicule.couleur || "Non renseignée"}
+                    </p>
+
+                    <p>
+                        <strong>Immatriculation :</strong>
+                        ${item.vehicule.immatriculation || "Non renseignée"}
+                    </p>
+
+                    <p>
+                        <strong>Numéro de série :</strong>
+                        ${item.vehicule.numeroSerie || "Non renseigné"}
+                    </p>
+
+                    <p>
+                        <strong>Propriétaire :</strong>
+                        ${item.vehicule.proprietaire || "Non renseigné"}
+                    </p>
+
+                    <p>
+                        <strong>Assuré :</strong>
+                        ${item.vehicule.assure || "Non renseigné"}
+                    </p>
+
+                    <p>
+                        <strong>Contrôle technique :</strong>
+                        ${item.vehicule.controleTechnique || "Non renseigné"}
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        <strong>Personne associée :</strong>
+                        ${item.personne.prenom || ""}
+                        ${item.personne.nom || ""}
+                    </p>
+
+                    <p>
+                        <strong>Identifiant :</strong>
+                        ${item.personne.id ?? "Non renseigné"}
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="ouvrirFichePersonneDepuisVehicule(${item.personne.id})"
+                    >
+                        👤 Ouvrir la fiche de la personne
+                    </button>
+
+                </article>
+
+            `;
+
+        })
+        .join("");
+}
+
+
+/* =========================================
+   OUVRIR LA FICHE PERSONNE
+========================================= */
 
 function ouvrirFichePersonneDepuisVehicule(personId) {
 
+    const liste =
+        Array.isArray(window.personnes)
+            ? window.personnes
+            : [];
+
     const personne =
-        window.personnes.find(function(personne) {
+        liste.find(function(personne) {
+
             return String(personne.id) === String(personId);
+
         });
 
     if (!personne) {
@@ -1129,180 +1272,21 @@ function ouvrirFichePersonneDepuisVehicule(personId) {
         document.getElementById("personSearch");
 
     if (input) {
-        input.value = personne.nom;
+
+        input.value =
+            personne.nom || "";
+
     }
 
     searchPerson();
 }
 
-    const liste =
-        window.personnes || [];
 
-
-    let resultats = [];
-
-
-    liste.forEach(
-        function(personne) {
-
-
-            if (!personne.vehicules) {
-
-                return;
-
-            }
-
-
-            personne.vehicules.forEach(
-                function(vehicule) {
-
-
-                    const marque =
-                        String(
-                            vehicule.marque || ""
-                        )
-                        .toLowerCase();
-
-
-                    const modele =
-                        String(
-                            vehicule.modele || ""
-                        )
-                        .toLowerCase();
-
-
-                    const immatriculation =
-                        String(
-                            vehicule.immatriculation || ""
-                        )
-                        .toLowerCase();
-
-
-
-                    if (
-
-                        marque.includes(search) ||
-
-                        modele.includes(search) ||
-
-                        immatriculation.includes(search)
-
-                    ) {
-
-
-                        resultats.push({
-
-                            personne:
-                                personne,
-
-                            vehicule:
-                                vehicule
-
-                        });
-
-                    }
-
-
-                }
-            );
-
-
-        }
-    );
-
-
-
-    if (resultats.length === 0) {
-
-        result.innerHTML =
-            "<p class='empty-result'>Aucun résultat trouvé.</p>";
-
-        return;
-
-    }
-
-
-
-    result.innerHTML =
-        resultats.map(
-            function(item) {
-
-
-                return `
-
-                    <article class="vehicle-card">
-
-                        <h3>
-
-                            ${item.vehicule.marque || ""}
-                            ${item.vehicule.modele || ""}
-
-                        </h3>
-
-
-                        <p>
-
-                            <strong>
-                                Couleur :
-                            </strong>
-
-                            ${item.vehicule.couleur || "Non renseignée"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Immatriculation :
-                            </strong>
-
-                            ${item.vehicule.immatriculation || "Non renseignée"}
-
-                        </p>
-
-
-                        <p>
-
-                            <strong>
-                                Propriétaire :
-                            </strong>
-
-                            ${item.personne.prenom || ""}
-                            ${item.personne.nom || ""}
-
-                        </p>
-<button
-    type="button"
-    onclick="ouvrirFichePersonneDepuisVehicule(${personne.id})"
->
-    👤 Ouvrir la fiche de la personne
-</button>
-                    </article>
-
-                `;
-
-
-            }
-        )
-        .join("");
-
-
-}
-
+/* =========================================
+   FIN DU JAVASCRIPT DU POSTE
+========================================= */
 
 </script>
-
-<script src="./base_personnes.js"></script>
-
-<script>
-if (window.personnes) {
-    console.log("BASE OK :", window.personnes.length);
-} else {
-    console.log("BASE NON CHARGÉE");
-}
-</script>
-
     
 </body>
 
