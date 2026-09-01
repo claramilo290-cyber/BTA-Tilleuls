@@ -11,6 +11,17 @@
 
     <title>Affaire 2026-593 — Dossier d'enquête</title>
 
+    .document-clickable {
+    cursor: pointer;
+    transition: 0.18s ease;
+}
+
+.document-clickable:hover {
+    transform: translateY(-2px);
+    border-color: rgba(96, 165, 250, 0.35);
+    background: rgba(96, 165, 250, 0.06);
+}
+
     <style>
 
         * {
@@ -1748,10 +1759,125 @@
 
                     <div class="card-body">
 
-                        <div
-                            class="item-list"
-                            id="documentsList"
-                        ></div>
+                      <div
+    class="item-list"
+    id="documentsList"
+>
+
+    <article
+        class="investigation-item document-clickable"
+        onclick="ouvrirDocument('doc-001')"
+    >
+
+        <div class="item-top">
+
+            <div>
+
+                <h3 class="item-title">
+                    Procès-verbal — Signalement des tirs
+                </h3>
+
+                <p class="item-description">
+                    Appel reçu à 22:09 signalant des tirs dans le secteur
+                    des Tilleuls.
+                </p>
+
+            </div>
+
+            <span class="item-status available">
+                DISPONIBLE
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <article
+        class="investigation-item document-clickable"
+        onclick="ouvrirDocument('doc-002')"
+    >
+
+        <div class="item-top">
+
+            <div>
+
+                <h3 class="item-title">
+                    Procès-verbal — Arrivée des premières unités
+                </h3>
+
+                <p class="item-description">
+                    Intervention des premières forces de l'ordre sur les lieux.
+                </p>
+
+            </div>
+
+            <span class="item-status available">
+                DISPONIBLE
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <article
+        class="investigation-item document-clickable"
+        onclick="ouvrirDocument('doc-003')"
+    >
+
+        <div class="item-top">
+
+            <div>
+
+                <h3 class="item-title">
+                    Plan du parking des Tilleuls
+                </h3>
+
+                <p class="item-description">
+                    Plan de travail permettant de situer les différents
+                    éléments de la scène.
+                </p>
+
+            </div>
+
+            <span class="item-status available">
+                DISPONIBLE
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <article
+        class="investigation-item locked"
+    >
+
+        <div class="item-top">
+
+            <div>
+
+                <h3 class="item-title">
+                    Élément verrouillé
+                </h3>
+
+                <p class="item-description">
+                    D'autres pièces seront ajoutées au dossier
+                    au cours de l'enquête.
+                </p>
+
+            </div>
+
+            <span class="item-status locked-status">
+                🔒 VERROUILLÉ
+            </span>
+
+        </div>
+
+    </article>
+
+</div>
 
                     </div>
 
@@ -2923,7 +3049,212 @@
 
        =========================================
     */
+function ouvrirDocument(documentId) {
 
+    if (documentId === "doc-001") {
+
+        afficherDocument(
+            "Procès-verbal — Signalement des tirs",
+            `
+            <p><strong>Date :</strong> 17 décembre 2026</p>
+
+            <p><strong>Heure :</strong> 22:09</p>
+
+            <p>
+                Un appel est reçu par les services de secours.
+                L'appelant signale la présence de coups de feu
+                dans le secteur des Tilleuls.
+            </p>
+
+            <p>
+                Aucun nom de victime ou d'auteur présumé n'est
+                communiqué lors du signalement.
+            </p>
+            `
+        );
+
+        return;
+    }
+
+
+    if (documentId === "doc-002") {
+
+        afficherDocument(
+            "Procès-verbal — Arrivée des premières unités",
+            `
+            <p><strong>Heure d'arrivée :</strong> 22:22</p>
+
+            <p>
+                Les premières unités arrivent sur les lieux
+                et procèdent à la sécurisation du secteur.
+            </p>
+
+            <p>
+                Plusieurs personnes sont retrouvées blessées.
+                Les lieux présentent plusieurs traces et éléments
+                matériels susceptibles d'être exploités.
+            </p>
+            `
+        );
+
+        return;
+    }
+
+
+    if (documentId === "doc-003") {
+
+        afficherDocument(
+            "Plan du parking des Tilleuls",
+            `
+            <p>
+                Plan de travail de la scène de crime.
+            </p>
+
+            <p>
+                Le document sera complété progressivement avec
+                les constatations et les éléments relevés.
+            </p>
+            `
+        );
+
+    }
+
+}
+
+
+function afficherDocument(titre, contenu) {
+
+    let ancienneFenetre =
+        document.getElementById("documentOverlay");
+
+    if (ancienneFenetre) {
+        ancienneFenetre.remove();
+    }
+
+
+    const overlay =
+        document.createElement("div");
+
+    overlay.id =
+        "documentOverlay";
+
+    overlay.style.position =
+        "fixed";
+
+    overlay.style.inset =
+        "0";
+
+    overlay.style.background =
+        "rgba(0, 0, 0, 0.72)";
+
+    overlay.style.display =
+        "flex";
+
+    overlay.style.alignItems =
+        "center";
+
+    overlay.style.justifyContent =
+        "center";
+
+    overlay.style.zIndex =
+        "999";
+
+
+    overlay.innerHTML = `
+
+        <div
+            style="
+                width: min(760px, 92vw);
+                max-height: 86vh;
+                overflow-y: auto;
+                background: #f3f0e8;
+                color: #1f2937;
+                border-radius: 12px;
+                box-shadow: 0 25px 80px rgba(0,0,0,.45);
+                padding: 0;
+            "
+        >
+
+            <div
+                style="
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    padding:16px 18px;
+                    background:#e5e7eb;
+                    border-bottom:1px solid #cbd5e1;
+                "
+            >
+
+                <strong>
+                    ${titre}
+                </strong>
+
+                <button
+                    type="button"
+                    onclick="fermerDocument()"
+                    style="
+                        border:0;
+                        background:transparent;
+                        font-size:20px;
+                        cursor:pointer;
+                    "
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div
+                style="
+                    padding:24px;
+                    line-height:1.75;
+                    font-size:14px;
+                "
+            >
+
+                ${contenu}
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    overlay.addEventListener(
+        "click",
+        function(event) {
+
+            if (event.target === overlay) {
+                fermerDocument();
+            }
+
+        }
+    );
+
+
+    document.body.appendChild(
+        overlay
+    );
+
+}
+
+
+function fermerDocument() {
+
+    const overlay =
+        document.getElementById(
+            "documentOverlay"
+        );
+
+    if (overlay) {
+        overlay.remove();
+    }
+
+}
+    
 </script>
 
 </body>
