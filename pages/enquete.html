@@ -2673,13 +2673,48 @@
                 }
 
 
-                return `
+               return `
 
-                    <article
-                        class="investigation-item"
-                        id="${item.id}"
-                    >
+    <article
+        class="investigation-item ${
+            elementId === "documentsList"
+                ? "document-clickable"
+                : ""
+        }"
+        id="${item.id}"
 
+        ${
+            elementId === "documentsList"
+                ? `onclick="ouvrirDocument('${item.id}')"`
+                : ""
+        }
+    >
+
+        <div class="item-top">
+
+            <div>
+
+                <h3 class="item-title">
+                    ${item.titre}
+                </h3>
+
+                <p class="item-description">
+                    ${item.description}
+                </p>
+
+            </div>
+
+            <span
+                class="item-status available"
+            >
+                Disponible
+            </span>
+
+        </div>
+
+    </article>
+
+`;
                         <div class="item-top">
 
                             <div>
