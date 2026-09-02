@@ -3051,30 +3051,224 @@
     */
 function ouvrirDocument(documentId) {
 
-    if (documentId === "doc-001") {
+   if (documentId === "doc-001") {
 
-        afficherDocument(
-            "Procès-verbal — Signalement des tirs",
-            `
-            <p><strong>Date :</strong> 17 décembre 2026</p>
+    afficherDocument(
+        "PROCÈS-VERBAL DE SIGNALEMENT — 2026-593",
+        `
+        <div style="
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #202020;
+            line-height: 1.75;
+        ">
 
-            <p><strong>Heure :</strong> 22:09</p>
+            <div style="
+                text-align:center;
+                margin-bottom:24px;
+                padding-bottom:16px;
+                border-bottom:1px solid #999;
+            ">
+
+                <div style="
+                    font-size:12px;
+                    letter-spacing:0.08em;
+                    text-transform:uppercase;
+                    color:#555;
+                ">
+                    Brigade territoriale — Saint-Laurent-des-Vignes
+                </div>
+
+                <h2 style="
+                    margin:8px 0 4px;
+                    font-size:20px;
+                    letter-spacing:0.03em;
+                ">
+                    PROCÈS-VERBAL
+                </h2>
+
+                <div style="
+                    font-size:13px;
+                    font-weight:700;
+                ">
+                    Signalement de coups de feu
+                </div>
+
+            </div>
+
+
+            <table style="
+                width:100%;
+                border-collapse:collapse;
+                margin-bottom:24px;
+                font-size:13px;
+            ">
+
+                <tr>
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                        width:32%;
+                        font-weight:700;
+                        background:#e9e6de;
+                    ">
+                        Numéro de procédure
+                    </td>
+
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                    ">
+                        2026-593
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                        font-weight:700;
+                        background:#e9e6de;
+                    ">
+                        Date
+                    </td>
+
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                    ">
+                        17 décembre 2026
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                        font-weight:700;
+                        background:#e9e6de;
+                    ">
+                        Heure de réception
+                    </td>
+
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                    ">
+                        22:09
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                        font-weight:700;
+                        background:#e9e6de;
+                    ">
+                        Localisation signalée
+                    </td>
+
+                    <td style="
+                        border:1px solid #bbb;
+                        padding:8px;
+                    ">
+                        Secteur des Tilleuls — parking souterrain
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <h3 style="
+                font-size:15px;
+                border-bottom:1px solid #aaa;
+                padding-bottom:5px;
+            ">
+                Objet du signalement
+            </h3>
 
             <p>
-                Un appel est reçu par les services de secours.
-                L'appelant signale la présence de coups de feu
-                dans le secteur des Tilleuls.
+                À 22:09, un appel est reçu par les services de secours
+                concernant plusieurs coups de feu entendus dans le secteur
+                des Tilleuls, sur la commune de Saint-Laurent-des-Vignes.
+            </p>
+
+
+            <h3 style="
+                font-size:15px;
+                border-bottom:1px solid #aaa;
+                padding-bottom:5px;
+                margin-top:22px;
+            ">
+                Contenu du signalement
+            </h3>
+
+            <p>
+                L'appelant indique que des tirs viennent d'être entendus
+                dans le parking souterrain des Tilleuls.
             </p>
 
             <p>
-                Aucun nom de victime ou d'auteur présumé n'est
-                communiqué lors du signalement.
+                L'appelant fournit la localisation des lieux mais ne
+                communique, au moment de l'appel, aucune identité concernant
+                les personnes éventuellement impliquées.
             </p>
-            `
-        );
 
-        return;
-    }
+            <p>
+                Aucun renseignement permettant d'identifier avec certitude
+                l'auteur des tirs n'est transmis lors de cet appel.
+            </p>
+
+
+            <h3 style="
+                font-size:15px;
+                border-bottom:1px solid #aaa;
+                padding-bottom:5px;
+                margin-top:22px;
+            ">
+                Suites données
+            </h3>
+
+            <p>
+                Compte tenu de la nature du signalement, une intervention
+                immédiate des forces de l'ordre et des services de secours
+                est déclenchée.
+            </p>
+
+            <div style="
+                margin-top:20px;
+                padding:13px 15px;
+                background:#ebe7dc;
+                border-left:4px solid #555;
+                font-size:12px;
+            ">
+                <strong>Observation :</strong>
+                Le présent procès-verbal constitue le premier élément
+                chronologique de la procédure. Les constatations réalisées
+                après l'arrivée des unités font l'objet de documents distincts.
+            </div>
+
+
+            <div style="
+                margin-top:34px;
+                padding-top:14px;
+                border-top:1px solid #999;
+                font-size:12px;
+                color:#555;
+            ">
+                Procès-verbal établi dans le cadre de la procédure
+                référencée 2026-593.
+            </div>
+
+        </div>
+        `
+    );
+
+    return;
+}
 
 
     if (documentId === "doc-002") {
