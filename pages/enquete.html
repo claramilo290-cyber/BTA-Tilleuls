@@ -2618,10 +2618,98 @@
        RENDU DES LISTES
     ========================================= */
 
-    function rendreListe(
-        liste,
-        elementId
-    ) {
+   function rendreListe(liste, elementId) {
+
+    const container =
+        document.getElementById(elementId);
+
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML =
+        liste.map(function(item) {
+
+            const disponible =
+                elementDisponible(item);
+
+            if (!disponible) {
+
+                return `
+                    <article class="investigation-item locked">
+
+                        <div class="item-top">
+
+                            <div>
+
+                                <h3 class="item-title">
+                                    Élément verrouillé
+                                </h3>
+
+                                <p class="item-description">
+                                    Cet élément n'est pas encore
+                                    accessible dans l'état actuel
+                                    du dossier.
+                                </p>
+
+                            </div>
+
+                            <span class="item-status locked-status">
+                                🔒 Verrouillé
+                            </span>
+
+                        </div>
+
+                    </article>
+                `;
+            }
+
+            const estDocument =
+                elementId === "documentsList";
+
+            const classe =
+                estDocument
+                    ? "investigation-item document-clickable"
+                    : "investigation-item";
+
+            const clic =
+                estDocument
+                    ? `onclick="ouvrirDocument('${item.id}')"`
+                    : "";
+
+            return `
+                <article
+                    class="${classe}"
+                    ${clic}
+                    id="${item.id}"
+                >
+
+                    <div class="item-top">
+
+                        <div>
+
+                            <h3 class="item-title">
+                                ${item.titre}
+                            </h3>
+
+                            <p class="item-description">
+                                ${item.description}
+                            </p>
+
+                        </div>
+
+                        <span class="item-status available">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                </article>
+            `;
+
+        }).join("");
+
+}
 
         const container =
             document.getElementById(elementId);
