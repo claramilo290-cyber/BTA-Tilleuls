@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 
     <meta charset="UTF-8">
@@ -13,17 +14,6 @@
 
     <style>
 
-        .document-clickable {
-    cursor: pointer;
-    transition: 0.18s ease;
-}
-
-.document-clickable:hover {
-    transform: translateY(-2px);
-    border-color: rgba(96, 165, 250, 0.35);
-    background: rgba(96, 165, 250, 0.06);
-}
-        
         * {
             box-sizing: border-box;
         }
@@ -67,6 +57,7 @@
             flex-direction: column;
         }
 
+
         .topbar {
 
             height: 74px;
@@ -95,6 +86,7 @@
             z-index: 50;
         }
 
+
         .brand {
 
             display: flex;
@@ -103,6 +95,7 @@
 
             gap: 14px;
         }
+
 
         .brand-mark {
 
@@ -130,12 +123,14 @@
             font-size: 20px;
         }
 
+
         .brand-text {
 
             display: flex;
 
             flex-direction: column;
         }
+
 
         .brand-title {
 
@@ -146,6 +141,7 @@
             letter-spacing: 0.03em;
         }
 
+
         .brand-subtitle {
 
             font-size: 11px;
@@ -155,6 +151,7 @@
             margin-top: 2px;
         }
 
+
         .topbar-status {
 
             display: flex;
@@ -163,6 +160,7 @@
 
             gap: 12px;
         }
+
 
         .status-pill {
 
@@ -183,6 +181,7 @@
             letter-spacing: 0.04em;
         }
 
+
         .status-dot {
 
             width: 8px;
@@ -196,6 +195,7 @@
                 0 0 12px rgba(34, 197, 94, 0.65);
         }
 
+
         .status-open {
 
             color: #bbf7d0;
@@ -206,6 +206,7 @@
             border:
                 1px solid rgba(34, 197, 94, 0.24);
         }
+
 
         /* =========================================
            EN-TÊTE DOSSIER
@@ -227,12 +228,14 @@
                 );
         }
 
+
         .case-header-inner {
 
             max-width: 1450px;
 
             margin: 0 auto;
         }
+
 
         .breadcrumb {
 
@@ -243,9 +246,11 @@
             margin-bottom: 14px;
         }
 
+
         .breadcrumb span {
             color: #cbd5e1;
         }
+
 
         .case-main {
 
@@ -257,6 +262,7 @@
 
             gap: 30px;
         }
+
 
         .case-title {
 
@@ -271,6 +277,7 @@
             color: #f8fafc;
         }
 
+
         .case-subtitle {
 
             margin: 10px 0 0;
@@ -279,6 +286,7 @@
 
             font-size: 14px;
         }
+
 
         .case-tags {
 
@@ -290,6 +298,7 @@
 
             margin-top: 16px;
         }
+
 
         .tag {
 
@@ -314,6 +323,7 @@
             color: #cbd5e1;
         }
 
+
         .tag-red {
 
             color: #fecaca;
@@ -324,6 +334,7 @@
             border-color:
                 rgba(248, 113, 113, 0.18);
         }
+
 
         .case-number {
 
@@ -342,6 +353,7 @@
             text-align: right;
         }
 
+
         .case-number-label {
 
             font-size: 10px;
@@ -352,6 +364,7 @@
 
             letter-spacing: 0.08em;
         }
+
 
         .case-number-value {
 
@@ -365,6 +378,7 @@
 
             color: #f8fafc;
         }
+
 
         /* =========================================
            NAVIGATION
@@ -388,6 +402,7 @@
                 1px solid rgba(255, 255, 255, 0.07);
         }
 
+
         .tabs {
 
             max-width: 1450px;
@@ -402,6 +417,7 @@
 
             overflow-x: auto;
         }
+
 
         .tab {
 
@@ -428,6 +444,7 @@
                 0.18s ease;
         }
 
+
         .tab:hover {
 
             color: #e2e8f0;
@@ -436,6 +453,7 @@
                 rgba(255, 255, 255, 0.03);
         }
 
+
         .tab.active {
 
             color: #f8fafc;
@@ -443,6 +461,7 @@
             border-bottom-color:
                 #60a5fa;
         }
+
 
         /* =========================================
            CONTENU
@@ -459,6 +478,7 @@
             padding: 28px;
         }
 
+
         .panel {
 
             display: none;
@@ -467,10 +487,12 @@
                 panelFade 0.22s ease;
         }
 
+
         .panel.active {
 
             display: block;
         }
+
 
         @keyframes panelFade {
 
@@ -487,6 +509,7 @@
             }
         }
 
+
         .grid {
 
             display: grid;
@@ -496,6 +519,7 @@
 
             gap: 18px;
         }
+
 
         .card {
 
@@ -513,6 +537,7 @@
             overflow: hidden;
         }
 
+
         .card-header {
 
             display: flex;
@@ -529,6 +554,7 @@
                 1px solid rgba(255, 255, 255, 0.07);
         }
 
+
         .card-title {
 
             margin: 0;
@@ -538,38 +564,47 @@
             color: #f1f5f9;
         }
 
+
         .card-body {
 
             padding: 18px;
         }
 
+
         .span-8 {
             grid-column: span 8;
         }
+
 
         .span-7 {
             grid-column: span 7;
         }
 
+
         .span-6 {
             grid-column: span 6;
         }
+
 
         .span-5 {
             grid-column: span 5;
         }
 
+
         .span-4 {
             grid-column: span 4;
         }
+
 
         .span-3 {
             grid-column: span 3;
         }
 
+
         .full {
             grid-column: 1 / -1;
         }
+
 
         /* =========================================
            INFOS DOSSIER
@@ -585,6 +620,7 @@
             gap: 12px;
         }
 
+
         .info-item {
 
             padding: 13px;
@@ -597,6 +633,7 @@
             border:
                 1px solid rgba(255, 255, 255, 0.05);
         }
+
 
         .info-label {
 
@@ -613,6 +650,7 @@
             margin-bottom: 5px;
         }
 
+
         .info-value {
 
             font-size: 13px;
@@ -621,6 +659,7 @@
 
             font-weight: 600;
         }
+
 
         /* =========================================
            TEXTE
@@ -636,6 +675,7 @@
 
             margin: 0;
         }
+
 
         .notice {
 
@@ -658,6 +698,7 @@
             line-height: 1.6;
         }
 
+
         .warning {
 
             background:
@@ -668,6 +709,7 @@
 
             color: #fde68a;
         }
+
 
         /* =========================================
            STATISTIQUES
@@ -683,6 +725,7 @@
             gap: 10px;
         }
 
+
         .stat {
 
             padding: 16px;
@@ -696,6 +739,7 @@
                 1px solid rgba(255, 255, 255, 0.05);
         }
 
+
         .stat-label {
 
             font-size: 10px;
@@ -706,6 +750,7 @@
 
             letter-spacing: 0.06em;
         }
+
 
         .stat-value {
 
@@ -720,6 +765,7 @@
             color: #f8fafc;
         }
 
+
         /* =========================================
            ELEMENTS D'ENQUÊTE
         ========================================= */
@@ -730,6 +776,7 @@
 
             gap: 10px;
         }
+
 
         .investigation-item {
 
@@ -744,10 +791,12 @@
                 1px solid rgba(255, 255, 255, 0.06);
         }
 
+
         .investigation-item.locked {
 
             opacity: 0.65;
         }
+
 
         .item-top {
 
@@ -760,6 +809,7 @@
             gap: 12px;
         }
 
+
         .item-title {
 
             margin: 0;
@@ -768,6 +818,7 @@
 
             color: #f1f5f9;
         }
+
 
         .item-description {
 
@@ -779,6 +830,7 @@
 
             line-height: 1.55;
         }
+
 
         .item-status {
 
@@ -797,6 +849,7 @@
             letter-spacing: 0.05em;
         }
 
+
         .available {
 
             color: #bbf7d0;
@@ -805,6 +858,7 @@
                 rgba(22, 101, 52, 0.22);
         }
 
+
         .locked-status {
 
             color: #cbd5e1;
@@ -812,6 +866,29 @@
             background:
                 rgba(71, 85, 105, 0.3);
         }
+
+
+        .document-clickable {
+
+            cursor: pointer;
+
+            transition:
+                0.18s ease;
+        }
+
+
+        .document-clickable:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                rgba(96, 165, 250, 0.35);
+
+            background:
+                rgba(96, 165, 250, 0.06);
+        }
+
 
         /* =========================================
            CHRONOLOGIE
@@ -825,6 +902,7 @@
 
             padding-left: 27px;
         }
+
 
         .timeline::before {
 
@@ -844,6 +922,7 @@
                 rgba(148, 163, 184, 0.25);
         }
 
+
         .timeline-item {
 
             position: relative;
@@ -851,9 +930,11 @@
             margin-bottom: 22px;
         }
 
+
         .timeline-item:last-child {
             margin-bottom: 0;
         }
+
 
         .timeline-marker {
 
@@ -878,6 +959,7 @@
                 0 0 0 4px rgba(96, 165, 250, 0.08);
         }
 
+
         .timeline-time {
 
             font-size: 11px;
@@ -889,6 +971,7 @@
             margin-bottom: 5px;
         }
 
+
         .timeline-title {
 
             margin: 0 0 5px;
@@ -897,6 +980,7 @@
 
             color: #f8fafc;
         }
+
 
         .timeline-text {
 
@@ -908,6 +992,7 @@
 
             line-height: 1.6;
         }
+
 
         /* =========================================
            DOSSIERS VERROUILLÉS
@@ -928,12 +1013,14 @@
                 1px dashed rgba(148, 163, 184, 0.18);
         }
 
+
         .locked-icon {
 
             font-size: 30px;
 
             margin-bottom: 9px;
         }
+
 
         .locked-box h3 {
 
@@ -943,6 +1030,7 @@
 
             color: #e2e8f0;
         }
+
 
         .locked-box p {
 
@@ -956,6 +1044,7 @@
 
             line-height: 1.6;
         }
+
 
         /* =========================================
            MISSIONS
@@ -973,6 +1062,7 @@
             border:
                 1px solid rgba(255, 255, 255, 0.06);
         }
+
 
         .mission-number {
 
@@ -999,6 +1089,7 @@
             margin-bottom: 10px;
         }
 
+
         .mission-card h3 {
 
             margin: 0;
@@ -1007,6 +1098,7 @@
 
             color: #f8fafc;
         }
+
 
         .mission-card p {
 
@@ -1018,6 +1110,7 @@
 
             line-height: 1.6;
         }
+
 
         /* =========================================
            PROCUREUR
@@ -1036,6 +1129,7 @@
                 1px solid rgba(255, 255, 255, 0.07);
         }
 
+
         .request-row {
 
             display: grid;
@@ -1047,6 +1141,7 @@
 
             margin-top: 12px;
         }
+
 
         .request-input {
 
@@ -1075,6 +1170,7 @@
             font-size: 12px;
         }
 
+
         .request-input:focus {
 
             border-color:
@@ -1083,6 +1179,7 @@
             box-shadow:
                 0 0 0 3px rgba(96, 165, 250, 0.08);
         }
+
 
         .primary-button {
 
@@ -1112,10 +1209,12 @@
             cursor: pointer;
         }
 
+
         .primary-button:hover {
 
             filter: brightness(1.08);
         }
+
 
         .request-result {
 
@@ -1131,6 +1230,7 @@
 
             line-height: 1.6;
         }
+
 
         /* =========================================
            RESPONSIVE
@@ -1148,12 +1248,14 @@
                 grid-column: 1 / -1;
             }
 
+
             .case-main {
 
                 align-items: flex-start;
 
                 flex-direction: column;
             }
+
 
             .case-number {
 
@@ -1162,6 +1264,7 @@
                 width: 100%;
             }
         }
+
 
         @media (max-width: 650px) {
 
@@ -1172,30 +1275,36 @@
                 height: 66px;
             }
 
+
             .tabs-wrap {
 
                 top: 66px;
             }
+
 
             .case-header {
 
                 padding: 24px 16px;
             }
 
+
             .content {
 
                 padding: 18px 14px;
             }
+
 
             .case-title {
 
                 font-size: 25px;
             }
 
+
             .info-grid {
 
                 grid-template-columns: 1fr;
             }
+
 
             .stat-grid {
 
@@ -1203,10 +1312,12 @@
                     repeat(2, 1fr);
             }
 
+
             .request-row {
 
                 grid-template-columns: 1fr;
             }
+
 
             .primary-button {
 
@@ -1218,9 +1329,11 @@
 
 </head>
 
+
 <body>
 
 <div class="page">
+
 
     <!-- =========================================
          BARRE SUPÉRIEURE
@@ -1234,11 +1347,13 @@
                 🕵️
             </div>
 
+
             <div class="brand-text">
 
                 <div class="brand-title">
                     BTA — Poste d'enquête
                 </div>
+
 
                 <div class="brand-subtitle">
                     Dossier judiciaire informatisé
@@ -1247,6 +1362,7 @@
             </div>
 
         </div>
+
 
         <div class="topbar-status">
 
@@ -1263,6 +1379,7 @@
     </header>
 
 
+
     <!-- =========================================
          EN-TÊTE AFFAIRE
     ========================================== -->
@@ -1272,10 +1389,13 @@
         <div class="case-header-inner">
 
             <div class="breadcrumb">
+
                 Affaires
                 /
                 <span>2026-593</span>
+
             </div>
+
 
             <div class="case-main">
 
@@ -1285,9 +1405,11 @@
                         Homicide / Fusillade
                     </h1>
 
+
                     <p class="case-subtitle">
                         Dossier d'enquête — Saint-Laurent-des-Vignes
                     </p>
+
 
                     <div class="case-tags">
 
@@ -1295,13 +1417,16 @@
                             Homicide
                         </span>
 
+
                         <span class="tag">
                             Arme à feu
                         </span>
 
+
                         <span class="tag">
                             17 décembre 2026
                         </span>
+
 
                         <span class="tag">
                             Les Tilleuls
@@ -1311,11 +1436,13 @@
 
                 </div>
 
+
                 <div class="case-number">
 
                     <div class="case-number-label">
                         Numéro d'affaire
                     </div>
+
 
                     <span class="case-number-value">
                         2026-593
@@ -1330,6 +1457,7 @@
     </section>
 
 
+
     <!-- =========================================
          NAVIGATION
     ========================================== -->
@@ -1341,48 +1469,61 @@
             <button
                 class="tab active"
                 data-panel="resume"
+                type="button"
             >
                 Vue générale
             </button>
 
+
             <button
                 class="tab"
                 data-panel="documents"
+                type="button"
             >
                 Documents
             </button>
 
+
             <button
                 class="tab"
                 data-panel="preuves"
+                type="button"
             >
                 Preuves
             </button>
 
+
             <button
                 class="tab"
                 data-panel="telephones"
+                type="button"
             >
                 Téléphones
             </button>
 
+
             <button
                 class="tab"
                 data-panel="chronologie"
+                type="button"
             >
                 Chronologie
             </button>
 
+
             <button
                 class="tab"
                 data-panel="missions"
+                type="button"
             >
                 Missions
             </button>
 
+
             <button
                 class="tab"
                 data-panel="procureur"
+                type="button"
             >
                 Procureur
             </button>
@@ -1390,6 +1531,7 @@
         </nav>
 
     </div>
+
 
 
     <!-- =========================================
@@ -1421,6 +1563,7 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <p class="intro-text">
@@ -1431,6 +1574,7 @@
                             parking souterrain des Tilleuls.
 
                         </p>
+
 
                         <p
                             class="intro-text"
@@ -1443,6 +1587,7 @@
                             susceptibles d'être exploités par l'enquête.
 
                         </p>
+
 
                         <div class="notice">
 
@@ -1462,6 +1607,7 @@
                 </article>
 
 
+
                 <article class="card span-4">
 
                     <div class="card-header">
@@ -1472,9 +1618,11 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <div class="info-grid">
+
 
                             <div class="info-item">
 
@@ -1488,6 +1636,7 @@
 
                             </div>
 
+
                             <div class="info-item">
 
                                 <span class="info-label">
@@ -1499,6 +1648,7 @@
                                 </span>
 
                             </div>
+
 
                             <div class="info-item">
 
@@ -1512,6 +1662,7 @@
 
                             </div>
 
+
                             <div class="info-item">
 
                                 <span class="info-label">
@@ -1524,6 +1675,7 @@
 
                             </div>
 
+
                             <div class="info-item">
 
                                 <span class="info-label">
@@ -1535,6 +1687,7 @@
                                 </span>
 
                             </div>
+
 
                             <div class="info-item">
 
@@ -1555,6 +1708,7 @@
                 </article>
 
 
+
                 <article class="card full">
 
                     <div class="card-header">
@@ -1565,9 +1719,11 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <div class="stat-grid">
+
 
                             <div class="stat">
 
@@ -1584,6 +1740,7 @@
 
                             </div>
 
+
                             <div class="stat">
 
                                 <span class="stat-label">
@@ -1599,6 +1756,7 @@
 
                             </div>
 
+
                             <div class="stat">
 
                                 <span class="stat-label">
@@ -1613,6 +1771,7 @@
                                 </span>
 
                             </div>
+
 
                             <div class="stat">
 
@@ -1636,6 +1795,7 @@
                 </article>
 
 
+
                 <article class="card span-7">
 
                     <div class="card-header">
@@ -1646,6 +1806,7 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <p class="intro-text">
@@ -1655,6 +1816,7 @@
                             puisse avoir été spécifiquement visée.
 
                         </p>
+
 
                         <div class="notice warning">
 
@@ -1670,6 +1832,7 @@
                 </article>
 
 
+
                 <article class="card span-5">
 
                     <div class="card-header">
@@ -1680,9 +1843,11 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <div class="item-list">
+
 
                             <div class="investigation-item">
 
@@ -1692,6 +1857,7 @@
 
                             </div>
 
+
                             <div class="investigation-item">
 
                                 <div class="item-title">
@@ -1699,6 +1865,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="investigation-item">
 
@@ -1708,6 +1875,7 @@
 
                             </div>
 
+
                             <div class="investigation-item">
 
                                 <div class="item-title">
@@ -1715,6 +1883,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="investigation-item">
 
@@ -1757,127 +1926,132 @@
 
                     </div>
 
+
                     <div class="card-body">
 
-                      <div
-    class="item-list"
-    id="documentsList"
->
-
-    <article
-        class="investigation-item document-clickable"
-        onclick="ouvrirDocument('doc-001')"
-    >
-
-        <div class="item-top">
-
-            <div>
-
-                <h3 class="item-title">
-                    Procès-verbal — Signalement des tirs
-                </h3>
-
-                <p class="item-description">
-                    Appel reçu à 22:09 signalant des tirs dans le secteur
-                    des Tilleuls.
-                </p>
-
-            </div>
-
-            <span class="item-status available">
-                DISPONIBLE
-            </span>
-
-        </div>
-
-    </article>
+                        <div
+                            class="item-list"
+                            id="documentsList"
+                        >
 
 
-    <article
-        class="investigation-item document-clickable"
-        onclick="ouvrirDocument('doc-002')"
-    >
+                            <article
+                                class="investigation-item document-clickable"
+                                onclick="ouvrirDocument('doc-001')"
+                            >
 
-        <div class="item-top">
+                                <div class="item-top">
 
-            <div>
+                                    <div>
 
-                <h3 class="item-title">
-                    Procès-verbal — Arrivée des premières unités
-                </h3>
+                                        <h3 class="item-title">
+                                            Procès-verbal — Signalement des tirs
+                                        </h3>
 
-                <p class="item-description">
-                    Intervention des premières forces de l'ordre sur les lieux.
-                </p>
+                                        <p class="item-description">
+                                            Appel reçu à 22:09 signalant des tirs
+                                            dans le secteur des Tilleuls.
+                                        </p>
 
-            </div>
+                                    </div>
 
-            <span class="item-status available">
-                DISPONIBLE
-            </span>
+                                    <span class="item-status available">
+                                        DISPONIBLE
+                                    </span>
 
-        </div>
+                                </div>
 
-    </article>
-
-
-    <article
-        class="investigation-item document-clickable"
-        onclick="ouvrirDocument('doc-003')"
-    >
-
-        <div class="item-top">
-
-            <div>
-
-                <h3 class="item-title">
-                    Plan du parking des Tilleuls
-                </h3>
-
-                <p class="item-description">
-                    Plan de travail permettant de situer les différents
-                    éléments de la scène.
-                </p>
-
-            </div>
-
-            <span class="item-status available">
-                DISPONIBLE
-            </span>
-
-        </div>
-
-    </article>
+                            </article>
 
 
-    <article
-        class="investigation-item locked"
-    >
 
-        <div class="item-top">
+                            <article
+                                class="investigation-item document-clickable"
+                                onclick="ouvrirDocument('doc-002')"
+                            >
 
-            <div>
+                                <div class="item-top">
 
-                <h3 class="item-title">
-                    Élément verrouillé
-                </h3>
+                                    <div>
 
-                <p class="item-description">
-                    D'autres pièces seront ajoutées au dossier
-                    au cours de l'enquête.
-                </p>
+                                        <h3 class="item-title">
+                                            Procès-verbal — Arrivée des premières unités
+                                        </h3>
 
-            </div>
+                                        <p class="item-description">
+                                            Intervention des premières forces
+                                            de l'ordre sur les lieux.
+                                        </p>
 
-            <span class="item-status locked-status">
-                🔒 VERROUILLÉ
-            </span>
+                                    </div>
 
-        </div>
+                                    <span class="item-status available">
+                                        DISPONIBLE
+                                    </span>
 
-    </article>
+                                </div>
 
-</div>
+                            </article>
+
+
+
+                            <article
+                                class="investigation-item document-clickable"
+                                onclick="ouvrirDocument('doc-003')"
+                            >
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Plan du parking des Tilleuls
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Plan de travail permettant de situer
+                                            les différents éléments de la scène.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status available">
+                                        DISPONIBLE
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+
+                            <article class="investigation-item locked">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Élément verrouillé
+                                        </h3>
+
+                                        <p class="item-description">
+                                            D'autres pièces seront ajoutées
+                                            au dossier au cours de l'enquête.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status locked-status">
+                                        🔒 VERROUILLÉ
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
 
                     </div>
 
@@ -1900,6 +2074,7 @@
 
             <div class="grid">
 
+
                 <article class="card span-7">
 
                     <div class="card-header">
@@ -1909,6 +2084,7 @@
                         </h2>
 
                     </div>
+
 
                     <div class="card-body">
 
@@ -1922,6 +2098,7 @@
                 </article>
 
 
+
                 <article class="card span-5">
 
                     <div class="card-header">
@@ -1931,6 +2108,7 @@
                         </h2>
 
                     </div>
+
 
                     <div class="card-body">
 
@@ -1970,12 +2148,14 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <div
                             class="item-list"
                             id="telephonesList"
                         ></div>
+
 
                         <div class="notice">
 
@@ -2017,6 +2197,7 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <div
@@ -2045,6 +2226,7 @@
 
             <div class="grid">
 
+
                 <article class="card span-6">
 
                     <div class="card-header">
@@ -2055,9 +2237,11 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <div class="item-list">
+
 
                             <div class="mission-card">
 
@@ -2077,6 +2261,7 @@
 
                             </div>
 
+
                             <div class="mission-card">
 
                                 <span class="mission-number">
@@ -2094,6 +2279,7 @@
                                 </p>
 
                             </div>
+
 
                             <div class="mission-card">
 
@@ -2120,6 +2306,7 @@
                 </article>
 
 
+
                 <article class="card span-6">
 
                     <div class="card-header">
@@ -2130,6 +2317,7 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <p class="intro-text">
@@ -2138,10 +2326,12 @@
 
                         </p>
 
+
                         <div
                             class="item-list"
                             style="margin-top: 14px;"
                         >
+
 
                             <div class="investigation-item">
 
@@ -2155,6 +2345,7 @@
 
                             </div>
 
+
                             <div class="investigation-item">
 
                                 <div class="item-title">
@@ -2166,6 +2357,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="investigation-item">
 
@@ -2179,6 +2371,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="investigation-item">
 
@@ -2216,6 +2409,7 @@
 
             <div class="grid">
 
+
                 <article class="card span-8">
 
                     <div class="card-header">
@@ -2226,6 +2420,7 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <p class="intro-text">
@@ -2235,6 +2430,7 @@
                             intérêt pour l'enquête.
 
                         </p>
+
 
                         <div
                             class="request-box"
@@ -2247,9 +2443,11 @@
                                 placeholder="Exemple : demander l'autorisation d'exploiter le téléphone d'une victime afin de rechercher d'éventuels échanges avec une personne liée aux faits..."
                             ></textarea>
 
+
                             <div class="request-row">
 
                                 <div></div>
+
 
                                 <button
                                     type="button"
@@ -2260,6 +2458,7 @@
                                 </button>
 
                             </div>
+
 
                             <div
                                 id="procureurResult"
@@ -2273,6 +2472,7 @@
                 </article>
 
 
+
                 <article class="card span-4">
 
                     <div class="card-header">
@@ -2283,9 +2483,11 @@
 
                     </div>
 
+
                     <div class="card-body">
 
                         <div class="item-list">
+
 
                             <div class="investigation-item">
 
@@ -2299,6 +2501,7 @@
 
                             </div>
 
+
                             <div class="investigation-item">
 
                                 <div class="item-title">
@@ -2311,6 +2514,7 @@
 
                             </div>
 
+
                             <div class="investigation-item">
 
                                 <div class="item-title">
@@ -2322,6 +2526,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="investigation-item">
 
@@ -2351,68 +2556,14 @@
 </div>
 
 
-<script>
 
-    <script>
+<script>
 
     /* =========================================
        DONNÉES DU DOSSIER
     ========================================= */
 
     const dossier = {
-
-        documents: [
-
-            {
-                id: "doc-001",
-                titre: "Procès-verbal de signalement des tirs",
-                description:
-                    "Premier document officiel relatif à l'appel reçu à 22:09.",
-                disponible: true
-            },
-
-            {
-                id: "doc-002",
-                titre: "Procès-verbal de constatations initiales",
-                description:
-                    "Constatations effectuées lors de l'arrivée des premières unités.",
-                disponible: false
-            },
-
-            {
-                id: "doc-003",
-                titre: "Plan du parking des Tilleuls",
-                description:
-                    "Configuration des lieux et localisation des éléments relevés.",
-                disponible: false
-            },
-
-            {
-                id: "doc-004",
-                titre: "Procès-verbal d'audition",
-                description:
-                    "Éléments issus des premières auditions.",
-                disponible: false
-            },
-
-            {
-                id: "doc-005",
-                titre: "Exploitation des fichiers téléphoniques",
-                description:
-                    "Synthèse des premières données numériques exploitables.",
-                disponible: false
-            },
-
-            {
-                id: "doc-006",
-                titre: "Rapport d'expertise balistique",
-                description:
-                    "Résultats techniques relatifs aux tirs et aux projectiles.",
-                disponible: false
-            }
-
-        ],
-
 
         preuves: [
 
@@ -2561,7 +2712,7 @@
 
 
     /* =========================================
-       SAUVEGARDE DE L'ÉTAT
+       SAUVEGARDE
     ========================================= */
 
     const STORAGE_KEY =
@@ -2616,7 +2767,7 @@
 
 
     /* =========================================
-       DISPONIBILITÉ DES ÉLÉMENTS
+       DISPONIBILITÉ
     ========================================= */
 
     function elementDisponible(element) {
@@ -2633,23 +2784,22 @@
 
 
     /* =========================================
-       AFFICHAGE DES LISTES
+       AFFICHAGE PREUVES
     ========================================= */
 
-    function rendreListe(liste, elementId) {
+    function rendrePreuves() {
 
         const container =
-            document.getElementById(elementId);
+            document.getElementById("preuvesList");
 
         if (!container) {
             return;
         }
 
-
         container.innerHTML = "";
 
 
-        liste.forEach(function(item) {
+        dossier.preuves.forEach(function(item) {
 
             const disponible =
                 elementDisponible(item);
@@ -2660,6 +2810,7 @@
                 container.insertAdjacentHTML(
                     "beforeend",
                     `
+
                     <article class="investigation-item locked">
 
                         <div class="item-top">
@@ -2685,6 +2836,7 @@
                         </div>
 
                     </article>
+
                     `
                 );
 
@@ -2692,64 +2844,230 @@
             }
 
 
-            const estDocument =
-                elementId === "documentsList";
+            container.insertAdjacentHTML(
+                "beforeend",
+                `
 
+                <article class="investigation-item">
 
-            const article =
-                document.createElement("article");
+                    <div class="item-top">
 
+                        <div>
 
-            article.className =
-                estDocument
-                    ? "investigation-item document-clickable"
-                    : "investigation-item";
+                            <h3 class="item-title">
+                                ${item.titre}
+                            </h3>
 
+                            <p class="item-description">
+                                ${item.description}
+                            </p>
 
-            article.id =
-                item.id;
+                        </div>
 
-
-            if (estDocument) {
-
-                article.addEventListener(
-                    "click",
-                    function() {
-
-                        ouvrirDocument(item.id);
-
-                    }
-                );
-
-            }
-
-
-            article.innerHTML = `
-
-                <div class="item-top">
-
-                    <div>
-
-                        <h3 class="item-title">
-                            ${item.titre}
-                        </h3>
-
-                        <p class="item-description">
-                            ${item.description}
-                        </p>
+                        <span class="item-status available">
+                            Disponible
+                        </span>
 
                     </div>
 
-                    <span class="item-status available">
-                        Disponible
-                    </span>
+                </article>
 
-                </div>
+                `
+            );
 
-            `;
+        });
+
+    }
 
 
-            container.appendChild(article);
+    /* =========================================
+       AFFICHAGE EXPERTISES
+    ========================================= */
+
+    function rendreExpertises() {
+
+        const container =
+            document.getElementById("expertisesList");
+
+        if (!container) {
+            return;
+        }
+
+        container.innerHTML = "";
+
+
+        dossier.expertises.forEach(function(item) {
+
+            const disponible =
+                elementDisponible(item);
+
+
+            if (!disponible) {
+
+                container.insertAdjacentHTML(
+                    "beforeend",
+                    `
+
+                    <article class="investigation-item locked">
+
+                        <div class="item-top">
+
+                            <div>
+
+                                <h3 class="item-title">
+                                    Élément verrouillé
+                                </h3>
+
+                                <p class="item-description">
+                                    Cette expertise n'est pas encore
+                                    accessible dans l'état actuel
+                                    du dossier.
+                                </p>
+
+                            </div>
+
+                            <span class="item-status locked-status">
+                                🔒 Verrouillé
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                    `
+                );
+
+                return;
+            }
+
+
+            container.insertAdjacentHTML(
+                "beforeend",
+                `
+
+                <article class="investigation-item">
+
+                    <div class="item-top">
+
+                        <div>
+
+                            <h3 class="item-title">
+                                ${item.titre}
+                            </h3>
+
+                            <p class="item-description">
+                                ${item.description}
+                            </p>
+
+                        </div>
+
+                        <span class="item-status available">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                </article>
+
+                `
+            );
+
+        });
+
+    }
+
+
+    /* =========================================
+       AFFICHAGE TÉLÉPHONES
+    ========================================= */
+
+    function rendreTelephones() {
+
+        const container =
+            document.getElementById("telephonesList");
+
+        if (!container) {
+            return;
+        }
+
+        container.innerHTML = "";
+
+
+        dossier.telephones.forEach(function(item) {
+
+            const disponible =
+                elementDisponible(item);
+
+
+            if (!disponible) {
+
+                container.insertAdjacentHTML(
+                    "beforeend",
+                    `
+
+                    <article class="investigation-item locked">
+
+                        <div class="item-top">
+
+                            <div>
+
+                                <h3 class="item-title">
+                                    Téléphone verrouillé
+                                </h3>
+
+                                <p class="item-description">
+                                    Cet appareil n'est pas encore
+                                    exploitable dans l'état actuel
+                                    du dossier.
+                                </p>
+
+                            </div>
+
+                            <span class="item-status locked-status">
+                                🔒 Verrouillé
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                    `
+                );
+
+                return;
+            }
+
+
+            container.insertAdjacentHTML(
+                "beforeend",
+                `
+
+                <article class="investigation-item">
+
+                    <div class="item-top">
+
+                        <div>
+
+                            <h3 class="item-title">
+                                ${item.titre}
+                            </h3>
+
+                            <p class="item-description">
+                                ${item.description}
+                            </p>
+
+                        </div>
+
+                        <span class="item-status available">
+                            Disponible
+                        </span>
+
+                    </div>
+
+                </article>
+
+                `
+            );
 
         });
 
@@ -2808,9 +3126,18 @@
 
     function mettreAJourCompteur() {
 
-        const tousLesElements = [
+        const compteur =
+            document.getElementById(
+                "statDebloques"
+            );
 
-            ...dossier.documents,
+        if (!compteur) {
+            return;
+        }
+
+
+        const objets = [
+
             ...dossier.preuves,
             ...dossier.expertises,
             ...dossier.telephones
@@ -2819,29 +3146,21 @@
 
 
         const nombre =
-            tousLesElements.filter(function(item) {
+            objets.filter(function(item) {
 
                 return elementDisponible(item);
 
             }).length;
 
 
-        const compteur =
-            document.getElementById("statDebloques");
-
-
-        if (compteur) {
-
-            compteur.textContent =
-                String(nombre);
-
-        }
+        compteur.textContent =
+            String(nombre);
 
     }
 
 
     /* =========================================
-       DÉBLOCAGE POUR LE MAÎTRE DU JEU
+       DÉBLOQUER UN ÉLÉMENT
     ========================================= */
 
     function debloquerElement(elementId) {
@@ -2863,6 +3182,10 @@
 
     }
 
+
+    /* =========================================
+       REVERROUILLER UN ÉLÉMENT
+    ========================================= */
 
     function verrouillerElement(elementId) {
 
@@ -2886,15 +3209,17 @@
 
 
     /* =========================================
-       AFFICHAGE D'UN DOCUMENT
+       DOCUMENTS
     ========================================= */
 
     function ouvrirDocument(documentId) {
+
 
         if (documentId === "doc-001") {
 
             afficherDocument(
                 "PROCÈS-VERBAL DE SIGNALEMENT — 2026-593",
+
                 `
 
                 <div style="
@@ -2902,6 +3227,7 @@
                     color: #202020;
                     line-height: 1.75;
                 ">
+
 
                     <div style="
                         text-align:center;
@@ -2919,6 +3245,7 @@
                             Brigade territoriale — Saint-Laurent-des-Vignes
                         </div>
 
+
                         <h2 style="
                             margin:8px 0 4px;
                             font-size:20px;
@@ -2926,6 +3253,7 @@
                         ">
                             PROCÈS-VERBAL
                         </h2>
+
 
                         <div style="
                             font-size:13px;
@@ -2944,6 +3272,7 @@
                         font-size:13px;
                     ">
 
+
                         <tr>
 
                             <td style="
@@ -2955,6 +3284,7 @@
                             ">
                                 Numéro de procédure
                             </td>
+
 
                             <td style="
                                 border:1px solid #bbb;
@@ -2977,6 +3307,7 @@
                                 Date
                             </td>
 
+
                             <td style="
                                 border:1px solid #bbb;
                                 padding:8px;
@@ -2998,6 +3329,7 @@
                                 Heure de réception
                             </td>
 
+
                             <td style="
                                 border:1px solid #bbb;
                                 padding:8px;
@@ -3018,6 +3350,7 @@
                             ">
                                 Localisation signalée
                             </td>
+
 
                             <td style="
                                 border:1px solid #bbb;
@@ -3136,6 +3469,7 @@
 
             afficherDocument(
                 "PROCÈS-VERBAL — ARRIVÉE DES PREMIÈRES UNITÉS",
+
                 `
 
                 <div style="
@@ -3148,14 +3482,17 @@
                         Arrivée sur les lieux
                     </h3>
 
+
                     <p>
                         Les premières unités arrivent sur les lieux
                         à 22:22 et procèdent à la sécurisation du secteur.
                     </p>
 
+
                     <p>
                         Plusieurs personnes sont retrouvées blessées.
                     </p>
+
 
                     <p>
                         Les lieux présentent plusieurs traces et éléments
@@ -3175,6 +3512,7 @@
 
             afficherDocument(
                 "PLAN DU PARKING DES TILLEULS",
+
                 `
 
                 <div style="
@@ -3187,12 +3525,14 @@
                         Plan de travail
                     </h3>
 
+
                     <p>
                         Le plan du parking constitue un support de travail
                         destiné à localiser progressivement les personnes,
                         véhicules, traces, impacts et autres éléments
                         relevés au cours de l'enquête.
                     </p>
+
 
                     <div style="
                         margin-top:20px;
@@ -3221,7 +3561,9 @@
     function afficherDocument(titre, contenu) {
 
         const ancienneFenetre =
-            document.getElementById("documentOverlay");
+            document.getElementById(
+                "documentOverlay"
+            );
 
 
         if (ancienneFenetre) {
@@ -3242,23 +3584,30 @@
         overlay.style.position =
             "fixed";
 
+
         overlay.style.inset =
             "0";
+
 
         overlay.style.background =
             "rgba(0, 0, 0, 0.72)";
 
+
         overlay.style.display =
             "flex";
+
 
         overlay.style.alignItems =
             "center";
 
+
         overlay.style.justifyContent =
             "center";
 
+
         overlay.style.padding =
             "20px";
+
 
         overlay.style.zIndex =
             "9999";
@@ -3278,6 +3627,7 @@
                     padding:0;
                 "
             >
+
 
                 <div
                     style="
@@ -3373,29 +3723,11 @@
 
     function initialiserPage() {
 
-        rendreListe(
-            dossier.documents,
-            "documentsList"
-        );
+        rendrePreuves();
 
+        rendreExpertises();
 
-        rendreListe(
-            dossier.preuves,
-            "preuvesList"
-        );
-
-
-        rendreListe(
-            dossier.expertises,
-            "expertisesList"
-        );
-
-
-        rendreListe(
-            dossier.telephones,
-            "telephonesList"
-        );
-
+        rendreTelephones();
 
         rendreChronologie();
 
@@ -3474,7 +3806,7 @@
 
 
     /* =========================================
-       DEMANDE AU PROCUREUR
+       PROCUREUR
     ========================================= */
 
     function soumettreDemandeProcureur() {
@@ -3492,9 +3824,7 @@
 
 
         if (!input || !result) {
-
             return;
-
         }
 
 
@@ -3507,17 +3837,22 @@
             result.style.display =
                 "block";
 
+
             result.style.background =
                 "rgba(127, 29, 29, 0.20)";
+
 
             result.style.borderLeft =
                 "3px solid #f87171";
 
+
             result.style.color =
                 "#fecaca";
 
+
             result.innerHTML =
                 "Veuillez formuler une demande suffisamment précise.";
+
 
             return;
 
@@ -3527,11 +3862,14 @@
         result.style.display =
             "block";
 
+
         result.style.background =
             "rgba(59, 130, 246, 0.08)";
 
+
         result.style.borderLeft =
             "3px solid #60a5fa";
+
 
         result.style.color =
             "#bfdbfe";
@@ -3541,7 +3879,7 @@
 
             "<strong>Demande enregistrée.</strong><br>" +
 
-            "La demande devra être examinée au regard " +
+            "La demande sera examinée au regard " +
 
             "de l'objet de l'enquête, de sa justification " +
 
@@ -3561,9 +3899,7 @@
        =========================================
        OUTILS MAÎTRE DU JEU
 
-       Pour débloquer un élément :
-
-       debloquerElement("doc-002");
+       Pour débloquer :
 
        debloquerElement("preuve-003");
 
@@ -3573,14 +3909,14 @@
 
        Pour reverrouiller :
 
-       verrouillerElement("doc-002");
+       verrouillerElement("preuve-003");
 
        =========================================
     */
 
 </script>
-    
-</script>
+
 
 </body>
+
 </html>
