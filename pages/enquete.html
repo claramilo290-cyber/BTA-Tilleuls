@@ -45,9 +45,6 @@
             min-height: 100vh;
         }
 
-        /* =========================================
-           STRUCTURE PRINCIPALE
-        ========================================= */
 
         .page {
 
@@ -207,10 +204,6 @@
                 1px solid rgba(34, 197, 94, 0.24);
         }
 
-
-        /* =========================================
-           EN-TÊTE DOSSIER
-        ========================================= */
 
         .case-header {
 
@@ -380,10 +373,6 @@
         }
 
 
-        /* =========================================
-           NAVIGATION
-        ========================================= */
-
         .tabs-wrap {
 
             position: sticky;
@@ -462,10 +451,6 @@
                 #60a5fa;
         }
 
-
-        /* =========================================
-           CONTENU
-        ========================================= */
 
         .content {
 
@@ -575,26 +560,21 @@
             grid-column: span 8;
         }
 
-
         .span-7 {
             grid-column: span 7;
         }
-
 
         .span-6 {
             grid-column: span 6;
         }
 
-
         .span-5 {
             grid-column: span 5;
         }
 
-
         .span-4 {
             grid-column: span 4;
         }
-
 
         .span-3 {
             grid-column: span 3;
@@ -605,10 +585,6 @@
             grid-column: 1 / -1;
         }
 
-
-        /* =========================================
-           INFOS DOSSIER
-        ========================================= */
 
         .info-grid {
 
@@ -661,10 +637,6 @@
         }
 
 
-        /* =========================================
-           TEXTE
-        ========================================= */
-
         .intro-text {
 
             font-size: 14px;
@@ -710,10 +682,6 @@
             color: #fde68a;
         }
 
-
-        /* =========================================
-           STATISTIQUES
-        ========================================= */
 
         .stat-grid {
 
@@ -765,10 +733,6 @@
             color: #f8fafc;
         }
 
-
-        /* =========================================
-           ELEMENTS D'ENQUÊTE
-        ========================================= */
 
         .item-list {
 
@@ -890,10 +854,6 @@
         }
 
 
-        /* =========================================
-           CHRONOLOGIE
-        ========================================= */
-
         .timeline {
 
             position: relative;
@@ -994,62 +954,6 @@
         }
 
 
-        /* =========================================
-           DOSSIERS VERROUILLÉS
-        ========================================= */
-
-        .locked-box {
-
-            text-align: center;
-
-            padding: 35px 20px;
-
-            border-radius: 14px;
-
-            background:
-                rgba(2, 6, 23, 0.34);
-
-            border:
-                1px dashed rgba(148, 163, 184, 0.18);
-        }
-
-
-        .locked-icon {
-
-            font-size: 30px;
-
-            margin-bottom: 9px;
-        }
-
-
-        .locked-box h3 {
-
-            margin: 0;
-
-            font-size: 15px;
-
-            color: #e2e8f0;
-        }
-
-
-        .locked-box p {
-
-            max-width: 560px;
-
-            margin: 8px auto 0;
-
-            font-size: 12px;
-
-            color: #64748b;
-
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           MISSIONS
-        ========================================= */
-
         .mission-card {
 
             padding: 16px;
@@ -1111,10 +1015,6 @@
             line-height: 1.6;
         }
 
-
-        /* =========================================
-           PROCUREUR
-        ========================================= */
 
         .request-box {
 
@@ -1232,10 +1132,6 @@
         }
 
 
-        /* =========================================
-           RESPONSIVE
-        ========================================= */
-
         @media (max-width: 950px) {
 
             .span-8,
@@ -1263,6 +1159,7 @@
 
                 width: 100%;
             }
+
         }
 
 
@@ -1323,6 +1220,7 @@
 
                 min-height: 44px;
             }
+
         }
 
     </style>
@@ -1335,10 +1233,6 @@
 <div class="page">
 
 
-    <!-- =========================================
-         BARRE SUPÉRIEURE
-    ========================================== -->
-
     <header class="topbar">
 
         <div class="brand">
@@ -1347,13 +1241,11 @@
                 🕵️
             </div>
 
-
             <div class="brand-text">
 
                 <div class="brand-title">
                     BTA — Poste d'enquête
                 </div>
-
 
                 <div class="brand-subtitle">
                     Dossier judiciaire informatisé
@@ -1380,20 +1272,13 @@
 
 
 
-    <!-- =========================================
-         EN-TÊTE AFFAIRE
-    ========================================== -->
-
     <section class="case-header">
 
         <div class="case-header-inner">
 
             <div class="breadcrumb">
-
-                Affaires
-                /
+                Affaires /
                 <span>2026-593</span>
-
             </div>
 
 
@@ -1417,16 +1302,13 @@
                             Homicide
                         </span>
 
-
                         <span class="tag">
                             Arme à feu
                         </span>
 
-
                         <span class="tag">
                             17 décembre 2026
                         </span>
-
 
                         <span class="tag">
                             Les Tilleuls
@@ -1443,7 +1325,6 @@
                         Numéro d'affaire
                     </div>
 
-
                     <span class="case-number-value">
                         2026-593
                     </span>
@@ -1458,18 +1339,14 @@
 
 
 
-    <!-- =========================================
-         NAVIGATION
-    ========================================== -->
-
     <div class="tabs-wrap">
 
         <nav class="tabs">
 
             <button
                 class="tab active"
-                data-panel="resume"
                 type="button"
+                data-panel="resume"
             >
                 Vue générale
             </button>
@@ -1477,8 +1354,8 @@
 
             <button
                 class="tab"
-                data-panel="documents"
                 type="button"
+                data-panel="documents"
             >
                 Documents
             </button>
@@ -1486,8 +1363,8 @@
 
             <button
                 class="tab"
-                data-panel="preuves"
                 type="button"
+                data-panel="preuves"
             >
                 Preuves
             </button>
@@ -1495,8 +1372,8 @@
 
             <button
                 class="tab"
-                data-panel="telephones"
                 type="button"
+                data-panel="telephones"
             >
                 Téléphones
             </button>
@@ -1504,8 +1381,8 @@
 
             <button
                 class="tab"
-                data-panel="chronologie"
                 type="button"
+                data-panel="chronologie"
             >
                 Chronologie
             </button>
@@ -1513,8 +1390,8 @@
 
             <button
                 class="tab"
-                data-panel="missions"
                 type="button"
+                data-panel="missions"
             >
                 Missions
             </button>
@@ -1522,8 +1399,8 @@
 
             <button
                 class="tab"
-                data-panel="procureur"
                 type="button"
+                data-panel="procureur"
             >
                 Procureur
             </button>
@@ -1533,10 +1410,6 @@
     </div>
 
 
-
-    <!-- =========================================
-         CONTENU
-    ========================================== -->
 
     <main class="content">
 
@@ -1731,10 +1604,7 @@
                                     Victimes
                                 </span>
 
-                                <span
-                                    class="stat-value"
-                                    id="statVictimes"
-                                >
+                                <span class="stat-value">
                                     3
                                 </span>
 
@@ -1747,10 +1617,7 @@
                                     Tirs recensés
                                 </span>
 
-                                <span
-                                    class="stat-value"
-                                    id="statTirs"
-                                >
+                                <span class="stat-value">
                                     5
                                 </span>
 
@@ -1763,10 +1630,7 @@
                                     Téléphones saisis
                                 </span>
 
-                                <span
-                                    class="stat-value"
-                                    id="statTelephones"
-                                >
+                                <span class="stat-value">
                                     3
                                 </span>
 
@@ -1779,10 +1643,7 @@
                                     Éléments débloqués
                                 </span>
 
-                                <span
-                                    class="stat-value"
-                                    id="statDebloques"
-                                >
+                                <span class="stat-value">
                                     0
                                 </span>
 
@@ -2088,10 +1949,88 @@
 
                     <div class="card-body">
 
-                        <div
-                            class="item-list"
-                            id="preuvesList"
-                        ></div>
+                        <div class="item-list">
+
+
+                            <article class="investigation-item">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Douilles retrouvées sur la scène
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Présence de plusieurs étuis
+                                            correspondant aux tirs constatés.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status available">
+                                        Disponible
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="investigation-item">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Impacts de projectile
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Plusieurs impacts ont été relevés
+                                            sur les lieux.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status available">
+                                        Disponible
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="investigation-item locked">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Élément verrouillé
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Cet élément n'est pas encore
+                                            accessible dans l'état actuel
+                                            du dossier.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status locked-status">
+                                        🔒 Verrouillé
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+                        </div>
 
                     </div>
 
@@ -2112,10 +2051,87 @@
 
                     <div class="card-body">
 
-                        <div
-                            class="item-list"
-                            id="expertisesList"
-                        ></div>
+                        <div class="item-list">
+
+
+                            <article class="investigation-item locked">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Médecine légale
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Détermination des lésions,
+                                            trajectoires et causes du décès.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status locked-status">
+                                        🔒 Verrouillé
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="investigation-item locked">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Balistique
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Analyse des étuis, projectiles
+                                            et trajectoires.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status locked-status">
+                                        🔒 Verrouillé
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="investigation-item locked">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Téléphonie
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Extraction et analyse des
+                                            données numériques.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status locked-status">
+                                        🔒 Verrouillé
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+                        </div>
 
                     </div>
 
@@ -2151,10 +2167,110 @@
 
                     <div class="card-body">
 
-                        <div
-                            class="item-list"
-                            id="telephonesList"
-                        ></div>
+                        <div class="item-list">
+
+
+                            <article class="investigation-item">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Téléphone victime 01
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Appareil saisi et placé sous scellé.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status available">
+                                        Disponible
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="investigation-item">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Téléphone victime 02
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Appareil saisi et placé sous scellé.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status available">
+                                        Disponible
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="investigation-item">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Téléphone victime 03
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Appareil saisi et placé sous scellé.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status available">
+                                        Disponible
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="investigation-item locked">
+
+                                <div class="item-top">
+
+                                    <div>
+
+                                        <h3 class="item-title">
+                                            Téléphone supplémentaire
+                                        </h3>
+
+                                        <p class="item-description">
+                                            Appareil susceptible d'être rattaché
+                                            à l'enquête.
+                                        </p>
+
+                                    </div>
+
+                                    <span class="item-status locked-status">
+                                        🔒 Verrouillé
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+                        </div>
 
 
                         <div class="notice">
@@ -2200,10 +2316,89 @@
 
                     <div class="card-body">
 
-                        <div
-                            class="timeline"
-                            id="timeline"
-                        ></div>
+                        <div class="timeline">
+
+
+                            <article class="timeline-item">
+
+                                <span class="timeline-marker"></span>
+
+                                <div class="timeline-time">
+                                    22:09
+                                </div>
+
+                                <h3 class="timeline-title">
+                                    Appel aux secours
+                                </h3>
+
+                                <p class="timeline-text">
+                                    Un appel signale des tirs dans le secteur
+                                    des Tilleuls.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <span class="timeline-marker"></span>
+
+                                <div class="timeline-time">
+                                    22:22
+                                </div>
+
+                                <h3 class="timeline-title">
+                                    Arrivée des premières unités
+                                </h3>
+
+                                <p class="timeline-text">
+                                    Les premières forces de l'ordre arrivent
+                                    sur place.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <span class="timeline-marker"></span>
+
+                                <div class="timeline-time">
+                                    22:24
+                                </div>
+
+                                <h3 class="timeline-title">
+                                    Renforts spécialisés
+                                </h3>
+
+                                <p class="timeline-text">
+                                    Arrivée des renforts et des sapeurs-pompiers.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <span class="timeline-marker"></span>
+
+                                <div class="timeline-time">
+                                    22:26
+                                </div>
+
+                                <h3 class="timeline-title">
+                                    Prise en charge médicale
+                                </h3>
+
+                                <p class="timeline-text">
+                                    Les équipes médicales interviennent auprès
+                                    des victimes.
+                                </p>
+
+                            </article>
+
+
+                        </div>
 
                     </div>
 
@@ -2560,656 +2755,77 @@
 <script>
 
     /* =========================================
-       DONNÉES DU DOSSIER
+       NAVIGATION DES ONGLETS
     ========================================= */
 
-    const dossier = {
-
-        preuves: [
-
-            {
-                id: "preuve-001",
-                titre: "Douilles retrouvées sur la scène",
-                description:
-                    "Présence de plusieurs étuis correspondant aux tirs constatés.",
-                disponible: true
-            },
-
-            {
-                id: "preuve-002",
-                titre: "Impacts de projectile",
-                description:
-                    "Plusieurs impacts ont été relevés sur les lieux.",
-                disponible: true
-            },
-
-            {
-                id: "preuve-003",
-                titre: "Projectile retrouvé dans un véhicule",
-                description:
-                    "Un projectile semble avoir traversé un véhicule stationné.",
-                disponible: false
-            },
-
-            {
-                id: "preuve-004",
-                titre: "Photographies de la scène",
-                description:
-                    "Photographies judiciaires et localisation des traces.",
-                disponible: false
-            },
-
-            {
-                id: "preuve-005",
-                titre: "Éléments biologiques",
-                description:
-                    "Résultats d'analyses en attente de transmission.",
-                disponible: false
-            }
-
-        ],
+    const onglets =
+        document.querySelectorAll(".tab");
 
 
-        expertises: [
-
-            {
-                id: "expert-001",
-                titre: "Médecine légale",
-                description:
-                    "Détermination des lésions, trajectoires et causes du décès.",
-                disponible: false
-            },
-
-            {
-                id: "expert-002",
-                titre: "Balistique",
-                description:
-                    "Analyse des étuis, projectiles et trajectoires.",
-                disponible: false
-            },
-
-            {
-                id: "expert-003",
-                titre: "Téléphonie",
-                description:
-                    "Extraction et analyse des données numériques.",
-                disponible: false
-            }
-
-        ],
+    const panneaux =
+        document.querySelectorAll(".panel");
 
 
-        telephones: [
+    onglets.forEach(function(onglet) {
 
-            {
-                id: "phone-001",
-                titre: "Téléphone victime 01",
-                description:
-                    "Appareil saisi et placé sous scellé.",
-                disponible: true
-            },
+        onglet.addEventListener(
+            "click",
+            function() {
 
-            {
-                id: "phone-002",
-                titre: "Téléphone victime 02",
-                description:
-                    "Appareil saisi et placé sous scellé.",
-                disponible: true
-            },
-
-            {
-                id: "phone-003",
-                titre: "Téléphone victime 03",
-                description:
-                    "Appareil saisi et placé sous scellé.",
-                disponible: true
-            },
-
-            {
-                id: "phone-004",
-                titre: "Téléphone supplémentaire",
-                description:
-                    "Appareil susceptible d'être rattaché à l'enquête.",
-                disponible: false
-            }
-
-        ],
+                const panelId =
+                    onglet.getAttribute("data-panel");
 
 
-        chronologie: [
+                onglets.forEach(function(item) {
 
-            {
-                heure: "22:09",
-                titre: "Appel aux secours",
-                texte:
-                    "Un appel signale des tirs dans le secteur des Tilleuls."
-            },
+                    item.classList.remove(
+                        "active"
+                    );
 
-            {
-                heure: "22:22",
-                titre: "Arrivée des premières unités",
-                texte:
-                    "Les premières forces de l'ordre arrivent sur place."
-            },
-
-            {
-                heure: "22:24",
-                titre: "Renforts spécialisés",
-                texte:
-                    "Arrivée des renforts et des sapeurs-pompiers."
-            },
-
-            {
-                heure: "22:26",
-                titre: "Prise en charge médicale",
-                texte:
-                    "Les équipes médicales interviennent auprès des victimes."
-            }
-
-        ]
-
-    };
+                });
 
 
-    /* =========================================
-       SAUVEGARDE
-    ========================================= */
+                panneaux.forEach(function(panel) {
 
-    const STORAGE_KEY =
-        "bta_tilleuls_affaire_2026_593";
+                    panel.classList.remove(
+                        "active"
+                    );
+
+                });
 
 
-    function getEtatEnquete() {
+                onglet.classList.add(
+                    "active"
+                );
 
-        try {
 
-            const saved =
-                localStorage.getItem(STORAGE_KEY);
+                const panneau =
+                    document.getElementById(panelId);
 
-            if (!saved) {
 
-                return {
-                    debloques: []
-                };
+                if (panneau) {
+
+                    panneau.classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
             }
-
-            const etat =
-                JSON.parse(saved);
-
-            if (!Array.isArray(etat.debloques)) {
-
-                etat.debloques = [];
-
-            }
-
-            return etat;
-
-        } catch (error) {
-
-            return {
-                debloques: []
-            };
-
-        }
-
-    }
-
-
-    function sauvegarderEtat(etat) {
-
-        localStorage.setItem(
-            STORAGE_KEY,
-            JSON.stringify(etat)
         );
 
-    }
+    });
 
-
-    /* =========================================
-       DISPONIBILITÉ
-    ========================================= */
-
-    function elementDisponible(element) {
-
-        const etat =
-            getEtatEnquete();
-
-        return (
-            element.disponible === true ||
-            etat.debloques.includes(element.id)
-        );
-
-    }
 
 
     /* =========================================
-       AFFICHAGE PREUVES
-    ========================================= */
-
-    function rendrePreuves() {
-
-        const container =
-            document.getElementById("preuvesList");
-
-        if (!container) {
-            return;
-        }
-
-        container.innerHTML = "";
-
-
-        dossier.preuves.forEach(function(item) {
-
-            const disponible =
-                elementDisponible(item);
-
-
-            if (!disponible) {
-
-                container.insertAdjacentHTML(
-                    "beforeend",
-                    `
-
-                    <article class="investigation-item locked">
-
-                        <div class="item-top">
-
-                            <div>
-
-                                <h3 class="item-title">
-                                    Élément verrouillé
-                                </h3>
-
-                                <p class="item-description">
-                                    Cet élément n'est pas encore
-                                    accessible dans l'état actuel
-                                    du dossier.
-                                </p>
-
-                            </div>
-
-                            <span class="item-status locked-status">
-                                🔒 Verrouillé
-                            </span>
-
-                        </div>
-
-                    </article>
-
-                    `
-                );
-
-                return;
-            }
-
-
-            container.insertAdjacentHTML(
-                "beforeend",
-                `
-
-                <article class="investigation-item">
-
-                    <div class="item-top">
-
-                        <div>
-
-                            <h3 class="item-title">
-                                ${item.titre}
-                            </h3>
-
-                            <p class="item-description">
-                                ${item.description}
-                            </p>
-
-                        </div>
-
-                        <span class="item-status available">
-                            Disponible
-                        </span>
-
-                    </div>
-
-                </article>
-
-                `
-            );
-
-        });
-
-    }
-
-
-    /* =========================================
-       AFFICHAGE EXPERTISES
-    ========================================= */
-
-    function rendreExpertises() {
-
-        const container =
-            document.getElementById("expertisesList");
-
-        if (!container) {
-            return;
-        }
-
-        container.innerHTML = "";
-
-
-        dossier.expertises.forEach(function(item) {
-
-            const disponible =
-                elementDisponible(item);
-
-
-            if (!disponible) {
-
-                container.insertAdjacentHTML(
-                    "beforeend",
-                    `
-
-                    <article class="investigation-item locked">
-
-                        <div class="item-top">
-
-                            <div>
-
-                                <h3 class="item-title">
-                                    Élément verrouillé
-                                </h3>
-
-                                <p class="item-description">
-                                    Cette expertise n'est pas encore
-                                    accessible dans l'état actuel
-                                    du dossier.
-                                </p>
-
-                            </div>
-
-                            <span class="item-status locked-status">
-                                🔒 Verrouillé
-                            </span>
-
-                        </div>
-
-                    </article>
-
-                    `
-                );
-
-                return;
-            }
-
-
-            container.insertAdjacentHTML(
-                "beforeend",
-                `
-
-                <article class="investigation-item">
-
-                    <div class="item-top">
-
-                        <div>
-
-                            <h3 class="item-title">
-                                ${item.titre}
-                            </h3>
-
-                            <p class="item-description">
-                                ${item.description}
-                            </p>
-
-                        </div>
-
-                        <span class="item-status available">
-                            Disponible
-                        </span>
-
-                    </div>
-
-                </article>
-
-                `
-            );
-
-        });
-
-    }
-
-
-    /* =========================================
-       AFFICHAGE TÉLÉPHONES
-    ========================================= */
-
-    function rendreTelephones() {
-
-        const container =
-            document.getElementById("telephonesList");
-
-        if (!container) {
-            return;
-        }
-
-        container.innerHTML = "";
-
-
-        dossier.telephones.forEach(function(item) {
-
-            const disponible =
-                elementDisponible(item);
-
-
-            if (!disponible) {
-
-                container.insertAdjacentHTML(
-                    "beforeend",
-                    `
-
-                    <article class="investigation-item locked">
-
-                        <div class="item-top">
-
-                            <div>
-
-                                <h3 class="item-title">
-                                    Téléphone verrouillé
-                                </h3>
-
-                                <p class="item-description">
-                                    Cet appareil n'est pas encore
-                                    exploitable dans l'état actuel
-                                    du dossier.
-                                </p>
-
-                            </div>
-
-                            <span class="item-status locked-status">
-                                🔒 Verrouillé
-                            </span>
-
-                        </div>
-
-                    </article>
-
-                    `
-                );
-
-                return;
-            }
-
-
-            container.insertAdjacentHTML(
-                "beforeend",
-                `
-
-                <article class="investigation-item">
-
-                    <div class="item-top">
-
-                        <div>
-
-                            <h3 class="item-title">
-                                ${item.titre}
-                            </h3>
-
-                            <p class="item-description">
-                                ${item.description}
-                            </p>
-
-                        </div>
-
-                        <span class="item-status available">
-                            Disponible
-                        </span>
-
-                    </div>
-
-                </article>
-
-                `
-            );
-
-        });
-
-    }
-
-
-    /* =========================================
-       CHRONOLOGIE
-    ========================================= */
-
-    function rendreChronologie() {
-
-        const container =
-            document.getElementById("timeline");
-
-        if (!container) {
-            return;
-        }
-
-
-        container.innerHTML =
-            dossier.chronologie
-                .map(function(item) {
-
-                    return `
-
-                        <article class="timeline-item">
-
-                            <span class="timeline-marker"></span>
-
-                            <div class="timeline-time">
-                                ${item.heure}
-                            </div>
-
-                            <h3 class="timeline-title">
-                                ${item.titre}
-                            </h3>
-
-                            <p class="timeline-text">
-                                ${item.texte}
-                            </p>
-
-                        </article>
-
-                    `;
-
-                })
-                .join("");
-
-    }
-
-
-    /* =========================================
-       COMPTEUR
-    ========================================= */
-
-    function mettreAJourCompteur() {
-
-        const compteur =
-            document.getElementById(
-                "statDebloques"
-            );
-
-        if (!compteur) {
-            return;
-        }
-
-
-        const objets = [
-
-            ...dossier.preuves,
-            ...dossier.expertises,
-            ...dossier.telephones
-
-        ];
-
-
-        const nombre =
-            objets.filter(function(item) {
-
-                return elementDisponible(item);
-
-            }).length;
-
-
-        compteur.textContent =
-            String(nombre);
-
-    }
-
-
-    /* =========================================
-       DÉBLOQUER UN ÉLÉMENT
-    ========================================= */
-
-    function debloquerElement(elementId) {
-
-        const etat =
-            getEtatEnquete();
-
-
-        if (!etat.debloques.includes(elementId)) {
-
-            etat.debloques.push(elementId);
-
-        }
-
-
-        sauvegarderEtat(etat);
-
-        initialiserPage();
-
-    }
-
-
-    /* =========================================
-       REVERROUILLER UN ÉLÉMENT
-    ========================================= */
-
-    function verrouillerElement(elementId) {
-
-        const etat =
-            getEtatEnquete();
-
-
-        etat.debloques =
-            etat.debloques.filter(function(id) {
-
-                return id !== elementId;
-
-            });
-
-
-        sauvegarderEtat(etat);
-
-        initialiserPage();
-
-    }
-
-
-    /* =========================================
-       DOCUMENTS
+       OUVERTURE DES DOCUMENTS
     ========================================= */
 
     function ouvrirDocument(documentId) {
@@ -3227,7 +2843,6 @@
                     color: #202020;
                     line-height: 1.75;
                 ">
-
 
                     <div style="
                         text-align:center;
@@ -3272,7 +2887,6 @@
                         font-size:13px;
                     ">
 
-
                         <tr>
 
                             <td style="
@@ -3284,7 +2898,6 @@
                             ">
                                 Numéro de procédure
                             </td>
-
 
                             <td style="
                                 border:1px solid #bbb;
@@ -3307,7 +2920,6 @@
                                 Date
                             </td>
 
-
                             <td style="
                                 border:1px solid #bbb;
                                 padding:8px;
@@ -3329,7 +2941,6 @@
                                 Heure de réception
                             </td>
 
-
                             <td style="
                                 border:1px solid #bbb;
                                 padding:8px;
@@ -3350,7 +2961,6 @@
                             ">
                                 Localisation signalée
                             </td>
-
 
                             <td style="
                                 border:1px solid #bbb;
@@ -3467,713 +3077,696 @@
 
         if (documentId === "doc-002") {
 
-    afficherDocument(
-        "PROCÈS-VERBAL — ARRIVÉE DES PREMIÈRES UNITÉS",
+            afficherDocument(
+                "PROCÈS-VERBAL — ARRIVÉE DES PREMIÈRES UNITÉS",
 
-        `
-
-        <div style="
-            font-family: Georgia, 'Times New Roman', serif;
-            color: #202020;
-            line-height: 1.75;
-        ">
-
-            <div style="
-                text-align:center;
-                margin-bottom:24px;
-                padding-bottom:16px;
-                border-bottom:1px solid #999;
-            ">
+                `
 
                 <div style="
-                    font-size:12px;
-                    letter-spacing:0.08em;
-                    text-transform:uppercase;
-                    color:#555;
+                    font-family: Georgia, 'Times New Roman', serif;
+                    color:#202020;
+                    line-height:1.75;
                 ">
-                    Brigade territoriale — Saint-Laurent-des-Vignes
+
+                    <div style="
+                        text-align:center;
+                        margin-bottom:24px;
+                        padding-bottom:16px;
+                        border-bottom:1px solid #999;
+                    ">
+
+                        <div style="
+                            font-size:12px;
+                            letter-spacing:0.08em;
+                            text-transform:uppercase;
+                            color:#555;
+                        ">
+                            Brigade territoriale — Saint-Laurent-des-Vignes
+                        </div>
+
+
+                        <h2 style="
+                            margin:8px 0 4px;
+                            font-size:20px;
+                        ">
+                            PROCÈS-VERBAL
+                        </h2>
+
+
+                        <div style="
+                            font-size:13px;
+                            font-weight:700;
+                        ">
+                            Arrivée des premières unités sur les lieux
+                        </div>
+
+                    </div>
+
+
+                    <table style="
+                        width:100%;
+                        border-collapse:collapse;
+                        margin-bottom:24px;
+                        font-size:13px;
+                    ">
+
+                        <tr>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                                width:32%;
+                                font-weight:700;
+                                background:#e9e6de;
+                            ">
+                                Numéro de procédure
+                            </td>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                            ">
+                                2026-593
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                                font-weight:700;
+                                background:#e9e6de;
+                            ">
+                                Date
+                            </td>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                            ">
+                                17 décembre 2026
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                                font-weight:700;
+                                background:#e9e6de;
+                            ">
+                                Heure d'arrivée
+                            </td>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                            ">
+                                22:22
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                                font-weight:700;
+                                background:#e9e6de;
+                            ">
+                                Lieu
+                            </td>
+
+                            <td style="
+                                border:1px solid #bbb;
+                                padding:8px;
+                            ">
+                                Parking souterrain des Tilleuls
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+
+                    <h3 style="
+                        font-size:15px;
+                        border-bottom:1px solid #aaa;
+                        padding-bottom:5px;
+                    ">
+                        Arrivée sur les lieux
+                    </h3>
+
+
+                    <p>
+                        À 22:22, les premières unités arrivent au parking
+                        souterrain des Tilleuls à la suite du signalement
+                        de plusieurs coups de feu.
+                    </p>
+
+
+                    <p>
+                        À leur arrivée, aucun auteur apparent des tirs n'est
+                        présent sur les lieux.
+                    </p>
+
+
+                    <h3 style="
+                        font-size:15px;
+                        border-bottom:1px solid #aaa;
+                        padding-bottom:5px;
+                        margin-top:22px;
+                    ">
+                        Sécurisation de la scène
+                    </h3>
+
+
+                    <p>
+                        Le secteur immédiat est sécurisé afin d'empêcher
+                        toute personne étrangère à l'intervention de modifier
+                        ou déplacer les éléments présents sur la scène.
+                    </p>
+
+
+                    <p>
+                        Les premières constatations font apparaître plusieurs
+                        traces compatibles avec des tirs d'arme à feu.
+                    </p>
+
+
+                    <h3 style="
+                        font-size:15px;
+                        border-bottom:1px solid #aaa;
+                        padding-bottom:5px;
+                        margin-top:22px;
+                    ">
+                        Personnes retrouvées
+                    </h3>
+
+
+                    <p>
+                        Plusieurs personnes sont retrouvées blessées dans
+                        différentes zones du parking.
+                    </p>
+
+
+                    <p>
+                        Une personne est retrouvée dans un état compatible
+                        avec un pronostic vital engagé. Son décès sera
+                        constaté ultérieurement sur les lieux.
+                    </p>
+
+
+                    <p>
+                        Deux autres personnes présentent des blessures
+                        nécessitant une prise en charge médicale urgente.
+                    </p>
+
+
+                    <h3 style="
+                        font-size:15px;
+                        border-bottom:1px solid #aaa;
+                        padding-bottom:5px;
+                        margin-top:22px;
+                    ">
+                        Premières constatations matérielles
+                    </h3>
+
+
+                    <p>
+                        Plusieurs étuis correspondant à des tirs d'arme à feu
+                        sont observés au sol.
+                    </p>
+
+
+                    <p>
+                        Des impacts de projectile sont également relevés
+                        sur plusieurs éléments présents dans le parking.
+                    </p>
+
+
+                    <div style="
+                        margin-top:20px;
+                        padding:13px 15px;
+                        background:#ebe7dc;
+                        border-left:4px solid #555;
+                        font-size:12px;
+                    ">
+
+                        <strong>Observation :</strong>
+
+                        Les constatations détaillées, la localisation précise
+                        des impacts, l'étude des trajectoires et l'identification
+                        des projectiles feront l'objet de rapports distincts.
+
+                    </div>
+
+
+                    <h3 style="
+                        font-size:15px;
+                        border-bottom:1px solid #aaa;
+                        padding-bottom:5px;
+                        margin-top:22px;
+                    ">
+                        Intervention des secours
+                    </h3>
+
+
+                    <p>
+                        Des moyens de secours sont engagés afin d'assurer la
+                        prise en charge médicale des personnes blessées.
+                    </p>
+
+
+                    <p>
+                        Les investigations judiciaires sont poursuivies sous
+                        contrôle des services compétents.
+                    </p>
+
+
+                    <div style="
+                        margin-top:34px;
+                        padding-top:14px;
+                        border-top:1px solid #999;
+                        font-size:12px;
+                        color:#555;
+                    ">
+
+                        Procès-verbal établi dans le cadre de la procédure
+                        référencée 2026-593.
+
+                    </div>
+
                 </div>
 
-                <h2 style="
-                    margin:8px 0 4px;
-                    font-size:20px;
-                    letter-spacing:0.03em;
-                ">
-                    PROCÈS-VERBAL
-                </h2>
-
-                <div style="
-                    font-size:13px;
-                    font-weight:700;
-                ">
-                    Arrivée des premières unités sur les lieux
-                </div>
-
-            </div>
-
-
-            <table style="
-                width:100%;
-                border-collapse:collapse;
-                margin-bottom:24px;
-                font-size:13px;
-            ">
-
-                <tr>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                        width:32%;
-                        font-weight:700;
-                        background:#e9e6de;
-                    ">
-                        Numéro de procédure
-                    </td>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                    ">
-                        2026-593
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                        font-weight:700;
-                        background:#e9e6de;
-                    ">
-                        Date
-                    </td>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                    ">
-                        17 décembre 2026
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                        font-weight:700;
-                        background:#e9e6de;
-                    ">
-                        Heure d'arrivée
-                    </td>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                    ">
-                        22:22
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                        font-weight:700;
-                        background:#e9e6de;
-                    ">
-                        Lieu
-                    </td>
-
-                    <td style="
-                        border:1px solid #bbb;
-                        padding:8px;
-                    ">
-                        Parking souterrain des Tilleuls
-                    </td>
-
-                </tr>
-
-            </table>
-
-
-            <h3 style="
-                font-size:15px;
-                border-bottom:1px solid #aaa;
-                padding-bottom:5px;
-            ">
-                Arrivée sur les lieux
-            </h3>
-
-
-            <p>
-                À 22:22, les premières unités arrivent au parking
-                souterrain des Tilleuls à la suite du signalement
-                de plusieurs coups de feu.
-            </p>
-
-
-            <p>
-                À leur arrivée, aucun auteur apparent des tirs n'est
-                présent sur les lieux.
-            </p>
-
-
-            <h3 style="
-                font-size:15px;
-                border-bottom:1px solid #aaa;
-                padding-bottom:5px;
-                margin-top:22px;
-            ">
-                Sécurisation de la scène
-            </h3>
-
-
-            <p>
-                Le secteur immédiat est sécurisé afin d'empêcher
-                toute personne étrangère à l'intervention de modifier
-                ou déplacer les éléments présents sur la scène.
-            </p>
-
-
-            <p>
-                Les premières constatations font apparaître plusieurs
-                traces compatibles avec des tirs d'arme à feu.
-            </p>
-
-
-            <h3 style="
-                font-size:15px;
-                border-bottom:1px solid #aaa;
-                padding-bottom:5px;
-                margin-top:22px;
-            ">
-                Personnes retrouvées
-            </h3>
-
-
-            <p>
-                Plusieurs personnes sont retrouvées blessées dans
-                différentes zones du parking.
-            </p>
-
-
-            <p>
-                Une personne est retrouvée dans un état compatible
-                avec un pronostic vital engagé. Son décès sera
-                constaté ultérieurement sur les lieux.
-            </p>
-
-
-            <p>
-                Deux autres personnes présentent des blessures
-                nécessitant une prise en charge médicale urgente.
-            </p>
-
-
-            <h3 style="
-                font-size:15px;
-                border-bottom:1px solid #aaa;
-                padding-bottom:5px;
-                margin-top:22px;
-            ">
-                Premières constatations matérielles
-            </h3>
-
-
-            <p>
-                Plusieurs étuis correspondant à des tirs d'arme à feu
-                sont observés au sol.
-            </p>
-
-
-            <p>
-                Des impacts de projectile sont également relevés
-                sur plusieurs éléments présents dans le parking.
-            </p>
-
-
-            <div style="
-                margin-top:20px;
-                padding:13px 15px;
-                background:#ebe7dc;
-                border-left:4px solid #555;
-                font-size:12px;
-            ">
-
-                <strong>Observation :</strong>
-
-                Les constatations détaillées, la localisation précise
-                des impacts, l'étude des trajectoires et l'identification
-                des projectiles feront l'objet de rapports et d'expertises
-                distincts.
-
-            </div>
-
-
-            <h3 style="
-                font-size:15px;
-                border-bottom:1px solid #aaa;
-                padding-bottom:5px;
-                margin-top:22px;
-            ">
-                Intervention des secours
-            </h3>
-
-
-            <p>
-                Des moyens de secours sont engagés afin d'assurer la
-                prise en charge médicale des personnes blessées.
-            </p>
-
-
-            <p>
-                Les investigations judiciaires sont poursuivies sous
-                contrôle des services compétents.
-            </p>
-
-
-            <div style="
-                margin-top:34px;
-                padding-top:14px;
-                border-top:1px solid #999;
-                font-size:12px;
-                color:#555;
-            ">
-
-                Procès-verbal établi dans le cadre de la procédure
-                référencée 2026-593.
-
-            </div>
-
-        </div>
-
-        `
-    );
-
-    return;
-}
+                `
+            );
+
+            return;
+        }
 
 
         if (documentId === "doc-003") {
 
-    afficherDocument(
-        "PLAN DU PARKING DES TILLEULS",
-        `
+            afficherDocument(
+                "PLAN DU PARKING DES TILLEULS",
 
-        <div style="
-            font-family: Georgia, 'Times New Roman', serif;
-            color:#202020;
-            line-height:1.6;
-        ">
-
-            <div style="
-                text-align:center;
-                margin-bottom:20px;
-                padding-bottom:14px;
-                border-bottom:1px solid #999;
-            ">
+                `
 
                 <div style="
-                    font-size:12px;
-                    text-transform:uppercase;
-                    letter-spacing:0.08em;
-                    color:#555;
-                ">
-                    Brigade territoriale — Saint-Laurent-des-Vignes
-                </div>
-
-                <h2 style="
-                    margin:8px 0 4px;
-                    font-size:20px;
-                ">
-                    PLAN DES LIEUX
-                </h2>
-
-                <div style="
-                    font-size:13px;
-                    font-weight:700;
-                ">
-                    Affaire 2026-593
-                </div>
-
-            </div>
-
-
-            <p style="
-                font-size:13px;
-                margin-bottom:16px;
-            ">
-                Plan de travail du parking souterrain des Tilleuls.
-                Les éléments relevés au cours de l'enquête pourront être
-                ajoutés ou précisés ultérieurement.
-            </p>
-
-
-            <div style="
-                position:relative;
-                width:100%;
-                aspect-ratio: 16 / 10;
-                background:#e7e2d7;
-                border:2px solid #444;
-                overflow:hidden;
-                margin-top:15px;
-            ">
-
-
-                <!-- ROUTE / VOIE DE CIRCULATION -->
-
-                <div style="
-                    position:absolute;
-                    left:8%;
-                    right:8%;
-                    top:42%;
-                    height:18%;
-                    background:#b8b4aa;
-                    border-top:2px solid #777;
-                    border-bottom:2px solid #777;
+                    font-family: Georgia, 'Times New Roman', serif;
+                    color:#202020;
+                    line-height:1.6;
                 ">
 
                     <div style="
-                        position:absolute;
-                        left:0;
-                        right:0;
-                        top:50%;
-                        border-top:2px dashed #eee;
-                    "></div>
+                        text-align:center;
+                        margin-bottom:20px;
+                        padding-bottom:14px;
+                        border-bottom:1px solid #999;
+                    ">
 
-                </div>
+                        <div style="
+                            font-size:12px;
+                            text-transform:uppercase;
+                            letter-spacing:0.08em;
+                            color:#555;
+                        ">
+                            Brigade territoriale — Saint-Laurent-des-Vignes
+                        </div>
 
 
-                <!-- PLACES DE STATIONNEMENT HAUT -->
+                        <h2 style="
+                            margin:8px 0 4px;
+                            font-size:20px;
+                        ">
+                            PLAN DES LIEUX
+                        </h2>
 
-                <div style="
-                    position:absolute;
-                    left:9%;
-                    top:8%;
-                    width:82%;
-                    height:25%;
-                ">
+
+                        <div style="
+                            font-size:13px;
+                            font-weight:700;
+                        ">
+                            Affaire 2026-593
+                        </div>
+
+                    </div>
+
+
+                    <p style="
+                        font-size:13px;
+                        margin-bottom:16px;
+                    ">
+                        Plan de travail du parking souterrain des Tilleuls.
+                        Les éléments relevés au cours de l'enquête pourront
+                        être ajoutés ou précisés ultérieurement.
+                    </p>
+
 
                     <div style="
-                        position:absolute;
-                        left:0;
-                        top:0;
+                        position:relative;
                         width:100%;
-                        height:100%;
-                        border-bottom:2px solid #777;
-                    "></div>
+                        aspect-ratio:16 / 10;
+                        background:#e7e2d7;
+                        border:2px solid #444;
+                        overflow:hidden;
+                        margin-top:15px;
+                    ">
+
+
+                        <!-- ZONE DU PARKING -->
+
+                        <div style="
+                            position:absolute;
+                            left:8%;
+                            right:8%;
+                            top:42%;
+                            height:18%;
+                            background:#b8b4aa;
+                            border-top:2px solid #777;
+                            border-bottom:2px solid #777;
+                        ">
+
+                            <div style="
+                                position:absolute;
+                                left:0;
+                                right:0;
+                                top:50%;
+                                border-top:2px dashed #eee;
+                            "></div>
+
+                        </div>
+
+
+                        <!-- PARKING HAUT -->
+
+                        <div style="
+                            position:absolute;
+                            left:9%;
+                            top:8%;
+                            width:82%;
+                            height:25%;
+                            border-bottom:2px solid #777;
+                        ">
+
+                            <div style="
+                                position:absolute;
+                                left:12%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:24%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:36%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:48%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:60%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:72%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:84%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                        </div>
+
+
+                        <!-- PARKING BAS -->
+
+                        <div style="
+                            position:absolute;
+                            left:9%;
+                            bottom:8%;
+                            width:82%;
+                            height:25%;
+                            border-top:2px solid #777;
+                        ">
+
+                            <div style="
+                                position:absolute;
+                                left:12%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:24%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:36%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:48%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:60%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:72%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                            <div style="
+                                position:absolute;
+                                left:84%;
+                                top:0;
+                                bottom:0;
+                                border-left:2px solid #888;
+                            "></div>
+
+                        </div>
+
+
+                        <!-- ENTRÉE -->
+
+                        <div style="
+                            position:absolute;
+                            left:44%;
+                            top:1%;
+                            width:12%;
+                            height:7%;
+                            background:#8f8a80;
+                            border:2px solid #555;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            font-size:11px;
+                            font-weight:700;
+                        ">
+                            ENTRÉE
+                        </div>
+
+
+                        <!-- SORTIE -->
+
+                        <div style="
+                            position:absolute;
+                            left:44%;
+                            bottom:1%;
+                            width:12%;
+                            height:7%;
+                            background:#8f8a80;
+                            border:2px solid #555;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            font-size:11px;
+                            font-weight:700;
+                        ">
+                            SORTIE
+                        </div>
+
+
+                        <!-- RAMPE -->
+
+                        <div style="
+                            position:absolute;
+                            right:1%;
+                            top:34%;
+                            width:8%;
+                            height:32%;
+                            background:#9e9a90;
+                            border:2px solid #555;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            font-size:10px;
+                            font-weight:700;
+                            writing-mode:vertical-rl;
+                            transform:rotate(180deg);
+                        ">
+                            RAMPE
+                        </div>
+
+
+                        <!-- ESCALIER -->
+
+                        <div style="
+                            position:absolute;
+                            left:1%;
+                            top:35%;
+                            width:8%;
+                            height:30%;
+                            background:#ccc7bc;
+                            border:2px solid #555;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            font-size:10px;
+                            font-weight:700;
+                            text-align:center;
+                        ">
+                            ESCALIER
+                        </div>
+
+
+                        <!-- ZONE TECHNIQUE -->
+
+                        <div style="
+                            position:absolute;
+                            left:39%;
+                            top:35%;
+                            width:22%;
+                            height:10%;
+                            border:2px solid #777;
+                            background:#d2cec4;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            font-size:10px;
+                            font-weight:700;
+                        ">
+                            ZONE TECHNIQUE
+                        </div>
+
+
+                        <!-- LÉGENDE -->
+
+                        <div style="
+                            position:absolute;
+                            right:12px;
+                            bottom:12px;
+                            background:rgba(255,255,255,.88);
+                            border:1px solid #999;
+                            padding:9px 11px;
+                            font-size:10px;
+                            line-height:1.5;
+                        ">
+
+                            <strong>LÉGENDE</strong><br>
+                            Entrée / sortie : accès parking<br>
+                            Rampe : circulation véhicules<br>
+                            Escalier : accès piéton<br>
+                            Zone technique : local technique
+
+                        </div>
+
+                    </div>
 
 
                     <div style="
-                        position:absolute;
-                        left:12%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
+                        margin-top:18px;
+                        padding:13px 15px;
+                        background:#ebe7dc;
+                        border-left:4px solid #555;
+                        font-size:12px;
+                    ">
+
+                        <strong>Note :</strong>
+
+                        Le présent plan constitue un support de travail.
+                        Les positions précises des véhicules, traces,
+                        impacts, douilles et personnes seront ajoutées
+                        à mesure de l'exploitation de la scène.
+
+                    </div>
+
 
                     <div style="
-                        position:absolute;
-                        left:24%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:36%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:48%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:60%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:72%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:84%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
+                        margin-top:28px;
+                        padding-top:12px;
+                        border-top:1px solid #999;
+                        font-size:11px;
+                        color:#666;
+                    ">
+                        Affaire 2026-593 — Plan de travail provisoire
+                    </div>
 
                 </div>
 
+                `
+            );
 
-                <!-- PLACES DE STATIONNEMENT BAS -->
-
-                <div style="
-                    position:absolute;
-                    left:9%;
-                    bottom:8%;
-                    width:82%;
-                    height:25%;
-                ">
-
-                    <div style="
-                        position:absolute;
-                        left:0;
-                        top:0;
-                        width:100%;
-                        height:100%;
-                        border-top:2px solid #777;
-                    "></div>
-
-
-                    <div style="
-                        position:absolute;
-                        left:12%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:24%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:36%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:48%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:60%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:72%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                    <div style="
-                        position:absolute;
-                        left:84%;
-                        top:0;
-                        bottom:0;
-                        border-left:2px solid #888;
-                    "></div>
-
-                </div>
-
-
-                <!-- ENTRÉE -->
-
-                <div style="
-                    position:absolute;
-                    left:44%;
-                    top:1%;
-                    width:12%;
-                    height:7%;
-                    background:#8f8a80;
-                    border:2px solid #555;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    font-size:11px;
-                    font-weight:700;
-                ">
-                    ENTRÉE
-                </div>
-
-
-                <!-- SORTIE -->
-
-                <div style="
-                    position:absolute;
-                    left:44%;
-                    bottom:1%;
-                    width:12%;
-                    height:7%;
-                    background:#8f8a80;
-                    border:2px solid #555;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    font-size:11px;
-                    font-weight:700;
-                ">
-                    SORTIE
-                </div>
-
-
-                <!-- RAMPE -->
-
-                <div style="
-                    position:absolute;
-                    right:1%;
-                    top:34%;
-                    width:8%;
-                    height:32%;
-                    background:#9e9a90;
-                    border:2px solid #555;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    font-size:10px;
-                    font-weight:700;
-                    writing-mode:vertical-rl;
-                    transform:rotate(180deg);
-                ">
-                    RAMPE
-                </div>
-
-
-                <!-- ESCALIER -->
-
-                <div style="
-                    position:absolute;
-                    left:1%;
-                    top:35%;
-                    width:8%;
-                    height:30%;
-                    background:#ccc7bc;
-                    border:2px solid #555;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    font-size:10px;
-                    font-weight:700;
-                    text-align:center;
-                ">
-                    ESCALIER
-                </div>
-
-
-                <!-- ZONE TECHNIQUE -->
-
-                <div style="
-                    position:absolute;
-                    left:39%;
-                    top:35%;
-                    width:22%;
-                    height:10%;
-                    border:2px solid #777;
-                    background:#d2cec4;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    font-size:10px;
-                    font-weight:700;
-                ">
-                    ZONE TECHNIQUE
-                </div>
-
-
-                <!-- LÉGENDE -->
-
-                <div style="
-                    position:absolute;
-                    right:12px;
-                    bottom:12px;
-                    background:rgba(255,255,255,.88);
-                    border:1px solid #999;
-                    padding:9px 11px;
-                    font-size:10px;
-                    line-height:1.5;
-                ">
-
-                    <strong>LÉGENDE</strong><br>
-                    Entrée / sortie : accès parking<br>
-                    Rampe : circulation véhicules<br>
-                    Escalier : accès piéton<br>
-                    Zone technique : local technique
-
-                </div>
-
-            </div>
-
-
-            <div style="
-                margin-top:18px;
-                padding:13px 15px;
-                background:#ebe7dc;
-                border-left:4px solid #555;
-                font-size:12px;
-            ">
-
-                <strong>Note :</strong>
-
-                Le présent plan constitue un support de travail.
-                Les positions précises des véhicules, traces,
-                impacts, douilles et personnes seront ajoutées
-                à mesure de l'exploitation de la scène.
-
-            </div>
-
-
-            <div style="
-                margin-top:28px;
-                padding-top:12px;
-                border-top:1px solid #999;
-                font-size:11px;
-                color:#666;
-            ">
-                Affaire 2026-593 — Plan de travail provisoire
-            </div>
-
-        </div>
-
-        `
-    );
-
- }
-        
         }
 
     }
@@ -4252,7 +3845,6 @@
                     padding:0;
                 "
             >
-
 
                 <div
                     style="
@@ -4343,95 +3935,7 @@
 
 
     /* =========================================
-       INITIALISATION
-    ========================================= */
-
-    function initialiserPage() {
-
-        rendrePreuves();
-
-        rendreExpertises();
-
-        rendreTelephones();
-
-        rendreChronologie();
-
-        mettreAJourCompteur();
-
-    }
-
-
-    /* =========================================
-       NAVIGATION DES ONGLETS
-    ========================================= */
-
-    document
-        .querySelectorAll(".tab")
-        .forEach(function(tab) {
-
-            tab.addEventListener(
-                "click",
-                function() {
-
-                    const panelId =
-                        tab.dataset.panel;
-
-
-                    document
-                        .querySelectorAll(".tab")
-                        .forEach(function(button) {
-
-                            button.classList.remove(
-                                "active"
-                            );
-
-                        });
-
-
-                    document
-                        .querySelectorAll(".panel")
-                        .forEach(function(panel) {
-
-                            panel.classList.remove(
-                                "active"
-                            );
-
-                        });
-
-
-                    tab.classList.add(
-                        "active"
-                    );
-
-
-                    const panel =
-                        document.getElementById(
-                            panelId
-                        );
-
-
-                    if (panel) {
-
-                        panel.classList.add(
-                            "active"
-                        );
-
-                    }
-
-
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-
-                }
-            );
-
-        });
-
-
-    /* =========================================
-       PROCUREUR
+       DEMANDE AU PROCUREUR
     ========================================= */
 
     function soumettreDemandeProcureur() {
@@ -4462,22 +3966,17 @@
             result.style.display =
                 "block";
 
-
             result.style.background =
                 "rgba(127, 29, 29, 0.20)";
-
 
             result.style.borderLeft =
                 "3px solid #f87171";
 
-
             result.style.color =
                 "#fecaca";
 
-
             result.innerHTML =
                 "Veuillez formuler une demande suffisamment précise.";
-
 
             return;
 
@@ -4487,14 +3986,11 @@
         result.style.display =
             "block";
 
-
         result.style.background =
             "rgba(59, 130, 246, 0.08)";
 
-
         result.style.borderLeft =
             "3px solid #60a5fa";
-
 
         result.style.color =
             "#bfdbfe";
@@ -4512,35 +4008,7 @@
 
     }
 
-
-    /* =========================================
-       LANCEMENT
-    ========================================= */
-
-    initialiserPage();
-
-
-    /*
-       =========================================
-       OUTILS MAÎTRE DU JEU
-
-       Pour débloquer :
-
-       debloquerElement("preuve-003");
-
-       debloquerElement("expert-002");
-
-       debloquerElement("phone-004");
-
-       Pour reverrouiller :
-
-       verrouillerElement("preuve-003");
-
-       =========================================
-    */
-
 </script>
-
 
 </body>
 
